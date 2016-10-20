@@ -1,0 +1,47 @@
+@import "../colors";
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin:4vw;
+    color: $color-text;
+    background: $color-background;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;    
+}
+
+p, span{
+    font-family: 'Roboto Slab', serif;
+    font-size: 14px;
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $color-link;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+main{
+
+    &>h1 {
+        margin: 0;
+    }
+
+    &>ol{
+        margin-top: 20px;
+        &>li:not(:last-child){
+            &>.article-summary{
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+}

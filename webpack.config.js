@@ -7,6 +7,7 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.tsx?$/, loader: "ts-loader" },
+            { test: /\.scss$/, loaders:["style", "css", "sass"] },
         ],
     },
     output: {

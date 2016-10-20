@@ -2,6 +2,8 @@ import * as React from "react";
 import { IArticle } from "../models/IArticle";
 import { ArticleSummary } from "../components/ArticleSummary";
 
+import "./Home.scss";
+
 let articles : IArticle[] = [
     {
         author: 'Vivek Maharajh',
@@ -25,6 +27,8 @@ export var Home: React.StatelessComponent<Props> = (props: Props) => {
 
     return (
         <main>
+            <h1>HCDE 512 Process Book</h1>
+            <p>A weekly blog the HCDE 512 course at the University of Washington.<br/>Vivek Maharajh</p>
             <ol>{
                 articles.map(article => 
                     <li key={article.link}>
