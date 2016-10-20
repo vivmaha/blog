@@ -1,9 +1,9 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-import * as Hello from "./components/Hello";
+import { Home } from "./views/Home";
 
 ReactDOM.render(
-    <Hello.Component compiler="TypeScript" framework="React"/>,
+    <Home />,
     document.getElementById("content")
 );
