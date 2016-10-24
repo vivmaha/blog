@@ -9,13 +9,13 @@ let articles : IArticle[] = [
         author: 'Vivek Maharajh',
         title : 'Culture studies & models',
         date: new Date(2016, 10, 8),
-        link: '#1',
+        id: 'culture-studies-models',
     },
     {
         author: 'Vivek Maharajh',
         title: 'Cultural Dimensions & Design',
         date: new Date(2016, 10, 16),
-        link: '#2',
+        id: 'cultural-dimensions-design',
     }
 ];
 
@@ -31,7 +31,7 @@ export var Home: React.StatelessComponent<Props> = (props: Props) => {
             <p>A weekly blog the HCDE 512 course at the University of Washington.<br/>Vivek Maharajh</p>
             <ol>{
                 articles.map(article => 
-                    <li key={article.link}>
+                    <li key={article.id}>
                         <ArticleSummary {...article}/>
                     </li>
                 )

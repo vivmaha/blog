@@ -1,4 +1,7 @@
 module.exports = {
+    devServer: {
+        historyApiFallback: true,
+    },
     entry: "./src/index.tsx",
     externals: {
         "react": "React",

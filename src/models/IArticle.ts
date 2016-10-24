@@ -1,6 +1,6 @@
 export interface IArticle {
     title: string;
     date: Date;
-    link: string;
+    id: string;
     author: string;
 }
