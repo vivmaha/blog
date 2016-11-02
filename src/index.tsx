@@ -5,6 +5,8 @@ import * as ReactRouter from "react-router";
 import { Home } from "./views/Home";
 import { Article } from "./views/Article";
 
+import "./index.scss";
+
 ReactDOM.render(
     (
         /* TODO: When you deploy this to a real server, you have to setup URL redirection, so that everythign gets redirected to index.html */

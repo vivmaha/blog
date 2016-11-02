@@ -2,6 +2,8 @@ import * as React from "react";
 import * as ReactRouter from 'react-router';
 import { ArticleStore } from "../stores/ArticleStore";
 
+import "./Home.scss";
+
 interface Params {
     articleId: string;
 }
@@ -22,7 +24,7 @@ export var Article: React.StatelessComponent<Props> = (props: Props) => {
             </header>
             <main>
                 <h1>{ article.title }</h1>
-                <span>{ article.author }</span>
+                <p>{ article.author }</p>
             </main>
         </div>
     );

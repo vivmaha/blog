@@ -12,7 +12,7 @@ export var Home: React.StatelessComponent<Props> = (props: Props) => {
     let store = new ArticleStore();
     let articles = store.getArticles();
     return (
-        <main>
+        <main className="home">
             <h1>HCDE 512 Process Book</h1>
             <p>A weekly blog the HCDE 512 course at the University of Washington.<br/>Vivek Maharajh</p>
             <ol>{
