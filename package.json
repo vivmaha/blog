@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --colors --inline",
-    "build-travis": "./node_modules/.bin/webpack --progress -p"
+    "build-travis": "./node_modules/.bin/webpack --progress -p --bail"
   },
   "author": "vivek maharajh",
   "license": "ISC",
