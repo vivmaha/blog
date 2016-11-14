@@ -1,6 +1,10 @@
-# hcde 512
+# HCDE 512
 
 [In Progress] Website for my hcde 512 assignments
+
+# Ops
+
+[![Build Status](https://travis-ci.org/vivmaha/hcde512.svg?branch=master)](https://travis-ci.org/vivmaha/hcde512)
 
 # Dev
 
