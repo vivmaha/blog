@@ -1,3 +1,5 @@
+var failPlugin = require('webpack-fail-plugin');
+
 module.exports = {
     devServer: {
         historyApiFallback: true,
@@ -16,6 +18,10 @@ module.exports = {
     output: {
         filename: "./dist/bundle.js",
     },
+    plugins: [
+        // Workaround for https://github.com/webpack/webpack/issues/708
+        failPlugin,
+    ],
     resolve: {
         extensions: ["", ".webpack.js", ".web.js", ".ts", ".tsx", ".js"],
     },
