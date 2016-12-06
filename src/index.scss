@@ -1,7 +1,9 @@
+@import "../node_modules/reset-css/_reset";
 @import "./colors";
+@import "./fonts";
 
 body {
-    font-family: 'Roboto', sans-serif;
+    @include font-sans-serif();
     margin: 4vw;
     color: $color-text;
     background: $color-background;
@@ -9,11 +11,15 @@ body {
 
 h1 {
     margin: 0;
-    font-family: 'Roboto', sans-serif;    
+    font-size: 40px;
+    @include font-serif();
+    &+p{
+        margin-top: 10px;
+    }    
 }
 
 p, span{
-    font-family: 'Roboto Slab', serif;
+    @include font-serif();
     font-size: 14px;
 }
 
