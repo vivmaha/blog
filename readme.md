@@ -1,10 +1,10 @@
-# HCDE 512
+# Blog
 
-[In Progress] Website for my hcde 512 assignments
+[In Progress] Website for my blog
 
 # Ops
 
-[![Build Status](https://travis-ci.org/vivmaha/hcde512.svg?branch=master)](https://travis-ci.org/vivmaha/hcde512)
+[![Build Status](https://travis-ci.org/vivmaha/blog.svg?branch=master)](https://travis-ci.org/vivmaha/blog)
 
 # Dev
 
