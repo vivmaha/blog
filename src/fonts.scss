@@ -1,6 +1,26 @@
+
+
 @mixin font-serif() {
-    font-family: 'Droid Serif', serif;
+    font-family: 'Merriweather', serif;
 }
+@mixin font-serif-light() {
+    @include font-serif();
+    font-weight: 300;
+}
+@mixin font-serif-regular() {
+    @include font-serif();
+    font-weight: 400;
+}
+@mixin font-serif-bold() {
+    @include font-serif();
+    font-weight: 700;
+}
+
+@mixin font-h1 {
+    font-size: 3vw;
+    @include font-serif-light();
+}
+
 
 @mixin font-sans-serif() {
     font-family: 'Roboto', sans-serif;

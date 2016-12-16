@@ -1,19 +1,16 @@
 import { IArticle } from "../models/IArticle";
+import articleCultureStudiesModels from './articles/culture-studies-models/culture-studies-models';
 
-export class ArticleStore {
+export class ArticleStore {    
 
-    private articles : IArticle[] = [
-        {
-            author: 'Vivek Maharajh',
-            title : 'Culture studies & models',
-            date: new Date(2016, 10, 8),
-            id: 'culture-studies-models',
-        },
+    private articles : IArticle[] = [        
+        articleCultureStudiesModels,
         {
             author: 'Vivek Maharajh',
             title: 'Cultural Dimensions & Design',
             date: new Date(2016, 10, 16),
             id: 'cultural-dimensions-design',
+            sections : []
         }
     ];
 

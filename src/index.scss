@@ -10,9 +10,8 @@ body {
 }
 
 h1 {
+    @include font-h1();
     margin: 0;
-    font-size: 40px;
-    @include font-serif();
     &+p{
         margin-top: 10px;
     }    
@@ -20,7 +19,10 @@ h1 {
 
 p, span{
     @include font-serif();
-    font-size: 14px;
+    font-size: 16px;
+    margin: 16px 0 16px 0;
+    max-width: 600px;
+    line-height: 1.4;
 }
 
 ul, ol {
@@ -33,5 +35,15 @@ a {
     color: $color-link;
     &:hover {
         text-decoration: underline;
+    }
+}
+
+main {    
+    section {        
+        margin-top: 20px;
+        h1 {            
+            @include font-serif-bold();
+            font-size: 20px;
+        }
     }
 }
