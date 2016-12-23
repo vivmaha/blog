@@ -9,7 +9,7 @@ header {
             @include font-h1();
             color: rgba(0,0,0,0);
             position: absolute;
-            left:$space-between-back-and-edge;
+            transform: translateX(-100%);
             // Why do we need to use ::after?
             //    Because our hover effect translates the object, and this can 
             //    move it from under the user's cursor, which will un-hover
@@ -18,14 +18,14 @@ header {
             //    bug.
             &::after {
                 color: $color-text;
-                transition: transform 0.1s;
-                content: "←";
+                transition: transform 0.25s;
+                content: "←\00a0";
                 position: absolute;
                 right: 0;
             }
             &:hover {
                 &::after {
-                    transform: translateX(-#{$space-between-back-and-edge});
+                    transform: translateX(-0.2em);
                 }
                 text-decoration: none;                
             }
