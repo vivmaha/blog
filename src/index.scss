@@ -1,6 +1,7 @@
 @import "../node_modules/reset-css/_reset";
 @import "./colors";
 @import "./fonts";
+@import "./transitions";
 
 body {
     @include font-sans-serif();
@@ -35,8 +36,18 @@ ul, ol {
 a {
     text-decoration: none;
     color: $color-link;
-    &:hover {
-        text-decoration: underline;
+    &::before {
+        opacity: 0;
+        transition: transform $transition-function, opacity $transition-function;
+        content: "→\00a0";
+        position: absolute;
+        transform: translateX(calc(-100% - 0.2em));
+    }
+    &:hover {        
+        &::before {
+            opacity: 1;
+            transform: translateX(-100%);
+        }
     }
 }
 

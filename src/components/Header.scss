@@ -1,5 +1,6 @@
 @import "../colors";
 @import "../fonts";
+@import "../transitions";
 
 
 $space-between-back-and-edge: 0.5vw;
@@ -18,7 +19,7 @@ header {
             //    bug.
             &::after {
                 color: $color-text;
-                transition: transform 0.25s;
+                transition: transform $transition-function;
                 content: "←\00a0";
                 position: absolute;
                 right: 0;
