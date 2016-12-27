@@ -23,12 +23,9 @@ body {
 h1 {
     @include font-h1();
     margin: 0;
-    &+p{
-        margin-top: 10px;
-    }    
 }
 
-p, span, dd, dt{
+p, span, dd, dt, blockquote{
     @include font-serif();
     font-size: $text-font-size;
     margin: $text-font-size 0 $text-font-size 0;
@@ -37,6 +34,18 @@ p, span, dd, dt{
         margin-left: 2em;
     }
 }
+
+blockquote {
+    margin-top: 2em;
+    font-style: italic;
+    margin-bottom: 0;
+    &+span {
+        @include font-weight-bold();
+        margin-top: 0;
+        margin-bottom: 2em;
+    }
+}
+
 
 dl {
     &>dt {
