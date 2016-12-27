@@ -20,8 +20,3 @@
     font-size: 3vw;
     @include font-serif-light();
 }
-
-
-@mixin font-sans-serif() {
-    font-family: 'Roboto', sans-serif;
-}

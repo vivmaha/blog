@@ -17,12 +17,17 @@ export var Article: React.StatelessComponent<Props> = (props: Props) => {
     let store = new ArticleStore();
     let article = store.getArticle(props.params.articleId);
     return (
-        <div>
-            <Header pageTitle={article.title}></Header>
+        <div>        
+            <Header></Header>
             <main>
-                <p>{ article.author }</p>
-                {article.element}
-            </main>            
+                <article>
+                    <header>
+                        <h1>{article.title}</h1>
+                        <p>{article.author}</p>
+                    </header>
+                    {article.sections}
+                </article>
+            </main>
         </div>
     );
 }

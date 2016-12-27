@@ -4,7 +4,6 @@
 @import "./transitions";
 
 body {
-    @include font-sans-serif();
     margin: 4vw auto;
     // You should be able to read the line with eye movement only (no head movement).    
     max-width: 33em;    
