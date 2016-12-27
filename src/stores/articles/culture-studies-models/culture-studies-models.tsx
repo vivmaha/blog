@@ -50,7 +50,7 @@ class Article implements IArticle {
             </dl>
         </section>,
         <section>
-            <h1>Minkov, “The Concept of Culture”, Cross-CulturalAnalysis (LA, London, Delhi: Sage, 2012): 9-17.</h1>
+            <h1>Minkov, “The Concept of Culture”, Cross-Cultural Analysis (LA, London, Delhi: Sage, 2012): 9-17.</h1>
             <p>Culture is too complicated to define, but too important to ignore. There is wide variation in definitions across scholarly circles. Notably, there is disagreement between which aspects are part of culture, and which are extraneous. For example, is the wealth of a nation a part of its culture? Pick the definition that best fits your purpose and be sure to communicate this with your findings.</p>
             <p>When comparing cultures, you can use statistics control for objective variances in populations, such as age. The value of doing this depends on the purpose of your comparison.</p>
             <p>Classifications of definitions of Culture:</p>

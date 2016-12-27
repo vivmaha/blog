@@ -87,4 +87,7 @@ article {
             @include font-h2();
         }
     }
+    section+section{
+        margin-top: 2em;
+    }
 }

@@ -19,6 +19,7 @@ export var ArticleSummary: React.StatelessComponent<IArticle> = (props: IArticle
                 <ReactRouter.Link to={link}>{props.title}</ReactRouter.Link>
             </h1>
             <span>{friendlyDate}</span>
+            {props.introduction}
         </section>
     );
 }

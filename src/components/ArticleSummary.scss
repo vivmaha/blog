@@ -1,11 +1,15 @@
 @import "../colors";
+@import "../fonts";
 
 .article-summary {
     h1 {
-        font-size: 18px;
+        @include font-h2();
         margin:0;
     }
     span {
         color: $color-text-secondary;
+    }
+    p {
+        margin-top: 0;
     }
 }
