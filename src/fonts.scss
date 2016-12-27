@@ -1,22 +1,41 @@
 
-
-@mixin font-serif() {
-    font-family: 'Merriweather', serif;
-}
-@mixin font-serif-light() {
-    @include font-serif();
+// weight
+@mixin font-weight-light() {
     font-weight: 300;
 }
-@mixin font-serif-regular() {
-    @include font-serif();
+@mixin font-weight-regular() {
     font-weight: 400;
 }
-@mixin font-serif-bold() {
-    @include font-serif();
+@mixin font-weight-bold() {
     font-weight: 700;
 }
 
+// typeface
+@mixin font-serif() {
+    font-family: 'Merriweather', serif;
+}
+
+// combinations
+@mixin font-serif-light() {
+    @include font-serif();
+    @include font-weight-light();
+}
+@mixin font-serif-regular() {
+    @include font-serif();
+    @include font-weight-regular();
+}
+@mixin font-serif-bold() {
+    @include font-serif();
+    @include font-weight-bold();
+}
+
+// Special cases
 @mixin font-h1 {
-    font-size: 3vw;
+    font-size: 32px;
+    @include font-serif-light();
+}
+
+@mixin font-h2 {
+    font-size: 20px;
     @include font-serif-light();
 }

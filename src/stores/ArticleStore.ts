@@ -7,6 +7,7 @@ var tempArticle: IArticle = {
     title: 'Cultural Dimensions & Design',
     date: new Date(2016, 10, 16),
     id: 'cultural-dimensions-design',
+    introduction: articleCultureStudiesModels.introduction,
     sections: []
 };
 

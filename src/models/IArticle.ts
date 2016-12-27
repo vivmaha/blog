@@ -3,5 +3,6 @@ export interface IArticle {
     date: Date;
     id: string;
     author: string;
+    introduction : JSX.Element;
     sections : JSX.Element[];
 }

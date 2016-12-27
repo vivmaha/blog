@@ -28,11 +28,29 @@ h1 {
     }    
 }
 
-p, span{
+p, span, dd, dt{
     @include font-serif();
     font-size: $text-font-size;
     margin: $text-font-size 0 $text-font-size 0;
     line-height: 1.4;
+    &+dl {
+        margin-left: 2em;
+    }
+}
+
+dl {
+    &>dt {
+        @include font-weight-bold();
+        margin-bottom: 0;
+    }
+    &>dd {
+        margin-top: 0;
+    }
+}
+
+
+strong {
+    @include font-weight-bold();
 }
 
 ul, ol {
@@ -58,14 +76,15 @@ a {
     }
 }
 
-main {    
-    margin-left: auto;
-    margin-right: auto;
-    section {        
-        margin-top: 20px;
-        h1 {            
-            @include font-serif-bold();
-            font-size: 20px;
+article {
+    header {
+        h1 {
+            @include font-h1();
+        }
+    }
+    section {
+        h1 {
+            @include font-h2();
         }
     }
 }
