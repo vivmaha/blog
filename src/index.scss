@@ -3,10 +3,19 @@
 @import "./fonts";
 @import "./transitions";
 
+$text-width: 33em;
+$page-margin-minimum: 2em;
+$text-font-size: 16px;
+
 body {
+    font-size: $text-font-size;
     margin: 4vw auto;
     // You should be able to read the line with eye movement only (no head movement).    
-    max-width: 33em;    
+    max-width: $text-width; 
+    @media (max-width:#{$text-width + 2 * $page-margin-minimum}) {
+        margin-left: 2em;
+        margin-right: 2em;
+    }
     color: $color-text;
     background: $color-background;
 }
@@ -21,9 +30,8 @@ h1 {
 
 p, span{
     @include font-serif();
-    font-size: 16px;
-    margin: 16px 0 16px 0;
-    max-width: 33em;
+    font-size: $text-font-size;
+    margin: $text-font-size 0 $text-font-size 0;
     line-height: 1.4;
 }
 
@@ -53,7 +61,6 @@ a {
 main {    
     margin-left: auto;
     margin-right: auto;
-    width: 33em;
     section {        
         margin-top: 20px;
         h1 {            
