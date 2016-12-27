@@ -2,7 +2,7 @@ import * as React from "react";
 import { IArticle } from "../../../models/IArticle";
 
 class Article implements IArticle {
-    title = 'Culture studies & models';
+    title = 'Culture Studies & Models';
     date = new Date(2016, 10, 8);
     id = 'culture-studies-models';
     author = 'Vivek Maharajh';

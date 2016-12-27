@@ -13,8 +13,8 @@ export var Home: React.StatelessComponent<Props> = (props: Props) => {
     let articles = store.getArticles();
     return (
         <main className="home">
-            <h1>Lorem Ipsum</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu massa sodales, dapibus neque sagittis, posuere leo. </p>
+            <h1>Notes by V</h1>
+            <p>A place to store my notes.</p>
             <ol>{
                 articles.map(article => 
                     <li key={article.id}>
