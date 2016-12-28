@@ -1,21 +1,12 @@
 import { IArticle } from "../models/IArticle";
 import articleCultureStudiesModels from './articles/culture-studies-models/culture-studies-models';
-
-// todo - move this out of here
-var tempArticle: IArticle = {
-    author: 'Vivek Maharajh',
-    title: 'Cultural Dimensions & Design',
-    date: new Date(2016, 10, 16),
-    id: 'cultural-dimensions-design',
-    introduction: articleCultureStudiesModels.introduction,
-    sections: []
-};
+import articleCulturalDimensionsDesign from './articles/cultural-dimensions-design/cultural-dimensions-design';
 
 export class ArticleStore {    
 
-    private articles : IArticle[] = [        
+    private articles : IArticle[] = [
+        articleCulturalDimensionsDesign,
         articleCultureStudiesModels,
-        tempArticle,
     ];
 
     getArticles() : IArticle[] {
