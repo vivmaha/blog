@@ -1,6 +1,14 @@
 language: node_js
 node_js:
   - "node"
+deploy:
+  provider: azure_web_apps
+  username: vivmaha
+  # password: Uses travis environment variable AZURE_WA_PASSWORD
+  site: notesbyv
+  skip_cleanup: true
+  on:
+    branch: master
 env:
   - CXX=g++-4.8
 addons:
