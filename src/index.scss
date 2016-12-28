@@ -25,28 +25,16 @@ h1 {
     margin: 0;
 }
 
-p, span, dd, dt, blockquote{
+@mixin reading-styles() {
     @include font-serif();
     font-size: $text-font-size;
     margin: $text-font-size 0 $text-font-size 0;
     line-height: 1.4;
-    &+dl {
-        margin-left: 2em;
-    }
 }
 
-
-
-dl {
-    &>dt {
-        @include font-weight-bold();
-        margin-bottom: 0;
-    }
-    &>dd {
-        margin-top: 0;
-    }
+p, span, dd, dt, blockquote {
+    @include reading-styles();
 }
-
 
 strong {
     @include font-weight-bold();
@@ -88,5 +76,23 @@ article {
     }
     section+section{
         margin-top: 2em;
+    }
+    dl {
+        margin-left: 2em;
+        &>dt {
+            @include font-weight-bold();
+            margin-bottom: 0;
+        }
+        &>dd {
+            margin-top: 0;
+        }
+    }
+    dl, ul {        
+        margin-left: 2em;        
+    }
+    ul {
+       li {
+           @include reading-styles();
+       } 
     }
 }

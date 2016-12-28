@@ -15,60 +15,51 @@ class Article implements IArticle {
             personTitle="Rensselaer Polytechnic Institute"
         ></ArticleBlockQuote>,
         <section>
-            <h1>Quesenbery, W., &amp; Szuc, D. (2012). Global UX: Design and research in a connected world. Waltham, MA: Morgan Kaufmann (Chaper 3)</h1>
-            <p>Culture is best understood comparatively.</p>
-            <p>Culture changes more slowly than other aspects that we design for (eg. governance, infrastructure, commerce &amp; fashion).</p>
-            <p>Strong cultural factors:</p>
-            <dl>
-                <dt>Nationality</dt>
-                <dd>Where someone grew up. The time period is also important. Be mindful of nationalities with a vast array of sub-cultures, the diluting effect of globalization, and the possibility that individual interests can overrule the effect of national culture.</dd>
-                <dt>Technology</dt>
-                <dd>What technological environment someone grew up in.</dd>
-                <dt>Company</dt>
-                <dd>Companies, or industries, can develop strong cultures.</dd>
-            </dl>
-            <p>Language and cultural issues easily go by undetected by outsiders. Identifying and solving these require an intentional effort. This effort should be phased — use cheap research methods to weed out the bulk of issues, then use extensive methods for completeness.</p> 
-            <p>Some sources of UX issues are easier to predict than others. In increasing order of difficulty: task completion, infrastructure, legal, market, language, and finally, culture.</p>
-            <p>Hofstede has five dimensions for classifying cultures. It is the most popular model for doing this, but has been met with mixed reactions. Regardless of its accuracy, it is a good mental framework to build upon.</p>
-            <p>Language will be just as nuanced as culture, and you'll have to understand them both for a successful design.</p>
+            <h1>Gladwell, Malcolm: “The Ethnic Theory of PlaneCrashes” in Outliers. New York: Little, Brown andCompany, 2008. Chapter 7, pp. 177-223</h1>
+            <p>It is tempting design with the happy path in mind, however this can lead to failures under extenuating circumstances.</p>
+            <p>This reading made me wonder if users see UI as their pilot (superior) or first officer (inferior)? How much mitigation should UI use to communicate? This probably depends on the tolerance to error of the task. The designer must be mindful of this and balance comfortable with error avoidance.</p>
+            <p>We can generalize populations, but we should expect individuals within these populations to exhibit variance.</p>
+            <p>Culture emerges from hundreds of years of history based on things such as political structures, religions traditions, languages, food, architecture, and literature.</p>
+            <p>Western culture is Transmitter oriented — it is the responsibility of the speaker to ensure communication is successful. Asian culture is Receiver oriented — it is the responsibility of the listener. Receiver oriented languages do not work well in extenuating circumstances because the listener does not have the attention needed to read between the lines.</p>
+            <p>If cultural values are innately unsuited for a task, look for ways to suppress the corresponding cultural behaviors. With training, individuals can change their behaviors from their cultural norms.</p>
+            <p>It is tempting to ignore cultural differences for fear of offending someone. However ignoring our differences, our unique strengths and weaknesses, can lead to unsuitable designs.</p>
         </section>,
         <section>
-            <h1>Quesenbery, W., &amp; Szuc, D. (2012). Global UX: Design and research in a connected world. Waltham, MA: Morgan Kaufmann (Chaper 4)</h1>
-            <p>The following attitudes are helpful in developing global awareness:</p>
-            <dl>
-                <dt>Constant challenges</dt>
-                <dd>Embrace new and foreign concepts.</dd>
-                <dt>Curiosity</dt>
-                <dd>Approach new experiences with naivete</dd>
-                <dt>Humility</dt>
-                <dd>Learn from others. Do not assume your way is best.</dd>
-            </dl>
-            <p>Immersion refers to a deep understanding of another's perspective. It goes beyond being able to objectively describe another culture. It involves being able to actually experience that culture like a local. Immersion allows you to accurately interpret User Research, and effectively communicate your findings. The following actions are helpful in developing immersion:</p>
-            <dl>
-                <dt>Time</dt>
-                <dd>Spending an extended amount of time in a place. It is unclear if this is months, years, or a lifetime.</dd>
-                <dt>Local customs</dt>
-                <dd>Follow and respect the local customs. Don't hang out with expats. Go far from the city center if needed.</dd>
-                <dt>Language</dt>
-                <dd>Learn the language. Aside from the utility of easy communication, the language reveals cultural subtleties.</dd>
-                <dt>Proxy</dt>
-                <dd>As a last resort, if you're unable to travel, you can get to know someone who originates from that culture, or even someone who has been thru the immersion process in that culture. Be mindful that the person's experiences may be reflective of an older time period of that culture.</dd>
-            </dl>
+            <h1>Gould, Emilie: “Synthesizing the Literature of Cultural Values.”</h1>
+            <p>It is prohibitively costly to custom-tailor a product to every single culture. Instead, we classify similar groups of cultures and target these.</p>
+            <p>The field of cultural anthropology is unsuitable for informing HCI because:</p>
+            <ul>
+                <li>Results are not in a standardized cross-cultural format, which makes it difficult to convert a single experience across cultures.</li>
+                <li>They do not identify which differences are important, which prevents the designer from cheaply addressing the important differences.</li>
+                <li>Findings are oriented in comparison between the culture and the researcher.</li>
+                <li>It has historical ties to imperialistically biased research.</li>
+            </ul>
+            <p>The field of intercultural communication is suitable for informing HCI because:</p>
+            <ul>
+                <li>Results are comparative in nature, which makes it easy to morph the same product design across cultures.</li>
+                <li>It identifies the critical variables that need to be addressed, allowing the designer to make targeted changes.</li>
+                <li>In order to understand another's culture, your must first understand your personal cultural afflictions.</li>
+            </ul>
+            <p>Hall studied the following dimensions of communication within cultures: time, space, and context. The implications for web design include:</p>
+            <ul>
+                <li>Use of color.</li>
+                <li>Density of text vs. image.</li>
+                <li>Linear vs. ad-hoc task flow.</li>
+                <li>Proving context, such as branding, or social awareness.</li>
+            </ul>
+            <p>Stewart and Bennett explored cultural differences in the context of various levels of perception: innate, patterns, and metaphors. This analysis implies that application localization cannot merely consist of textual translations, but should also consider higher levels of design such as page structure and imagery connotations. A simple example of this is horizontally flipping the interface for let-to-right cultures instead of merely translating the text.</p> 
+            <p>Codon and Yousef explored a non-exhaustive set of twenty five value orientations under the intersecting categories of nature, self, and society. Implications to HCI include application defaults, degree of persuasion, representation of users to each other, and even the representation of the application's culture to users.</p>
+            <p>Hofstede explored four cultural dimensions across a very wide number of countries. He later added a fifth dimension for a subset of countries. These values are widely criticized, but also widely used. His data makes it very straightforward to examine your application in the context of another set of cultural dimensions in order to adapt it for suitability in another target market.</p> 
+            <p>Triandis approached this topic from social psychology, and redefined many existing notions, including Hofstede's dimensions. The open-minded cross-cultural approach that Triandis advocated would serve HCI well — we should ensure that our field is not building on a western-centric foundation. HIs work also suggests that more effort should be placed in developing trust from users from collectivist cultures.</p>
+            <p>Gudykunst combined intra and inter cultural communications theory. When people first meet, they try to find similarities in background, then as the relationship developers, they explore personal traits, and the need for similarity decreases. His work also explored the multiple identities that persons adopt for subgroups that they belong to. This work can be applied to the first meeting between a user and software being designed by providing sufficient similarities for users to attach to and being attuned to when the user has gained sufficient trust in the system.</p>
         </section>,
         <section>
-            <h1>Minkov, “The Concept of Culture”, Cross-Cultural Analysis (LA, London, Delhi: Sage, 2012): 9-17.</h1>
-            <p>Culture is too complicated to define, but too important to ignore. There is wide variation in definitions across scholarly circles. Notably, there is disagreement between which aspects are part of culture, and which are extraneous. For example, is the wealth of a nation a part of its culture? Pick the definition that best fits your purpose and be sure to communicate this with your findings.</p>
-            <p>When comparing cultures, you can use statistics control for objective variances in populations, such as age. The value of doing this depends on the purpose of your comparison.</p>
-            <p>Classifications of definitions of Culture:</p>
-            <dl>
-                <dt>Subjective vs. Objective</dt>
-                <dd>We can view culture as an intrinsic quality of people (subjective), or as the artifacts created by people (objective). These artifacts can be physical, such as buildings, and also intangible, such as marriage structures.</dd>
-                <dt>Behaviors vs. Meanings</dt>
-                <dd>We can view culture as behaviors exhibited by a group, or by the meanings of those behaviors. The latter view has gained popularity.</dd>
-                <dt>Independent vs. Human</dt>
-                <dd>These classifications disagree on whether or not culture should be studied in context of humans, or as an independent phenomenon.</dd>
-                <dd>The disagreement is not about the uniqueness of culture to mankind. It is about whether humans are capable of studying it independently from human contexts.</dd>
-            </dl>
+            <h1>Gasparini, Pimenta, de Oliveira, “Vive la différence!: asurvey of cultural-aware issues in HCI”</h1>
+            <p>Internationalization instills flexibility into the technical  and design infrastructure, so that it can be cheaply adapted to various cultures.</p> 
+            <p>Localization adapts the product for a specific culture. Is successful, it will feel as if the product was developed in that culture. This goes beyond translating text — it includes changing metaphors and adapting the visual design.</p>
+            <p>With globalization, companies providing software must localize for more and more markets. At the same time, more and more individuals are becoming global citizens via physical travel, or media that crosses cultural bounds.</p>
+            <p>In High PDI cultures, websites may focus on the organization. In low PDI cultures, websites may focus on the users of the organization.</p> 
+            <p>Tables 2–6 of this reading are a great cheat sheet for adapting a website based on Hofstede's dimensions.</p>
         </section>
     ];
 }
