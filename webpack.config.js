@@ -4,11 +4,7 @@ module.exports = {
     devServer: {
         historyApiFallback: true,
     },
-    entry: "./src/index.tsx",
-    externals: {
-        "react": "React",
-        "react-dom": "ReactDOM",
-    },
+    entry: "./src/index.tsx",    
     module: {
         loaders: [
             { test: /\.tsx?$/, loader: "ts-loader" },
