@@ -35,26 +35,7 @@ p, span, dd, dt, blockquote{
     }
 }
 
-blockquote {
-    margin-top: 2em;
-    font-style: italic;
-    margin-bottom: 0;
-    &+span {
-        &::before{
-            content: "—\00a0";
-        }
-        @include font-weight-bold();
-        margin-top: 0;
-        margin-bottom: 2em;
-    }
-    &+:not(span) {
-        &::before {
-            content: "<blockquote> has to be followed by <span>";
-            color:red;
 
-        }
-    }
-}
 
 dl {
     &>dt {

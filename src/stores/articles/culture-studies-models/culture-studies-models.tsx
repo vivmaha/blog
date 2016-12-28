@@ -1,5 +1,6 @@
 import * as React from "react";
 import { IArticle } from "../../../models/IArticle";
+import { ArticleBlockQuote } from "../../../components/ArticleBlockQuote";
 
 class Article implements IArticle {
     title = 'Culture Studies & Models';
@@ -8,10 +9,11 @@ class Article implements IArticle {
     author = 'Vivek Maharajh';
     introduction = <p>The summaries of three papers that explore the study of culture, and the models that emerge from it.</p>;
     sections = [
-        <section>            
-            <blockquote>“Your company's culture and your company's brand are really just two sides of the same coin. The brand may lag the culture at first, but eventually it will catch up. Your culture is your brand.”</blockquote>
-            <span>Tony Hsei, Zappos</span>
-        </section>,
+        <ArticleBlockQuote
+            quote="Your company's culture and your company's brand are really just two sides of the same coin. The brand may lag the culture at first, but eventually it will catch up. Your culture is your brand."
+            person="Tony Hsei"
+            personTitle="Zappos"
+        ></ArticleBlockQuote>,
         <section>
             <h1>Quesenbery, W., &amp; Szuc, D. (2012). Global UX: Design and research in a connected world. Waltham, MA: Morgan Kaufmann (Chaper 3)</h1>
             <p>Culture is best understood comparatively.</p>

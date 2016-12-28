@@ -15,7 +15,7 @@ export interface Props {
 
 export var Article: React.StatelessComponent<Props> = (props: Props) => {
     let store = new ArticleStore();
-    let article = store.getArticle(props.params.articleId);
+    let article = store.getArticle(props.params.articleId);    
     return (
         <div>        
             <Header></Header>
@@ -26,7 +26,7 @@ export var Article: React.StatelessComponent<Props> = (props: Props) => {
                         <p>{article.author}</p>
                         {article.introduction}
                     </header>
-                    {article.sections}
+                    { article.sections }
                 </article>
             </main>
         </div>
