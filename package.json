@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build && node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --content-base dist/ --progress --colors --inline",
-    "build-travis": "npm run build",
+    "build-travis": "npm run build && rimraf node_modules",
     "build" : "npm run copy && npm run bundle",
     "bundle": "./node_modules/.bin/webpack --progress -p --bail",
     "copy": "npm run clean && mkdirp dist && ncp index.html dist/index.html",
