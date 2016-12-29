@@ -12,7 +12,7 @@ module.exports = {
         ],
     },
     output: {
-        filename: "./dist/bundle.js",
+        filename: "./bundle.js",
     },
     plugins: [
         // Workaround for https://github.com/webpack/webpack/issues/708
