@@ -7,7 +7,7 @@ $space-between-back-and-edge: 0.5vw;
 header {
     nav {
         a{
-            @include font-h1();
+            @include type-h1();
             color: rgba(0,0,0,0);
             position: absolute;
             transform: translateX(-100%);

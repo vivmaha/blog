@@ -29,15 +29,32 @@
     @include font-weight-bold();
 }
 
-// Special cases
-@mixin font-h1 {
-    font-size: 32px;
-    line-height: 1.4;
-    @include font-serif-light();
+// The typeramp below was inspired by 
+// http://typecast.com/blog/a-more-modern-scale-for-web-typography
+
+@mixin responsive($key, $small, $medium, $large) {
+    @media (min-width: 0) {
+        #{$key}: #{$small};
+    }
+    @media (min-width:43.75em) {
+        #{$key}: #{$medium};
+    }
+    @media (min-width: 56.25em) {
+        #{$key}: #{$large};
+    }    
 }
 
-@mixin font-h2 {
-    font-size: 24px;
-    line-height: 1.4;
-    @include font-serif-light();
+@mixin type-h1 {    
+    @include responsive(font-size, 2em, 2.5em, 3em);
+    @include responsive(line-height, 1.25, 1.125, 1.05);
+}
+
+@mixin type-h2 {
+    @include responsive(font-size, 1.625em, 2em, 2.25em);
+    @include responsive(line-height, 1.15, 1.25, 1.05);
+}
+
+@mixin type-h3 {
+    @include responsive(font-size, 1.375em, 1.5em, 1.75em);
+    @include responsive(line-height, 1.14, 1.25, 1.25);
 }

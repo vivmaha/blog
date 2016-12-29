@@ -3,33 +3,30 @@
 @import "./fonts";
 @import "./transitions";
 
-$text-width: 33em;
-$page-margin-minimum: 2em;
-$text-font-size: 16px;
-
 body {
-    font-size: $text-font-size;
     margin: 4vw auto;
     // You should be able to read the line with eye movement only (no head movement).    
-    max-width: $text-width; 
-    @media (max-width:#{$text-width + 2 * $page-margin-minimum}) {
-        margin-left: 2em;
-        margin-right: 2em;
-    }
+    font-size: 16px;
+    max-width: 38em;
+    @include responsive(margin-left, 3em, auto, auto);
+    @include responsive(margin-right, 3em, auto, auto);
+    @include responsive(line-height, 1.25, 1.375, 1.375);    
     color: $color-text;
     background: $color-background;
 }
 
 h1 {
-    @include font-h1();
+    @include type-h1();
     margin: 0;
 }
 
 @mixin reading-styles() {
     @include font-serif();
-    font-size: $text-font-size;
-    margin: $text-font-size 0 $text-font-size 0;
-    line-height: 1.4;
+    margin: 1em 0 1em 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @include font-serif-regular();
 }
 
 p, span, dd, dt, blockquote {
@@ -66,12 +63,12 @@ a {
 article {
     header {
         h1 {
-            @include font-h1();
+            @include type-h1();
         }
     }
     section {
         h1 {
-            @include font-h2();
+            @include type-h2();
         }
     }
     section+section{
