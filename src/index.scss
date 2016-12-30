@@ -15,6 +15,12 @@ body {
     background: $color-background;
 }
 
+cite {
+    @include font-serif-regular();
+    @include responsive(font-size, .7em, .75em, .8em);
+    @include responsive(line-height, 1, 1, 1);
+}
+
 h1 {
     @include type-h1();
     margin: 0;
