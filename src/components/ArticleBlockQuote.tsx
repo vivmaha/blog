@@ -6,14 +6,15 @@ import "./ArticleBlockQuote.scss";
 export interface Props {
     quote: string;
     person: string;
-    personTitle: string;
+    personTitle?: string;
 }
 
 export var ArticleBlockQuote: React.StatelessComponent<Props> = (props: Props) => {
+    let titleString = props.personTitle ? `, ${props.personTitle}` : '';
     return (
         <section className="article-block-quote">
             <blockquote>{props.quote}</blockquote>
-            <p><strong>{props.person}</strong>, {props.personTitle}</p>
+            <p><strong>{props.person}</strong>{titleString}</p>
         </section>
     );
 }

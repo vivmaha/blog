@@ -44,6 +44,11 @@
     }    
 }
 
+@mixin type-body {
+    font-size: 16px;
+    @include responsive(line-height, 1.25, 1.375, 1.375);  
+}
+
 @mixin type-h1 {    
     @include responsive(font-size, 2em, 2.5em, 3em);
     @include responsive(line-height, 1.25, 1.125, 1.05);
@@ -57,4 +62,15 @@
 @mixin type-h3 {
     @include responsive(font-size, 1.375em, 1.5em, 1.75em);
     @include responsive(line-height, 1.14, 1.25, 1.25);
+}
+
+@mixin type-h4 {
+    @include font-weight-bold();
+    @include responsive(font-size, 1.125em, 1.125em, 1.125em);
+    @include responsive(line-height, 1.11, 1.22, 1.22);    
+}
+
+@mixin type-h5 {
+    @include font-weight-bold();
+    @include type-body();
 }

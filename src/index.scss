@@ -4,13 +4,12 @@
 @import "./transitions";
 
 body {
+    @include type-body();
     margin: 4vw auto;
-    // You should be able to read the line with eye movement only (no head movement).    
-    font-size: 16px;
+    // You should be able to read the line with eye movement only (no head movement).
     max-width: 38em;
     @include responsive(margin-left, 3em, auto, auto);
-    @include responsive(margin-right, 3em, auto, auto);
-    @include responsive(line-height, 1.25, 1.375, 1.375);    
+    @include responsive(margin-right, 3em, auto, auto);        
     color: $color-text;
     background: $color-background;
 }
@@ -75,6 +74,12 @@ article {
     section {
         h1 {
             @include type-h2();
+        }
+        h2 {            
+            @include type-h4();
+        }
+        h3 {
+            @include type-h5();
         }
     }
     header+section{
