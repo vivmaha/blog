@@ -24,7 +24,8 @@ export var Article: React.StatelessComponent<Props> = (props: Props) => {
                     <header>
                         <h1>{article.title}</h1>
                         <p>{article.author}</p>
-                        {article.introduction}
+                        {article.introductionPart1}
+                        {article.introductionPart2}
                     </header>
                     { article.sections }
                 </article>

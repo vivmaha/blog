@@ -13,7 +13,7 @@ export var ArticleBlockQuote: React.StatelessComponent<Props> = (props: Props) =
     return (
         <section className="article-block-quote">
             <blockquote>{props.quote}</blockquote>
-            <span><strong>{props.person}</strong>, {props.personTitle}</span>
+            <p><strong>{props.person}</strong>, {props.personTitle}</p>
         </section>
     );
 }

@@ -7,16 +7,14 @@
         }
         &::after {
             content: "”";
-        }
-        margin-top: 2em;
+        }        
         font-style: italic;
         margin-bottom: 0;
     }
-    &>span {
+    &>p {
         &::before{
             content: "—\00a0";
         }
-        margin-top: 0;
-        margin-bottom: 2em;
+        margin-top: 0.3em;
     }
 }

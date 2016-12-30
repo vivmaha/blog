@@ -71,6 +71,9 @@ article {
             @include type-h2();
         }
     }
+    header+section{
+        margin-top: 1em;
+    }
     section+section{
         margin-top: 2em;
     }
@@ -91,5 +94,10 @@ article {
        li {
            @include reading-styles();
        } 
+    }
+    hr {
+        width: 33%;        
+        border:0;
+        border-top: 1px solid $color-text;
     }
 }

@@ -7,15 +7,17 @@ class Article implements IArticle {
     date = new Date(2016, 10, 8);
     id = 'culture-studies-models';
     author = 'Vivek Maharajh';
-    introduction = <p>The summaries of three papers that explore the study of culture, and the models that emerge from it.</p>;
-    sections = [
+    introductionPart1 = <p>The summaries of three papers that explore the study of culture, and the models that emerge from it.</p>;
+    introductionPart2 = 
         <ArticleBlockQuote
             quote="Your company's culture and your company's brand are really just two sides of the same coin. The brand may lag the culture at first, but eventually it will catch up. Your culture is your brand."
             person="Tony Hsei"
             personTitle="Zappos"
-        ></ArticleBlockQuote>,
+        ></ArticleBlockQuote>;
+    sections = [
         <section>
-            <h1>Quesenbery, W., &amp; Szuc, D. (2012). Global UX: Design and research in a connected world. Waltham, MA: Morgan Kaufmann (Chaper 3)</h1>
+            <h1>Culture and UX</h1>
+            <cite>Quesenbery, W., &amp; Szuc, D. (2012). Global UX: Design and research in a connected world. Waltham, MA: Morgan Kaufmann (Chaper 3)</cite>
             <p>Culture is best understood comparatively.</p>
             <p>Culture changes more slowly than other aspects that we design for (eg. governance, infrastructure, commerce &amp; fashion).</p>
             <p>Strong cultural factors:</p>
@@ -33,7 +35,8 @@ class Article implements IArticle {
             <p>Language will be just as nuanced as culture, and you'll have to understand them both for a successful design.</p>
         </section>,
         <section>
-            <h1>Quesenbery, W., &amp; Szuc, D. (2012). Global UX: Design and research in a connected world. Waltham, MA: Morgan Kaufmann (Chaper 4)</h1>
+            <h1>Building Your Cultural Awareness</h1>
+            <cite>Quesenbery, W., &amp; Szuc, D. (2012). Global UX: Design and research in a connected world. Waltham, MA: Morgan Kaufmann (Chaper 4)</cite>
             <p>The following attitudes are helpful in developing global awareness:</p>
             <dl>
                 <dt>Constant challenges</dt>
@@ -56,7 +59,8 @@ class Article implements IArticle {
             </dl>
         </section>,
         <section>
-            <h1>Minkov, “The Concept of Culture”, Cross-Cultural Analysis (LA, London, Delhi: Sage, 2012): 9-17.</h1>
+            <h1>The Concept of Culture</h1>
+            <cite>Minkov, “The Concept of Culture”, Cross-Cultural Analysis (LA, London, Delhi: Sage, 2012): 9-17.</cite>
             <p>Culture is too complicated to define, but too important to ignore. There is wide variation in definitions across scholarly circles. Notably, there is disagreement between which aspects are part of culture, and which are extraneous. For example, is the wealth of a nation a part of its culture? Pick the definition that best fits your purpose and be sure to communicate this with your findings.</p>
             <p>When comparing cultures, you can use statistics control for objective variances in populations, such as age. The value of doing this depends on the purpose of your comparison.</p>
             <p>Classifications of definitions of Culture:</p>

@@ -7,15 +7,17 @@ class Article implements IArticle {
     date = new Date(2016, 10, 16);
     id = 'cultural-dimensions-design';
     author = 'Vivek Maharajh';
-    introduction = <p>The summaries of three papers that explore the dimensions of culture, and their impact on design.</p>;
-    sections = [
+    introductionPart1 = <p>The summaries of three papers that explore the dimensions of culture, and their impact on design.</p>;
+    introductionPart2 = 
         <ArticleBlockQuote
             quote="Once developers recognize that their own patterns of rationality are not universal, there is the possibility of designing new interfaces with more appeal to those voluntarily on the opposite side of the digital divide."
             person="Emilie W. Gould"
             personTitle="Rensselaer Polytechnic Institute"
-        ></ArticleBlockQuote>,
+        ></ArticleBlockQuote>;
+    sections = [        
         <section>
-            <h1>Gladwell, Malcolm: “The Ethnic Theory of PlaneCrashes” in Outliers. New York: Little, Brown andCompany, 2008. Chapter 7, pp. 177-223</h1>
+            <h1>The Ethnic Theory of Plane Crashes</h1>
+            <cite>Gladwell, Malcolm: “The Ethnic Theory of Plane Crashes” in Outliers. New York: Little, Brown andCompany, 2008. Chapter 7, pp. 177-223</cite>
             <p>It is tempting design with the happy path in mind, however this can lead to failures under extenuating circumstances.</p>
             <p>This reading made me wonder if users see UI as their pilot (superior) or first officer (inferior)? How much mitigation should UI use to communicate? This probably depends on the tolerance to error of the task. The designer must be mindful of this and balance comfortable with error avoidance.</p>
             <p>We can generalize populations, but we should expect individuals within these populations to exhibit variance.</p>
@@ -25,7 +27,8 @@ class Article implements IArticle {
             <p>It is tempting to ignore cultural differences for fear of offending someone. However ignoring our differences, our unique strengths and weaknesses, can lead to unsuitable designs.</p>
         </section>,
         <section>
-            <h1>Gould, Emilie: “Synthesizing the Literature of Cultural Values.”</h1>
+            <h1>Synthesizing the Literature on Cultural Values</h1>
+            <cite>Aykin, N. (2005). Usability and internationalization of information technology. Mahwah, NJ: Lawrence Erlbaum. (Chap. 4 Gould, Emilie)</cite>            
             <p>It is prohibitively costly to custom-tailor a product to every single culture. Instead, we classify similar groups of cultures and target these.</p>
             <p>The field of cultural anthropology is unsuitable for informing HCI because:</p>
             <ul>
@@ -54,7 +57,8 @@ class Article implements IArticle {
             <p>Gudykunst combined intra and inter cultural communications theory. When people first meet, they try to find similarities in background, then as the relationship developers, they explore personal traits, and the need for similarity decreases. His work also explored the multiple identities that persons adopt for subgroups that they belong to. This work can be applied to the first meeting between a user and software being designed by providing sufficient similarities for users to attach to and being attuned to when the user has gained sufficient trust in the system.</p>
         </section>,
         <section>
-            <h1>Gasparini, Pimenta, de Oliveira, “Vive la différence!: asurvey of cultural-aware issues in HCI”</h1>
+            <h1>Culural issues in HCI</h1>
+            <cite>Isabela Gasparini , Marcelo S. Pimenta , José Palazzo M. De Oliveira, Vive la différence!: a survey of cultural-aware issues in HCI, Proceedings of the 10th Brazilian Symposium on Human Factors in Computing Systems and the 5th Latin American Conference on Human-Computer Interaction, October 25-28, 2011, Porto de Galinhas, Pernambuco, Brazil</cite>
             <p>Internationalization instills flexibility into the technical  and design infrastructure, so that it can be cheaply adapted to various cultures.</p> 
             <p>Localization adapts the product for a specific culture. Is successful, it will feel as if the product was developed in that culture. This goes beyond translating text — it includes changing metaphors and adapting the visual design.</p>
             <p>With globalization, companies providing software must localize for more and more markets. At the same time, more and more individuals are becoming global citizens via physical travel, or media that crosses cultural bounds.</p>
