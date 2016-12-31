@@ -6,7 +6,6 @@ class Article implements IArticle {
     title = 'Culture Studies & Models';
     date = new Date(2016, 10, 8);
     id = 'culture-studies-models';
-    author = 'Vivek Maharajh';
     introductionPart1 = <p>The summaries of three papers that explore the study of culture, and the models that emerge from it.</p>;
     introductionPart2 = 
         <ArticleBlockQuote

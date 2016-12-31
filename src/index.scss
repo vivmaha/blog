@@ -25,17 +25,12 @@ h1 {
     margin: 0;
 }
 
-@mixin reading-styles() {
-    @include font-serif();
-    margin: 1em 0 1em 0;
-}
-
 h1, h2, h3, h4, h5, h6 {
     @include font-serif-regular();
 }
 
 p, span, dd, dt, blockquote {
-    @include reading-styles();
+    @include type-p();
 }
 
 strong {
@@ -62,53 +57,5 @@ a {
             opacity: 1;
             transform: translateX(-100%);
         }
-    }
-}
-
-article {
-    header {
-        h1 {
-            @include type-h1();
-        }
-    }
-    section {
-        h1 {
-            @include type-h2();
-        }
-        h2 {            
-            @include type-h4();
-        }
-        h3 {
-            @include type-h5();
-        }
-    }
-    header+section{
-        margin-top: 1em;
-    }
-    section+section{
-        margin-top: 2em;
-    }
-    dl {
-        margin-left: 2em;
-        &>dt {
-            @include font-weight-bold();
-            margin-bottom: 0;
-        }
-        &>dd {
-            margin-top: 0;
-        }
-    }
-    dl, ul {        
-        margin-left: 2em;        
-    }
-    ul {
-       li {
-           @include reading-styles();
-       } 
-    }
-    hr {
-        width: 33%;        
-        border:0;
-        border-top: 1px solid $color-text;
     }
 }

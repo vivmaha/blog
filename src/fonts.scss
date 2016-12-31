@@ -44,6 +44,11 @@
     }    
 }
 
+@mixin type-p {    
+    @include font-serif();
+    margin: 1em 0 1em 0;
+}
+
 @mixin type-body {
     font-size: 16px;
     @include responsive(line-height, 1.25, 1.375, 1.375);  

@@ -1,0 +1,48 @@
+@import "../fonts";
+
+article {
+    header {
+        h1 {
+            @include type-h1();
+            &+p{
+                margin-top: 0;
+                opacity: 0.5;
+            }
+        }
+    }
+    section {
+        h1 {
+            @include type-h2();
+        }
+        h2 {            
+            @include type-h4();
+        }
+        h3 {
+            @include type-h5();
+        }
+    }
+    header+section{
+        margin-top: 1em;
+    }
+    section+section{
+        margin-top: 2em;
+    }
+    dl {
+        margin-left: 2em;
+        &>dt {
+            @include font-weight-bold();
+            margin-bottom: 0;
+        }
+        &>dd {
+            margin-top: 0;
+        }
+    }
+    dl, ul {        
+        margin-left: 2em;        
+    }
+    ul {
+       li {
+           @include type-p();
+       } 
+    }
+}

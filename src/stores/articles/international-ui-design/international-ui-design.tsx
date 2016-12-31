@@ -6,7 +6,6 @@ class Article implements IArticle {
     title = 'Internation UI Design';
     date = new Date(2016, 10, 22);
     id = 'international-ui-design';
-    author = 'Vivek Maharajh';
     introductionPart1 = <p>The summaries of two papers that explore the design of UI for international audiences.</p>;
     introductionPart2 = 
         <ArticleBlockQuote

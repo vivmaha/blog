@@ -6,7 +6,6 @@ class Article implements IArticle {
     title = 'Cultural Dimensions & Design';
     date = new Date(2016, 10, 16);
     id = 'cultural-dimensions-design';
-    author = 'Vivek Maharajh';
     introductionPart1 = <p>The summaries of three papers that explore the dimensions of culture, and their impact on design.</p>;
     introductionPart2 = 
         <ArticleBlockQuote
