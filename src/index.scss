@@ -15,9 +15,12 @@ body {
 }
 
 cite {
+    display: inline-block;
+    margin-top: 1em;
+    line-height: 2;
     @include font-serif-regular();
     @include responsive(font-size, .7em, .75em, .8em);
-    @include responsive(line-height, 1, 1, 1);
+    @include responsive(line-height, 1.2, 1.2, 1.2);
 }
 
 h1 {
