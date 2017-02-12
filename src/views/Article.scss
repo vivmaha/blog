@@ -1,4 +1,5 @@
 @import "../fonts";
+@import "../colors";
 
 article {
     header {
@@ -41,8 +42,18 @@ article {
         margin-left: 2em;        
     }
     ul {
+       position: relative;
        li {
            @include type-p();
-       } 
+       }
+       &::after {
+           top:0;
+           left:-1em;           
+           background-color: $color-text-secondary;
+           height: 100%;
+           width: 1px;
+           position: absolute;
+           content:"";
+       }
     }
 }

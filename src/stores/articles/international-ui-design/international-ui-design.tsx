@@ -3,7 +3,7 @@ import { IArticle } from "../../../models/IArticle";
 import { ArticleBlockQuote } from "../../../components/ArticleBlockQuote";
 
 class Article implements IArticle {
-    title = 'Internation UI Design';
+    title = 'International UI Design';
     date = new Date(2016, 10, 22);
     id = 'international-ui-design';
     introductionPart1 = <p>The summaries of two papers that explore the design of UI for international audiences.</p>;
