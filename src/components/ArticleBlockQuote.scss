@@ -1,6 +1,9 @@
 @import "../fonts";
 
 .article-block-quote {
+    &:not(:first-child) {
+        margin-top: 1em;
+    }
     &>blockquote{
         &::before {
             content: "“";

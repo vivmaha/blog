@@ -3,10 +3,10 @@ import { IArticle } from "../../../models/IArticle";
 import { ArticleBlockQuote } from "../../../components/ArticleBlockQuote";
 
 class Article implements IArticle {
-    title = 'International UI Design';
+    title = 'International Design';
     date = new Date(2016, 10, 22);
     id = 'international-ui-design';
-    introductionPart1 = <p>The summaries of two papers that explore the design of UI for international audiences.</p>;
+    introductionPart1 = "The summaries of two papers that explore the design of UI for international audiences.";
     introductionPart2 = 
         <ArticleBlockQuote
             quote="It is arrogant of us to think we can create images that will have the same precise meaning to everyone everywhere."

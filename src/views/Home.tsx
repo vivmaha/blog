@@ -14,7 +14,7 @@ export var Home: React.StatelessComponent<Props> = (props: Props) => {
     return (
         <main className="home">
             <h1>Notes by V</h1>
-            <p>A place to store my notes.</p>
+            <p className="no-margin-top">A place to store my notes.</p>
             <ol>{
                 articles.map(article => 
                     <li key={article.id}>

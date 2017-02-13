@@ -2,10 +2,12 @@ import { IArticle } from "../models/IArticle";
 import articleCultureStudiesModels from './articles/culture-studies-models/culture-studies-models';
 import articleCulturalDimensionsDesign from './articles/cultural-dimensions-design/cultural-dimensions-design';
 import articleInternationalUIDesign from './articles/international-ui-design/international-ui-design';
+import articleInternationalResearch from './articles/international-research/international-research';
 
 export class ArticleStore {    
 
     private articles : IArticle[] = [
+        articleInternationalResearch,
         articleInternationalUIDesign,
         articleCulturalDimensionsDesign,
         articleCultureStudiesModels,

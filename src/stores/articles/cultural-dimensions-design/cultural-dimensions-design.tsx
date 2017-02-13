@@ -3,10 +3,10 @@ import { IArticle } from "../../../models/IArticle";
 import { ArticleBlockQuote } from "../../../components/ArticleBlockQuote";
 
 class Article implements IArticle {
-    title = 'Cultural Dimensions & Design';
+    title = 'Culture and UX (Part 2)';
     date = new Date(2016, 10, 16);
     id = 'cultural-dimensions-design';
-    introductionPart1 = <p>The summaries of three papers that explore the dimensions of culture, and their impact on design.</p>;
+    introductionPart1 = "The summaries of three papers that explore the dimensions of culture, and their impact on design.";
     introductionPart2 = 
         <ArticleBlockQuote
             quote="Once developers recognize that their own patterns of rationality are not universal, there is the possibility of designing new interfaces with more appeal to those voluntarily on the opposite side of the digital divide."

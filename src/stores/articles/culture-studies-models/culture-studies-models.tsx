@@ -3,10 +3,10 @@ import { IArticle } from "../../../models/IArticle";
 import { ArticleBlockQuote } from "../../../components/ArticleBlockQuote";
 
 class Article implements IArticle {
-    title = 'Culture Studies & Models';
+    title = 'Culture and UX (Part 1)';
     date = new Date(2016, 10, 8);
     id = 'culture-studies-models';
-    introductionPart1 = <p>The summaries of three papers that explore the study of culture, and the models that emerge from it.</p>;
+    introductionPart1 = "The summaries of three papers that explore the study of culture, and the models that emerge from it.";
     introductionPart2 = 
         <ArticleBlockQuote
             quote="Your company's culture and your company's brand are really just two sides of the same coin. The brand may lag the culture at first, but eventually it will catch up. Your culture is your brand."

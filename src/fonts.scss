@@ -44,38 +44,52 @@
     }    
 }
 
-@mixin type-p {    
+@mixin type-base() {
+    &:not(:first-child):not(.no-margin-top) {
+        margin-top: 1em;
+    }
+}
+
+@mixin type-p {
+    @include type-base();
     @include font-serif();
-    margin: 1em 0 1em 0;
 }
 
 @mixin type-body {
+    @include type-base();
     font-size: 16px;
     @include responsive(line-height, 1.25, 1.375, 1.375);  
 }
 
 @mixin type-h1 {    
+    @include type-base();
     @include responsive(font-size, 2em, 2.5em, 3em);
-    @include responsive(line-height, 1.25, 1.125, 1.05);
+    @include responsive(line-height, 1.25, 1.125, 1.125);
+    
 }
 
 @mixin type-h2 {
+    @include type-base();
     @include responsive(font-size, 1.625em, 2em, 2.25em);
-    @include responsive(line-height, 1.15, 1.25, 1.05);
+    @include responsive(line-height, 1.15, 1.25, 1.125);    
 }
 
 @mixin type-h3 {
+    @include type-base();
     @include responsive(font-size, 1.375em, 1.5em, 1.75em);
-    @include responsive(line-height, 1.14, 1.25, 1.25);
+    @include responsive(line-height, 1.14, 1.25, 1.25);    
 }
 
 @mixin type-h4 {
+    @include type-base();
     @include font-weight-bold();
     @include responsive(font-size, 1.125em, 1.125em, 1.125em);
-    @include responsive(line-height, 1.11, 1.22, 1.22);    
+    @include responsive(line-height, 1.11, 1.22, 1.22);
+ 
 }
 
 @mixin type-h5 {
+    @include type-base();
     @include font-weight-bold();
     @include type-body();
 }
