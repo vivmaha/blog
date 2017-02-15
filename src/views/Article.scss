@@ -43,6 +43,13 @@ article {
     }
     ul {
        position: relative;
+       /* We use both margin and padding so that
+          1) The vertical line adornment starts halfway between the previous line
+             the first item in the list.
+          2) The first line in the list starts 1em lower than the preceeding div.
+       */
+       margin-top: 0.5em;
+       padding-top: 0.5em;
        li {
            @include type-p();
        }

@@ -14,7 +14,7 @@ export var ArticleBlockQuote: React.StatelessComponent<Props> = (props: Props) =
     return (
         <section className="article-block-quote">
             <blockquote>{props.quote}</blockquote>
-            <p><strong>{props.person}</strong>{titleString}</p>
+            <p className="no-margin-top"><strong>{props.person}</strong>{titleString}</p>
         </section>
     );
 }
