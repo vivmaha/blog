@@ -8,6 +8,7 @@ deploy:
   # password uses travis environment variable AZURE_WA_PASSWORD
   # site uses travis environment variable AZURE_WA_SITE
   skip_cleanup: true
+  verbose: true
   on:
     branch: master
 env:
