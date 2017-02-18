@@ -4,9 +4,9 @@ node_js:
 before_deploy: "rm -rf node_modules"
 deploy:
   provider: azure_web_apps
-  username: vivmaha
-  # password: Uses travis environment variable AZURE_WA_PASSWORD
-  site: notesbyv
+  # username uses travis environment variable AZURE_WA_USERNAME
+  # password uses travis environment variable AZURE_WA_PASSWORD
+  # site uses travis environment variable AZURE_WA_SITE
   skip_cleanup: true
   on:
     branch: master
