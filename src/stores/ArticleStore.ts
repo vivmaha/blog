@@ -3,10 +3,11 @@ import articleCultureStudiesModels from './articles/culture-studies-models/cultu
 import articleCulturalDimensionsDesign from './articles/cultural-dimensions-design/cultural-dimensions-design';
 import articleInternationalUIDesign from './articles/international-ui-design/international-ui-design';
 import articleInternationalResearch from './articles/international-research/international-research';
-
+import articleTranslationLocalization from './articles/translation-localization/translation-localization';
 export class ArticleStore {    
 
     private articles : IArticle[] = [
+        articleTranslationLocalization,
         articleInternationalResearch,
         articleInternationalUIDesign,
         articleCulturalDimensionsDesign,
