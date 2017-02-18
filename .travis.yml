@@ -21,3 +21,5 @@ addons:
     - g++-4.8
 before_script:
   - npm run build-travis
+  - git fetch --unshallow || true
+  - git fetch origin "+refs/heads/*:refs/remotes/origin/*"
