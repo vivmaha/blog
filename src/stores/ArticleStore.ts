@@ -5,10 +5,11 @@ import articleInternationalUIDesign from './articles/international-ui-design/int
 import articleInternationalResearch from './articles/international-research/international-research';
 import articleTranslationLocalization from './articles/translation-localization/translation-localization';
 import articleDevelopingEmergingEconomies from './articles/developing-emerging-economies/developing-emerging-economies';
-
+import articleCrossCulturalTeams  from './articles/cross-cultural-teams/cross-cultural-teams';
 export class ArticleStore {    
 
     private articles : IArticle[] = [
+        articleCrossCulturalTeams,
         articleDevelopingEmergingEconomies,
         articleTranslationLocalization,
         articleInternationalResearch,

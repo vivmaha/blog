@@ -3,7 +3,7 @@ import { IArticle } from "../../../models/IArticle";
 import { ArticleBlockQuote } from "../../../components/ArticleBlockQuote";
 
 class Article implements IArticle {
-    title = 'Design and Emerging Economies';
+    title = 'Design for Emerging Economies';
     date = new Date(2016, 10, 19);
     id = 'developing-emerging-economies';
     introductionPart1 = "The summaries of four papers that explore design for emerging economies.";
