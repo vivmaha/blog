@@ -4,9 +4,12 @@ import articleCulturalDimensionsDesign from './articles/cultural-dimensions-desi
 import articleInternationalUIDesign from './articles/international-ui-design/international-ui-design';
 import articleInternationalResearch from './articles/international-research/international-research';
 import articleTranslationLocalization from './articles/translation-localization/translation-localization';
+import articleDevelopingEmergingEconomies from './articles/developing-emerging-economies/developing-emerging-economies';
+
 export class ArticleStore {    
 
     private articles : IArticle[] = [
+        articleDevelopingEmergingEconomies,
         articleTranslationLocalization,
         articleInternationalResearch,
         articleInternationalUIDesign,
