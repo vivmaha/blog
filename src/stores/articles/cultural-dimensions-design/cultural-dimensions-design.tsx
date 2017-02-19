@@ -4,7 +4,7 @@ import { ArticleBlockQuote } from "../../../components/ArticleBlockQuote";
 
 class Article implements IArticle {
     title = 'Culture and UX (Part 2)';
-    date = new Date(2016, 10, 16);
+    date = new Date(2016, 9, 16);
     id = 'cultural-dimensions-design';
     introductionPart1 = "The summaries of three papers that explore the dimensions of culture, and their impact on design.";
     introductionPart2 = 

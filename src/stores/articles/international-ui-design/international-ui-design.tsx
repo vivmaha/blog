@@ -4,7 +4,7 @@ import { ArticleBlockQuote } from "../../../components/ArticleBlockQuote";
 
 class Article implements IArticle {
     title = 'International Design';
-    date = new Date(2016, 10, 22);
+    date = new Date(2016, 9, 22);
     id = 'international-ui-design';
     introductionPart1 = "The summaries of two papers that explore the design of UI for international audiences.";
     introductionPart2 = 

@@ -4,7 +4,7 @@ import { ArticleBlockQuote } from "../../../components/ArticleBlockQuote";
 
 class Article implements IArticle {
     title = 'Translation and Localization';
-    date = new Date(2016, 11, 13);
+    date = new Date(2016, 10, 13);
     id = 'translation-localization';
     introductionPart1 = "The summaries of three chapters that explore the nuances of language across cultures.";
     introductionPart2 = 

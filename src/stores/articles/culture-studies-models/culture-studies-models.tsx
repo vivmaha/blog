@@ -4,7 +4,7 @@ import { ArticleBlockQuote } from "../../../components/ArticleBlockQuote";
 
 class Article implements IArticle {
     title = 'Culture and UX (Part 1)';
-    date = new Date(2016, 10, 8);
+    date = new Date(2016, 9, 8);
     id = 'culture-studies-models';
     introductionPart1 = "The summaries of three papers that explore the study of culture, and the models that emerge from it.";
     introductionPart2 = 

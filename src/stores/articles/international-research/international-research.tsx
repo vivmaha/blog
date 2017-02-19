@@ -4,7 +4,7 @@ import { ArticleBlockQuote } from "../../../components/ArticleBlockQuote";
 
 class Article implements IArticle {
     title = 'International Research';
-    date = new Date(2016, 11, 6);
+    date = new Date(2016, 10, 6);
     id = 'international-research';
     introductionPart1 = "The summaries of two papers that explore international User Research.";
     introductionPart2 = 
