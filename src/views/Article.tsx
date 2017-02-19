@@ -19,7 +19,7 @@ export var Article: React.StatelessComponent<Props> = (props: Props) => {
     let article = store.getArticle(props.params.articleId);    
     let friendlyDate = Moment(article.date).format("MMM Do, YYYY");
     return (
-        <div>        
+        <div className="body-container">
             <Header></Header>
             <main>
                 <article>

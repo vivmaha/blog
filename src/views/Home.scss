@@ -1,9 +1,45 @@
+@import "../transitions";
+@import "../fonts";
+@import "../colors";
 .home {
+    background: $color-background;
+    $border: 20px;
+    $shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.2), 0 -6px 20px 0 rgba(0, 0, 0, 0.19);
+    .banner {
+        background-image: url('https://notesbyvmedia.blob.core.windows.net/images/pen-idea-bulb-paper.jpg');
+        background-position: center;
+        z-index: -1;
+        position: fixed;
+        background-size: cover;
+        left:0;
+        top: 0;
+        height: 70vh;
+        width: 100vw;
+        transition: opacity $transition-theatric-function;
+        box-shadow: 0px -7px 21px -5px rgba(0,0,0,0.75);
+        &>.banner-title {
+            transform: none;
+            transition: opacity $transition-theatric-function;
+            margin-top: 35vh;
+            transform: translateY(-50%);
+            border: $border solid $color-background;
+            box-shadow: $shadow;
+        }
+    }
+    box-shadow: $shadow;
     &>ol{
-        margin-top: 40px;
+        margin-top: 70vh;
+        border-top: $border solid white;
         &>li:not(:last-child){
             &>.article-summary{
                 margin-bottom: 2em;
+            }
+        }
+    }
+    &.collapsed {
+        &>.banner {
+            &>.banner-title {
+                opacity: 0;
             }
         }
     }

@@ -58,7 +58,7 @@
 @mixin type-body {
     @include type-base();
     font-size: 16px;
-    @include responsive(line-height, 1.25, 1.375, 1.375);  
+    @include responsive(line-height, 1.25, 1.375, 1.375);
 }
 
 @mixin type-h1 {    

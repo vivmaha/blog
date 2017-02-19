@@ -20,6 +20,7 @@ header {
             &::after {
                 color: $color-text;
                 transition: transform $transition-function;
+                font-family: "Times New Roman";
                 content: "←\00a0";
                 position: absolute;
                 right: 0;
