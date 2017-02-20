@@ -27,7 +27,10 @@ history.listen(location => {
 
 ReactDOM.render(
     (
-        /* TODO: When you deploy this to a real server, you have to setup URL redirection, so that everythign gets redirected to index.html */
+        /**
+         * Since this page handles all routing, the web server has to be configured to 
+         * redirect all page requests to this page instead. This is done in the web.config
+         */
         <ReactRouter.Router history={history}>
             <ReactRouter.Route path="/" component={Home} />
             <ReactRouter.Route path="/article/:articleId" component={Article} />
