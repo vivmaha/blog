@@ -1,3 +1,4 @@
+import * as Helmet from "react-helmet";
 import * as React from "react";
 import { IArticle } from "../models/IArticle";
 import { ArticleSummary } from "../components/ArticleSummary";
@@ -39,21 +40,22 @@ export class Home extends React.Component<Props, State> {
     public render() {
         let className = `home ${this.state.IsCollapsed ? 'collapsed' : ''}`;
         return (
-            <main className={className}>
-                <div className="banner">
-                    <div className="banner-title body-container">
-                        <h1 className="no-margin-top">Notes by V</h1>
-                        <p className="no-margin-top">A place to store my notes.</p>
-                    </div>
-                </div>                
-                <ol className='body-container no-margin-top'>{
-                    this.state.Articles.map(article => 
-                        <li key={article.id}>
-                            <ArticleSummary {...article}/>
-                        </li>
-                    )
-                }</ol>
-            </main>
+                <main className={className}>
+                    <Helmet title="Notes by V"/>
+                    <div className="banner">
+                        <div className="banner-title body-container">
+                            <h1 className="no-margin-top">Notes by V</h1>
+                            <p className="no-margin-top">A place to store my notes.</p>
+                        </div>
+                    </div>                
+                    <ol className='body-container no-margin-top'>{
+                        this.state.Articles.map(article => 
+                            <li key={article.id}>
+                                <ArticleSummary {...article}/>
+                            </li>
+                        )
+                    }</ol>
+                </main>
         );
     }
 }

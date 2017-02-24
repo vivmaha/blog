@@ -1,3 +1,4 @@
+import * as Helmet from "react-helmet";
 import * as Moment from "moment";
 import * as React from "react";
 import * as ReactRouter from 'react-router';
@@ -20,6 +21,7 @@ export var Article: React.StatelessComponent<Props> = (props: Props) => {
     let friendlyDate = Moment(article.date).format("MMM Do, YYYY");
     return (
         <div className="body-container">
+            <Helmet title={article.title}/>
             <Header></Header>
             <main>
                 <article>
