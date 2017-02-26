@@ -1,6 +1,5 @@
 var webpackFailPlugin = require('webpack-fail-plugin');
 var webpack = require('webpack');
-var webpackBundleAnalyzer = require('webpack-bundle-analyzer')
 
 const PRODUCTION = process.env.NODE_ENV === 'production';
 
