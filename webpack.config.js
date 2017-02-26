@@ -34,7 +34,10 @@ module.exports = {
     output: {
         filename: "./bundle.js",
     },
-    plugins: plugins,
+    plugins: plugins.concat([
+        // Workaround for https://github.com/moment/moment/issues/1435
+        new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en$/),
+    ]),
     resolve: {
         extensions: ["", ".webpack.js", ".web.js", ".ts", ".tsx", ".js"],
     },
