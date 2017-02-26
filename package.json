@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --progress --colors --inline",
-    "build-travis": "SET \"NODE_ENV=production\" && webpack --progress -p --bail"
+    "build-travis": "cross-env NODE_ENV=production webpack --progress -p --bail"
   },
   "author": "vivek maharajh",
   "license": "ISC",
@@ -16,6 +16,7 @@
     "@types/react-dom": "^0.14.17",
     "@types/react-helmet": "0.0.28",
     "@types/react-router": "^2.0.38",
+    "cross-env": "^3.1.4",
     "css-loader": "^0.25.0",
     "fs-extra": "^1.0.0",
     "history": "^4.4.0",
