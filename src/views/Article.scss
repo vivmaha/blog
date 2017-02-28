@@ -12,6 +12,7 @@ article {
         }
     }
     section {
+        margin-top: 2em;
         h1 {
             @include type-h2();
         }
@@ -21,12 +22,6 @@ article {
         h3 {
             @include type-h5();
         }
-    }
-    header+section{
-        margin-top: 1em;
-    }
-    section+section{
-        margin-top: 2em;
     }
     dl {
         margin-left: 2em;
