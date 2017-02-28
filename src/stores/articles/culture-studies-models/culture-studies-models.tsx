@@ -3,10 +3,10 @@ import { IArticle } from "../../../models/IArticle";
 import { ArticleBlockQuote } from "../../../components/ArticleBlockQuote";
 
 class Article implements IArticle {
-    title = 'Culture and UX (Part 1)';
+    title = 'Cultural Awareness';
     date = new Date(2016, 9, 8);
-    id = 'culture-studies-models';
-    introductionPart1 = "The summaries of three papers that explore the study of culture, and the models that emerge from it.";
+    id = 'cultural-awareness';
+    introductionPart1 = "Global design demands cultural awareness. In this article I look at techniques for developing cultural awareness. However, we first have to fully understand the meaning of ‘culture’.";
     introductionPart2 = 
         <ArticleBlockQuote
             quote="Your company's culture and your company's brand are really just two sides of the same coin. The brand may lag the culture at first, but eventually it will catch up. Your culture is your brand."
@@ -14,6 +14,22 @@ class Article implements IArticle {
             personTitle="Zappos"
         ></ArticleBlockQuote>;
     sections = [
+        <section>
+            <h1>The Concept of Culture</h1>
+            <cite>Minkov, “The Concept of Culture”, Cross-Cultural Analysis (LA, London, Delhi: Sage, 2012): 9-17.</cite>
+            <p>Culture is too complicated to define, but too important to ignore. There is wide variation in definitions across scholarly circles. Notably, there is disagreement between which aspects are part of culture, and which are extraneous. For example, is the wealth of a nation a part of its culture? Pick the definition that best fits your purpose and be sure to communicate this with your findings.</p>
+            <p>When comparing cultures, you can use statistics control for objective variances in populations, such as age. The value of doing this depends on the purpose of your comparison.</p>
+            <p>Classifications of definitions of Culture:</p>
+            <dl>
+                <dt>Subjective vs. Objective</dt>
+                <dd>We can view culture as an intrinsic quality of people (subjective), or as the artifacts created by people (objective). These artifacts can be physical, such as buildings, and also intangible, such as marriage structures.</dd>
+                <dt>Behaviors vs. Meanings</dt>
+                <dd>We can view culture as behaviors exhibited by a group, or by the meanings of those behaviors. The latter view has gained popularity.</dd>
+                <dt>Independent vs. Human</dt>
+                <dd>These classifications disagree on whether or not culture should be studied in context of humans, or as an independent phenomenon.</dd>
+                <dd>The disagreement is not about the uniqueness of culture to mankind. It is about whether humans are capable of studying it independently from human contexts.</dd>
+            </dl>
+        </section>,
         <section>
             <h1>Culture and UX</h1>
             <cite>Quesenbery, W., &amp; Szuc, D. (2012). Global UX: Design and research in a connected world. Waltham, MA: Morgan Kaufmann (Chaper 3)</cite>
@@ -55,22 +71,6 @@ class Article implements IArticle {
                 <dd>Learn the language. Aside from the utility of easy communication, the language reveals cultural subtleties.</dd>
                 <dt>Proxy</dt>
                 <dd>As a last resort, if you're unable to travel, you can get to know someone who originates from that culture, or even someone who has been thru the immersion process in that culture. Be mindful that the person's experiences may be reflective of an older time period of that culture.</dd>
-            </dl>
-        </section>,
-        <section>
-            <h1>The Concept of Culture</h1>
-            <cite>Minkov, “The Concept of Culture”, Cross-Cultural Analysis (LA, London, Delhi: Sage, 2012): 9-17.</cite>
-            <p>Culture is too complicated to define, but too important to ignore. There is wide variation in definitions across scholarly circles. Notably, there is disagreement between which aspects are part of culture, and which are extraneous. For example, is the wealth of a nation a part of its culture? Pick the definition that best fits your purpose and be sure to communicate this with your findings.</p>
-            <p>When comparing cultures, you can use statistics control for objective variances in populations, such as age. The value of doing this depends on the purpose of your comparison.</p>
-            <p>Classifications of definitions of Culture:</p>
-            <dl>
-                <dt>Subjective vs. Objective</dt>
-                <dd>We can view culture as an intrinsic quality of people (subjective), or as the artifacts created by people (objective). These artifacts can be physical, such as buildings, and also intangible, such as marriage structures.</dd>
-                <dt>Behaviors vs. Meanings</dt>
-                <dd>We can view culture as behaviors exhibited by a group, or by the meanings of those behaviors. The latter view has gained popularity.</dd>
-                <dt>Independent vs. Human</dt>
-                <dd>These classifications disagree on whether or not culture should be studied in context of humans, or as an independent phenomenon.</dd>
-                <dd>The disagreement is not about the uniqueness of culture to mankind. It is about whether humans are capable of studying it independently from human contexts.</dd>
             </dl>
         </section>
     ];

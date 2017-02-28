@@ -3,10 +3,10 @@ import { IArticle } from "../../../models/IArticle";
 import { ArticleBlockQuote } from "../../../components/ArticleBlockQuote";
 
 class Article implements IArticle {
-    title = 'International Research';
+    title = 'Global User Research';
     date = new Date(2016, 10, 6);
-    id = 'international-research';
-    introductionPart1 = "The summaries of two papers that explore international User Research.";
+    id = 'global-user-research';
+    introductionPart1 = "Global User Resarch is hard. In this post, we look at tips from seasoned veterans for conducting a insightful global user study, and delivering compelling results to the product team."
     introductionPart2 = 
         <ArticleBlockQuote
             quote="Let them teach you"

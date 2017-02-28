@@ -3,10 +3,10 @@ import { IArticle } from "../../../models/IArticle";
 import { ArticleBlockQuote } from "../../../components/ArticleBlockQuote";
 
 class Article implements IArticle {
-    title = 'Culture and UX (Part 2)';
+    title = 'How Culture Became Part of UX';
     date = new Date(2016, 9, 16);
-    id = 'cultural-dimensions-design';
-    introductionPart1 = "The summaries of three papers that explore the dimensions of culture, and their impact on design.";
+    id = 'how-culture-became-part-of-ux';
+    introductionPart1 = "Experiences in the field have proven that culture is a key factor of UX. In this article we look at one such example, and how the field of UX has evolved to incorporate culture.";
     introductionPart2 = 
         <ArticleBlockQuote
             quote="Once developers recognize that their own patterns of rationality are not universal, there is the possibility of designing new interfaces with more appeal to those voluntarily on the opposite side of the digital divide."

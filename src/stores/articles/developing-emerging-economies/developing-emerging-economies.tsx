@@ -5,8 +5,8 @@ import { ArticleBlockQuote } from "../../../components/ArticleBlockQuote";
 class Article implements IArticle {
     title = 'Design for Emerging Economies';
     date = new Date(2016, 10, 19);
-    id = 'developing-emerging-economies';
-    introductionPart1 = "The summaries of four papers that explore design for emerging economies.";
+    id = 'developing-for-emerging-economies';
+    introductionPart1 = "Companies are increasinly expanding into untapped markets of emerging economies. This post reflects on the successes and failures of a few of these endeavours.";
     introductionPart2 = 
         <ArticleBlockQuote
             quote="The usual approach is to strip the product of features until a semblance of affordability is attained. The trouble is that the emerging consumer, for whom every act of discretionaryconsumption is an act of sacrificing something essential, is looking to be seduced rather than patronized"

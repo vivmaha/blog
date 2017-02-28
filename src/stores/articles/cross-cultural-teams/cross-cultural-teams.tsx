@@ -6,7 +6,7 @@ class Article implements IArticle {
     title = 'Cross-Cultural Teams';
     date = new Date(2016, 10, 25);
     id = 'cross-cultural-teams';
-    introductionPart1 = "The summaries of two papers that explore working with cross-cultural teams.";
+    introductionPart1 = "Working on a global product is usually accompanied with a global workforce. This post explores the dynamics of diverse work spaces.";
     introductionPart2 = 
         <ArticleBlockQuote
             quote="The Japanese have a saying: ‘The nail that sticks up must be hammered down,’ implying that individualism must be crushed and frustrated. This isn’t so — individual effort and initiative are appreciated in Japanese business — but they need to be coordinated in a team effort. This eans that a lot of time is spent in collective discussion, and decisions are made through the process known as nemawashi (binding the roots)."

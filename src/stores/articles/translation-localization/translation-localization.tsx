@@ -3,10 +3,10 @@ import { IArticle } from "../../../models/IArticle";
 import { ArticleBlockQuote } from "../../../components/ArticleBlockQuote";
 
 class Article implements IArticle {
-    title = 'Translation and Localization';
+    title = 'Language and Power';
     date = new Date(2016, 10, 13);
-    id = 'translation-localization';
-    introductionPart1 = "The summaries of three chapters that explore the nuances of language across cultures.";
+    id = 'language-power';
+    introductionPart1 = "Localization and translation are standard for global products. This post explores power dynamics between languages that translators should be mindful of.";
     introductionPart2 = 
         <ArticleBlockQuote
             quote="However great our future writers may be, their fame will never succeed in crossing beyond our borders … And so I would like to suggest to the public spirited men of the world that they engage themselves in the writing of English … In this day and age, it is self-evident that a man with great ambitions should study English writing. Study it, and strive, by using the language, to make his glory shine abroad. There is nothing great about a fame solely garnered in the context of this pathetic string of islands"

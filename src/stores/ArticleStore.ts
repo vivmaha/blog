@@ -12,8 +12,8 @@ export class ArticleStore {
         articleCrossCulturalTeams,
         articleDevelopingEmergingEconomies,
         articleTranslationLocalization,
-        articleInternationalResearch,
         articleInternationalUIDesign,
+        articleInternationalResearch,        
         articleCulturalDimensionsDesign,
         articleCultureStudiesModels,
     ];
