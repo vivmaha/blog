@@ -1,7 +1,6 @@
 import * as Helmet from "react-helmet";
 import * as Moment from "moment";
 import * as React from "react";
-import * as ReactRouter from 'react-router';
 import { ArticleStore } from "../stores/ArticleStore";
 import { Header } from "../components/Header";
 

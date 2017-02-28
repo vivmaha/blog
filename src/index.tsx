@@ -1,15 +1,13 @@
 import * as React from "react";
-import * as ReactDOM from "react-dom";
-import * as ReactRouter from "react-router";
+import { render } from "react-dom";
+import { Router, Route, browserHistory } from "react-router";
 
 import { Home } from "./views/Home";
 import { Article } from "./views/Article";
 
 import "./index.scss";
 
-var history = ReactRouter.browserHistory;
-
-history.listen(location => {
+browserHistory.listen(location => {
   // Use setTimeout to make sure this runs after React Router's own listener
   setTimeout(() => {
     // Keep default behavior of restoring scroll position when user:
@@ -25,16 +23,16 @@ history.listen(location => {
   });
 });
 
-ReactDOM.render(
+render(
     (
         /**
          * Since this page handles all routing, the web server has to be configured to 
          * redirect all page requests to this page instead. This is done in the web.config
          */
-        <ReactRouter.Router history={history}>
-            <ReactRouter.Route path="/" component={Home} />
-            <ReactRouter.Route path="/article/:articleId" component={Article} />
-        </ReactRouter.Router>
+        <Router history={browserHistory}>
+            <Route path="/" component={Home} />
+            <Route path="/article/:articleId" component={Article} />
+        </Router>
     ),
     document.getElementById("content")
 );
