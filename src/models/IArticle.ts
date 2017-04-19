@@ -7,4 +7,5 @@ export interface IArticle {
     // Concatenated with {introductionPart1} and placed at the beginning of the article.
     introductionPart2: JSX.Element;
     sections : JSX.Element[];
+    articleSetId?: string;
 }

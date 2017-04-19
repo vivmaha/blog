@@ -13,6 +13,7 @@ class Article implements IArticle {
             person="Santosh Desai"
             personTitle="FutureBrands CEO"
         ></ArticleBlockQuote>;
+    articleSetId = 'global-ux';
     sections = [        
         <section>
             <h1>Engineering Reverse Innovations</h1>

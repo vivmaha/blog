@@ -13,6 +13,7 @@ class Article implements IArticle {
             person="Tony Hsei"
             personTitle="Zappos"
         ></ArticleBlockQuote>;
+    articleSetId = 'global-ux';
     sections = [
         <section>
             <h1>The Concept of Culture</h1>

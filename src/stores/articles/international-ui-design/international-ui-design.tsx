@@ -12,6 +12,7 @@ class Article implements IArticle {
             quote="It is arrogant of us to think we can create images that will have the same precise meaning to everyone everywhere."
             person="William Horton"
         ></ArticleBlockQuote>;
+    articleSetId = 'global-ux';
     sections = [
         <section>
             <h1>Design for a Global Audience</h1>

@@ -12,6 +12,7 @@ class Article implements IArticle {
             quote="Let them teach you"
             person="Global UX (Chapter 7)"
         ></ArticleBlockQuote>;
+    articleSetId = 'global-ux';
     sections = [
         <section>
             <h1>Research in the Field</h1>

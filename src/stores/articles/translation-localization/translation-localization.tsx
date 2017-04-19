@@ -13,6 +13,7 @@ class Article implements IArticle {
             person="Editorialist"
             personTitle="Yomiuri Shimbun (Japanese daily newspaper)"
         ></ArticleBlockQuote>;
+    articleSetId = 'global-ux';
     sections = [        
         <section>
             <h1>How Many Words Do We Have For Coffee</h1>

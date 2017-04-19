@@ -2,7 +2,7 @@ import * as React from "react";
 import { IArticle } from "../../../models/IArticle";
 import { ArticleBlockQuote } from "../../../components/ArticleBlockQuote";
 
-class Article implements IArticle {
+class Article implements IArticle {    
     title = 'Cross-Cultural Teams';
     date = new Date(2016, 10, 25);
     id = 'cross-cultural-teams';
@@ -13,6 +13,7 @@ class Article implements IArticle {
             person="Barry Tomalin"
             personTitle="Lecturer in Cultural Awareness"
         ></ArticleBlockQuote>;
+    articleSetId = 'global-ux';
     sections = [        
         <section>
             <h1>Effective Global Teams</h1>

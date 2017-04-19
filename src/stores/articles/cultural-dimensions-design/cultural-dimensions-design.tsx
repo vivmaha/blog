@@ -13,6 +13,7 @@ class Article implements IArticle {
             person="Emilie W. Gould"
             personTitle="Rensselaer Polytechnic Institute"
         ></ArticleBlockQuote>;
+    articleSetId = 'global-ux';
     sections = [        
         <section>
             <h1>The Ethnic Theory of Plane Crashes</h1>

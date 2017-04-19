@@ -1,0 +1,7 @@
+@import "../colors";
+.article-set-summary {
+    border: 1px solid $color-border;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    background-color: $color-background-accent;
+}
