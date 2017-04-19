@@ -38,4 +38,8 @@ export class ArticleStore {
     getArticleSet(id: string) {
         return this.articleSets.filter(articleSet => articleSet.id == id)[0];
     }
+
+    getArticlesOfArticleSet(id: string) {
+        return this.articles.filter(article => article.articleSetId == id);
+    }
 }

@@ -4,14 +4,20 @@ import { IArticle } from "../models/IArticle";
 import { ArticleStore } from "../stores/ArticleStore";
 import { Articles } from "../components/Articles";
 
+interface Params {
+    id: string;
+}
+
 export interface Props {
+    params: Params;
 }
 
 export class State {
     public Articles: IArticle[];
+    public Title: string;
 }
 
-export class Home extends React.Component<Props, State> {
+export class ArticleSet extends React.Component<Props, State> {
     constructor(props: Props) {        
         super(props);
         this.state = new State();
@@ -19,8 +25,13 @@ export class Home extends React.Component<Props, State> {
     }
 
     public componentDidMount() {
-        let store = new ArticleStore();
-        this.setState({Articles: store.getArticles()} as State);
+        let store = new ArticleStore();        
+        let articles = store.getArticlesOfArticleSet(this.props.params.id);
+        let articleSet = store.getArticleSet(this.props.params.id);
+        this.setState({
+            Articles: articles,
+            Title: articleSet.title,
+        } as State);
     }    
 
     public render() {
@@ -29,7 +40,7 @@ export class Home extends React.Component<Props, State> {
             <Articles 
                 articles={this.state.Articles} 
                 bannerContent={bannerContent}
-                bannerTitle="Notes by V"
+                bannerTitle={this.state.Title}
             />
         );
     }

@@ -8,7 +8,7 @@ import { ArticleSetSummary } from "../components/ArticleSetSummary";
 import "./Article.scss";
 
 interface Params {
-    articleId: string;
+    id: string;
 }
 
 export interface Props {
@@ -17,7 +17,7 @@ export interface Props {
 
 export var Article: React.StatelessComponent<Props> = (props: Props) => {
     let store = new ArticleStore();
-    let article = store.getArticle(props.params.articleId);
+    let article = store.getArticle(props.params.id);
     let friendlyDate = Moment(article.date).format("MMM Do, YYYY");
     return (
         <div className="body-container">

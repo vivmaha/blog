@@ -8,11 +8,7 @@ import "./ArticleSummary.scss";
 export var ArticleSummary: React.StatelessComponent<IArticle> = (props: IArticle) => {
     
     let friendlyDate = Moment(props.date).format("MMM Do, YYYY");
-    let link = [
-        'article',
-        props.id
-    ].join('/');
-
+    let link = `/article/${props.id}`;
     return (
         <section className="article-summary">
             <h1>

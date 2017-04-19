@@ -4,6 +4,7 @@ import { Router, Route, browserHistory } from "react-router";
 
 import { Home } from "./views/Home";
 import { Article } from "./views/Article";
+import { ArticleSet } from "./views/ArticleSet";
 
 import "./index.scss";
 
@@ -31,7 +32,8 @@ render(
          */
         <Router history={browserHistory}>
             <Route path="/" component={Home} />
-            <Route path="/article/:articleId" component={Article} />
+            <Route path="/article/:id" component={Article} />
+            <Route path="/series/:id" component={ArticleSet} />
         </Router>
     ),
     document.getElementById("content")

@@ -15,7 +15,8 @@ export var ArticleSetSummary: React.StatelessComponent<Props> = (props: Props) =
     }
     let store = new ArticleStore();
     let articleSet = store.getArticleSet(props.id);
+    let link = `/series/${props.id}`;
     return (
-        <p className="article-set-summary">This note is part of a series: <Link to={'foo'}>{articleSet.title}</Link></p>
+        <p className="article-set-summary">This note is part of a series: <Link to={link}>{articleSet.title}</Link></p>
     );
 }
