@@ -9,6 +9,7 @@ export interface Props {
     articles: IArticle[];
     bannerTitle: string;
     bannerContent: JSX.Element;
+    backgroundImageUrl: string;
 }
 
 export class State {
@@ -37,10 +38,13 @@ export class Articles extends React.Component<Props, State> {
 
     public render() {
         let className = `articles ${this.state.IsCollapsed ? 'collapsed' : ''}`;
+        let bannerStyle = {
+            backgroundImage: `url('${this.props.backgroundImageUrl}')`,
+        }
         return (
                 <main className={className}>
                     <Helmet title={this.props.bannerTitle}/>
-                    <div className="banner">
+                    <div className="banner" style={bannerStyle}>
                         <div className="banner-title body-container">
                             <h1 className="no-margin-top">{this.props.bannerTitle}</h1>
                             {this.props.bannerContent}

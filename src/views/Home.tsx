@@ -30,6 +30,8 @@ export class Home extends React.Component<Props, State> {
                 articles={this.state.Articles} 
                 bannerContent={bannerContent}
                 bannerTitle="Notes by V"
+                backgroundImageUrl="https://notesbyvmedia.blob.core.windows.net/images/pen-idea-bulb-paper-web-optimized.jpg"
+
             />
         );
     }

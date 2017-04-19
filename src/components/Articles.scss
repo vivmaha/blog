@@ -5,8 +5,7 @@
     background: $color-background;
     $border: 20px;
     $shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.2);
-    .banner {
-        background-image: url('https://notesbyvmedia.blob.core.windows.net/images/pen-idea-bulb-paper-web-optimized.jpg');
+    .banner {        
         background-position: center;
         z-index: -1;
         position: fixed;
