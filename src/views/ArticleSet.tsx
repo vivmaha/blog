@@ -24,6 +24,7 @@ export class ArticleSet extends React.Component<Props, State> {
         this.state = new State();
         this.state.articles = [];
         this.state.articleSet = {
+            introduction: null,
             backgroundImageUrl: "",
             title: "",
             id: "",
@@ -41,17 +42,10 @@ export class ArticleSet extends React.Component<Props, State> {
     }    
 
     public render() {
-        // TODO - Figure out how to store this content dynamically in the data layer for the specific article set.
-        let bannerContent = <p className="no-margin-top">
-            <span>A guide for Global UX</span>
-            <br/>
-            <br/>
-            <span>This was part of my HCDE 512 coursework at the University of Washington, which was instructed by Manuela Noske.</span>
-        </p>
         return (
             <Articles 
                 articles={this.state.articles} 
-                bannerContent={bannerContent}
+                bannerContent={this.state.articleSet.introduction}
                 bannerTitle={this.state.articleSet.title}
                 backgroundImageUrl={this.state.articleSet.backgroundImageUrl}
             />
