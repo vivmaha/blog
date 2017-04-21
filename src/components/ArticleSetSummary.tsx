@@ -2,8 +2,7 @@ import * as React from "react";
 
 import { ArticleStore } from "../stores/ArticleStore";
 import { Link } from 'react-router';
-
-import "./ArticleSetSummary.scss";
+import { ArticleCaption }  from "./ArticleCaption";
 
 export interface Props {
     id: string;
@@ -17,6 +16,8 @@ export var ArticleSetSummary: React.StatelessComponent<Props> = (props: Props) =
     let articleSet = store.getArticleSet(props.id);
     let link = `/series/${props.id}`;
     return (
-        <p className="article-set-summary">This note is part of a series: <Link to={link}>{articleSet.title}</Link></p>
+        <ArticleCaption>
+            This note is part of a series: <Link to={link}>{articleSet.title}</Link>
+        </ArticleCaption>
     );
 }

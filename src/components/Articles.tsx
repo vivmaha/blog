@@ -10,6 +10,7 @@ export interface Props {
     bannerTitle: string;
     bannerContent: JSX.Element;
     backgroundImageUrl: string;
+    isArticleSet?: boolean;
 }
 
 export class State {
@@ -17,6 +18,11 @@ export class State {
 }
 
 export class Articles extends React.Component<Props, State> {
+
+    public static defaultProps: Partial<Props> = {
+        isArticleSet: true,
+    };
+
     constructor(props: Props) {        
         super(props);
         this.state = new State();
@@ -49,7 +55,7 @@ export class Articles extends React.Component<Props, State> {
                             <h1 className="no-margin-top">{this.props.bannerTitle}</h1>
                             {this.props.bannerContent}
                         </div>
-                    </div>                
+                    </div>
                     <ol className='body-container no-margin-top'>{
                         this.props.articles.map(article => 
                             <li key={article.id}>
