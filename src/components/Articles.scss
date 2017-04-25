@@ -5,7 +5,7 @@
     background: $color-background;
     $border: 20px;
     $shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.2);
-    .banner {        
+    header {        
         background-position: center;
         z-index: -1;
         position: fixed;
@@ -24,18 +24,23 @@
             box-shadow: $shadow;
         }
     }
-    box-shadow: $shadow;
-    &>ol{
+    box-shadow: $shadow;    
+    &>article{
         margin-top: 70vh;
-        border-top: $border solid white;
-        &>li:not(:last-child){
-            &>.article-summary{
-                margin-bottom: 2em;
+        padding-top: 1px;
+        &>ol>li {
+            &:first-child {
+                &>.article-summary {
+                    margin-top: $border;   
+                }
             }
+        }
+        &>nav {
+            margin: $border 0;
         }
     }
     &.collapsed {
-        &>.banner {
+        &>header {
             &>.banner-title {
                 opacity: 0;
             }

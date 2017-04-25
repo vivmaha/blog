@@ -1,16 +1,19 @@
 import * as Helmet from "react-helmet";
 import * as React from "react";
+import { Link } from 'react-router';
+
 import { IArticle } from "../models/IArticle";
-import { ArticleSummary } from "../components/ArticleSummary";
+import { ArticleSummary } from "./ArticleSummary";
+import { ArticleCaption } from "./ArticleCaption";
 
 import "./Articles.scss";
 
-export interface Props {
+
+export interface Props extends React.HTMLProps<HTMLDivElement> {
     articles: IArticle[];
     bannerTitle: string;
     bannerContent: JSX.Element;
     backgroundImageUrl: string;
-    isArticleSet?: boolean;
 }
 
 export class State {
@@ -18,10 +21,6 @@ export class State {
 }
 
 export class Articles extends React.Component<Props, State> {
-
-    public static defaultProps: Partial<Props> = {
-        isArticleSet: true,
-    };
 
     constructor(props: Props) {        
         super(props);
@@ -47,22 +46,40 @@ export class Articles extends React.Component<Props, State> {
         let bannerStyle = {
             backgroundImage: `url('${this.props.backgroundImageUrl}')`,
         }
+        let isHome = window.location.pathname == '/';
+        let homeRecirculation: JSX.Element = null;
+        if (!isHome) {
+            homeRecirculation = (
+                <nav>
+                    <ArticleCaption>
+                        This series is part of <Link to="/">Notes by V</Link>
+                    </ArticleCaption>
+                </nav>
+            );
+        }
+
         return (
                 <main className={className}>
                     <Helmet title={this.props.bannerTitle}/>
-                    <div className="banner" style={bannerStyle}>
+                    <header style={bannerStyle}>
                         <div className="banner-title body-container">
                             <h1 className="no-margin-top">{this.props.bannerTitle}</h1>
                             {this.props.bannerContent}
                         </div>
-                    </div>
-                    <ol className='body-container no-margin-top'>{
-                        this.props.articles.map(article => 
-                            <li key={article.id}>
-                                <ArticleSummary {...article}/>
-                            </li>
-                        )
-                    }</ol>
+                    </header>
+                    <article className="body-container no-margin-top">
+                        { homeRecirculation }
+                        <ol>
+                        {                        
+                            this.props.articles.map(article => 
+                                <li key={article.id}>
+                                    <ArticleSummary {...article}/>
+                                </li>
+                            )
+                        }
+                        </ol>
+                        { homeRecirculation }
+                    </article>
                 </main>
         );
     }

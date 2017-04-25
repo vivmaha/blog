@@ -8,10 +8,10 @@ class ArticleSet implements IArticleSet {
     backgroundImageUrl = "https://notesbyvmedia.blob.core.windows.net/images/car-on-map-web-optimized.jpg"
     introduction = (
         <p className="no-margin-top">
-            <span>A guide for Global UX</span>
+            <span>A series exploring the existing literature on Global UX.</span>
             <br/>
             <br/>
-            <span>This was part of my HCDE 512 coursework at the University of Washington, which was instructed by Manuela Noske.</span>
+            <span>This is part of my <em>HCDE 512</em> coursework at the University of Washington as instructed by Manuela Noske.</span>
         </p>
     );
 }
