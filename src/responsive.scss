@@ -1,0 +1,13 @@
+$small-max-width: 44.75em;
+$medium-max-width: 56.25em;
+
+@mixin responsive($key, $small, $medium, $large) {
+
+    @media (max-width: #{$small-max-width}) {
+        #{$key}: #{$small};
+    }
+    #{$key}: #{$medium};
+    @media (min-width: #{$medium-max-width}) {
+        #{$key}: #{$large};
+    }    
+}

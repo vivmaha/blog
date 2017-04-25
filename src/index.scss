@@ -8,8 +8,8 @@
     margin: 4vw auto;
     // You should be able to read the line with eye movement only (no head movement).
     max-width: 38em;
-    @include responsive(margin-left, 3em, auto, auto);
-    @include responsive(margin-right, 3em, auto, auto);        
+    @include responsive(margin-left, 1em, auto, auto);
+    @include responsive(margin-right, 1em, auto, auto);        
     color: $color-text;
     background: $color-background;
 }

@@ -1,10 +1,11 @@
 @import "../colors";
 @import "../fonts";
 @import "../transitions";
-
+@import "../responsive";
 
 $space-between-back-and-edge: 0.5vw;
-header {
+.header {
+    @include responsive(display, none, null, null);
     nav {
         a{
             @include type-h1();

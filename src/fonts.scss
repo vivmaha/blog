@@ -1,3 +1,4 @@
+@import "./responsive";
 
 // weight
 @mixin font-weight-light() {
@@ -31,18 +32,6 @@
 
 // The typeramp below was inspired by 
 // http://typecast.com/blog/a-more-modern-scale-for-web-typography
-
-@mixin responsive($key, $small, $medium, $large) {
-    @media (min-width: 0) {
-        #{$key}: #{$small};
-    }
-    @media (min-width:43.75em) {
-        #{$key}: #{$medium};
-    }
-    @media (min-width: 56.25em) {
-        #{$key}: #{$large};
-    }    
-}
 
 @mixin type-base() {
     &:not(:first-child):not(.no-margin-top) {
