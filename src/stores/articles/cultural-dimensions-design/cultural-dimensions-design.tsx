@@ -17,14 +17,14 @@ class Article implements IArticle {
     sections = [        
         <section>
             <h1>The Ethnic Theory of Plane Crashes</h1>
-            <cite>Gladwell, Malcolm: “The Ethnic Theory of Plane Crashes” in Outliers. New York: Little, Brown andCompany, 2008. Chapter 7, pp. 177-223</cite>
+            <cite>Gladwell, Malcolm: “The Ethnic Theory of Plane Crashes” in Outliers. New York: Little, Brown and Company, 2008. Chapter 7, pp. 177-223</cite>
             <p>It is tempting design with the happy path in mind, however this can lead to failures under extenuating circumstances.</p>
             <p>This reading made me wonder if users see UI as their pilot (superior) or first officer (inferior)? How much mitigation should UI use to communicate? This probably depends on the tolerance to error of the task. The designer must be mindful of this and balance comfortable with error avoidance.</p>
             <p>We can generalize populations, but we should expect individuals within these populations to exhibit variance.</p>
             <p>Culture emerges from hundreds of years of history based on things such as political structures, religions traditions, languages, food, architecture, and literature.</p>
             <p>Western culture is Transmitter oriented — it is the responsibility of the speaker to ensure communication is successful. Asian culture is Receiver oriented — it is the responsibility of the listener. Receiver oriented languages do not work well in extenuating circumstances because the listener does not have the attention needed to read between the lines.</p>
             <p>If cultural values are innately unsuited for a task, look for ways to suppress the corresponding cultural behaviors. With training, individuals can change their behaviors from their cultural norms.</p>
-            <p>It is tempting to ignore cultural differences for fear of offending someone. However ignoring our differences, our unique strengths and weaknesses, can lead to unsuitable designs.</p>
+            <p>It is tempting to ignore cultural differences for fear of offending someone. However, ignoring our differences, our unique strengths and weaknesses, can lead to unsuitable designs.</p>
         </section>,
         <section>
             <h1>Synthesizing the Literature on Cultural Values</h1>

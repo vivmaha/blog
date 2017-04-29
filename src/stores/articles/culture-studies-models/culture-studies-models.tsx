@@ -6,7 +6,7 @@ class Article implements IArticle {
     title = 'Cultural Awareness';
     date = new Date(2016, 9, 8);
     id = 'cultural-awareness';
-    introductionPart1 = "Global design demands cultural awareness. In this article I look at techniques for developing cultural awareness. However, we first have to fully understand the meaning of ‘culture’.";
+    introductionPart1 = "Global design demands cultural awareness. In this article, I look at techniques for developing cultural awareness.";
     introductionPart2 = 
         <ArticleBlockQuote
             quote="Your company's culture and your company's brand are really just two sides of the same coin. The brand may lag the culture at first, but eventually it will catch up. Your culture is your brand."
@@ -27,13 +27,13 @@ class Article implements IArticle {
                 <dt>Behaviors vs. Meanings</dt>
                 <dd>We can view culture as behaviors exhibited by a group, or by the meanings of those behaviors. The latter view has gained popularity.</dd>
                 <dt>Independent vs. Human</dt>
-                <dd>These classifications disagree on whether or not culture should be studied in context of humans, or as an independent phenomenon.</dd>
+                <dd>These classifications disagree on whether culture should be studied in context of humans, or as an independent phenomenon.</dd>
                 <dd>The disagreement is not about the uniqueness of culture to mankind. It is about whether humans are capable of studying it independently from human contexts.</dd>
             </dl>
         </section>,
         <section>
             <h1>Culture and UX</h1>
-            <cite>Quesenbery, W., &amp; Szuc, D. (2012). Global UX: Design and research in a connected world. Waltham, MA: Morgan Kaufmann (Chaper 3)</cite>
+            <cite>Quesenbery, W., &amp; Szuc, D. (2012). Global UX: Design and research in a connected world. Waltham, MA: Morgan Kaufmann (Chapter 3)</cite>
             <p>Culture is best understood comparatively.</p>
             <p>Culture changes more slowly than other aspects that we design for (eg. governance, infrastructure, commerce &amp; fashion).</p>
             <p>Strong cultural factors:</p>
@@ -52,7 +52,7 @@ class Article implements IArticle {
         </section>,
         <section>
             <h1>Building Your Cultural Awareness</h1>
-            <cite>Quesenbery, W., &amp; Szuc, D. (2012). Global UX: Design and research in a connected world. Waltham, MA: Morgan Kaufmann (Chaper 4)</cite>
+            <cite>Quesenbery, W., &amp; Szuc, D. (2012). Global UX: Design and research in a connected world. Waltham, MA: Morgan Kaufmann (Chapter 4)</cite>
             <p>The following attitudes are helpful in developing global awareness:</p>
             <dl>
                 <dt>Constant challenges</dt>

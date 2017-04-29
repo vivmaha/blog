@@ -6,7 +6,7 @@ class Article implements IArticle {
     title = 'Global User Research';
     date = new Date(2016, 10, 6);
     id = 'global-user-research';
-    introductionPart1 = "Global User Resarch is hard. In this post, we look at tips from seasoned veterans for conducting a insightful global user study, and delivering compelling results to the product team."
+    introductionPart1 = "Global User Research is hard. In this post, we look at tips from seasoned veterans for conducting an insightful global user study, and delivering compelling results to the product team."
     introductionPart2 = 
         <ArticleBlockQuote
             quote="Let them teach you"
@@ -44,7 +44,7 @@ class Article implements IArticle {
             </ul>
             <p>Consult existing research before performing you own research. If you work for  large company, relevant studies may already exist and can help you improve your study.</p>
             <p>Avoid focus groups. The inaccurate effects of group think occur. The environment is also far from real, so accuracy suffers again.</p>
-            <p>Remote methods lack immersion and will not be as effective at exposing deep insights. However it will cheaply allow your data to draw from a very diverse set of participants.</p>
+            <p>Remote methods lack immersion and will not be as effective at exposing deep insights. However, it will cheaply allow your data to draw from a very diverse set of participants.</p>
             <h2>Team</h2>
             <p>The most effective global researchers are those that are passionate about learning the target culture.</p>
             <p>Including non-researchers builds empathy for the users, the research study, and research in general. This helps ensure that the research results are embraced and incorporated into the product. These principles also extend to including local representatives in a multi-national company.</p>

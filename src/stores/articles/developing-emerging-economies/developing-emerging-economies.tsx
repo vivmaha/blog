@@ -6,10 +6,10 @@ class Article implements IArticle {
     title = 'Design for Emerging Economies';
     date = new Date(2016, 10, 19);
     id = 'developing-for-emerging-economies';
-    introductionPart1 = "Companies are increasinly expanding into untapped markets of emerging economies. This post reflects on the successes and failures of a few of these endeavours.";
+    introductionPart1 = "Companies are increasingly expanding into untapped markets of emerging economies. This post reflects on the successes and failures of a few of these endeavours.";
     introductionPart2 = 
         <ArticleBlockQuote
-            quote="The usual approach is to strip the product of features until a semblance of affordability is attained. The trouble is that the emerging consumer, for whom every act of discretionaryconsumption is an act of sacrificing something essential, is looking to be seduced rather than patronized"
+            quote="The usual approach is to strip the product of features until a semblance of affordability is attained. The trouble is that the emerging consumer, for whom every act of discretionary consumption is an act of sacrificing something essential, is looking to be seduced rather than patronized"
             person="Santosh Desai"
             personTitle="FutureBrands CEO"
         ></ArticleBlockQuote>;
@@ -33,7 +33,7 @@ class Article implements IArticle {
         <section>
             <h1>Global Product Design</h1>
             <cite>Sathikh, P. M., &amp; Kumar, S. A. (2009). Transitive Culture: How ‘Global’ Product Design is Changing User Behavior. 3rd International Conference on Integrity, Reliability and Failure.</cite>
-            <p>In globalization, products are designed by the developed world and sold into developing countries as is. The result is similar to colonization, which which the dominant culture infected other cultures. This paper examines this cultural effect.</p>
+            <p>In globalization, products are designed by the developed world and sold into developing countries as is. The result is similar to colonization, in which the dominant culture infected other cultures. This paper examines this cultural effect.</p>
             <p>When a local culture adopts new technology designed for a foreign culture, locals are forced to adapt their behaviors to use the new technology. These new behaviors lead to a change in the culture, which is called transitive culture.</p>
             <p>Advocates for globalization laud the efficiency of design and production if we treat the world as homogeneous. In fact, they suggest using homogeneous products to train the world to be homogeneous. This approach focuses on the similarities of cultures. However, this overlooks the deep emotional differences that affect usage and purchase decisions, and it also wrongly assumes that differences in cultures can be dissolved quickly.</p>
             <p>Interesting examples:</p>

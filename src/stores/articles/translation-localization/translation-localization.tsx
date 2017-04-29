@@ -27,7 +27,7 @@ class Article implements IArticle {
             <cite>David Bellos, Is That a Fish in Your Ear? Faber and Faber, NY, 2011 (Chapter 15)</cite>
             <p>Power differences between populations can affect how their languages are translated. Power differences change over time and a corresponding change in translation mechanics is to be expected.</p>
             <p>When translating to a more powerful language, the translated content is adapted to conform to the more powerful language. When translating to a less powerful language, the target language is adapted to conform to the material being translated. Over time, this leads to the introduction of artifacts from more powerful languages into less powerful languages.</p>
-            <p>The translation of the Bible was a notable exception to this rule. Eugene Nida , who oversaw many translations of the Bible, was interested in getting the message of the Bible to masses of new populations, and this would only be possible if the text was easily understood by the masses.</p>
+            <p>The translation of the Bible was a notable exception to this rule. Eugene Nida, who oversaw many translations of the Bible, was interested in getting the message of the Bible to masses of new populations, and this would only be possible if the text was easily understood by the masses.</p>
             <p>When translating a concept that does not exist in the target language, there are various approaches:</p>
             <dl>
                 <dt>Foreignism</dt>
@@ -40,7 +40,7 @@ class Article implements IArticle {
                 <dd>Change the source to be translatable while preserving intent</dd>
             </dl>
             <p>Translators who speak the target language since childhood can pick up on unintended consequences in translations that other translators will easily miss.</p>
-            <p>Nida's approach is great for translation for informal communication. However it does not work well in scenarios that demand accuracy, such as scholarly endeavors.</p>
+            <p>Nida's approach is great for translation for informal communication. However, it does not work well in scenarios that demand accuracy, such as scholarly endeavors.</p>
         </section>,
         <section>
             <h1>Global Flows</h1>
