@@ -21,7 +21,7 @@ module.exports = {
     devServer: {
         historyApiFallback: true,
     },
-    devtool: 'inline-source-map',
+    devtool: 'source-map',
     entry: "./src/index.tsx",    
     module: {
         rules: [     
