@@ -8,13 +8,15 @@ var plugins = PRODUCTION ? [
             NODE_ENV: JSON.stringify('production')
         }
     }),
-    new webpack.optimize.UglifyJsPlugin({
-        compress: {
-            warnings: false
-        }
-    }),
+    new webpack.optimize.UglifyJsPlugin(),
+    new webpack.LoaderOptionsPlugin({
+        minimize: true
+    })
 ] : [
-]
+    new webpack.LoaderOptionsPlugin({
+        debug: true
+    })
+];
 
 module.exports = {
     devServer: {
@@ -22,10 +24,17 @@ module.exports = {
     },
     entry: "./src/index.tsx",    
     module: {
-        loaders: [
-            { test: /\.tsx?$/, loader: "ts-loader" },
-            { test: /\.scss$/, loaders:["style-loader", "css-loader", "sass-loader"] },
-        ],
+        rules: [{ 
+            test: /\.tsx?$/, 
+            use: "ts-loader"
+        }, {            
+            test: /\.scss$/, 
+            use: [
+                "style-loader",
+                "css-loader",
+                "sass-loader"
+            ]
+        }]
     },
     output: {
         filename: "./bundle.js",
