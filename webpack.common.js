@@ -1,9 +1,6 @@
 var webpack = require('webpack');
 
 module.exports = {
-    devServer: {
-        historyApiFallback: true,
-    },
     entry: "./src/index.tsx",    
     module: {
         rules: [     
