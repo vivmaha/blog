@@ -1,6 +1,6 @@
 import * as Moment from "moment";
 import * as React from "react";
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import { IArticle } from "../models/IArticle";
 
 import "./ArticleSummary.scss";

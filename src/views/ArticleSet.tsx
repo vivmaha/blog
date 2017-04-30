@@ -1,40 +1,38 @@
-import * as Helmet from "react-helmet";
+import { Helmet } from "react-helmet";
 import * as React from "react";
 import { IArticle } from "../models/IArticle";
 import { IArticleSet } from "../models/IArticleSet";
 import { ArticleStore } from "../stores/ArticleStore";
 import { Articles } from "../components/Articles";
+import { RouteComponentProps } from "react-router";
 
 interface Params {
     id: string;
 }
 
-export interface Props {
-    params: Params;
-}
-
-export class State {
+export interface State {
     articles: IArticle[];
     articleSet: IArticleSet
 }
 
-export class ArticleSet extends React.Component<Props, State> {
-    constructor(props: Props) {        
+export class ArticleSet extends React.Component<RouteComponentProps<any>, State> {
+    constructor(props: RouteComponentProps<any>) {        
         super(props);
-        this.state = new State();
-        this.state.articles = [];
-        this.state.articleSet = {
-            introduction: null,
-            backgroundImageUrl: "",
-            title: "",
-            id: "",
+        this.state = {
+            articles: [],
+            articleSet: {
+                introduction: null,
+                backgroundImageUrl: "",
+                title: "",
+                id: "",
+            }
         };
     }
 
     public componentDidMount() {
         let store = new ArticleStore();        
-        let articles = store.getArticlesOfArticleSet(this.props.params.id);
-        let articleSet = store.getArticleSet(this.props.params.id);
+        let articles = store.getArticlesOfArticleSet(this.props.match.params.id);
+        let articleSet = store.getArticleSet(this.props.match.params.id);
         this.setState({
             articles: articles,
             articleSet: articleSet,

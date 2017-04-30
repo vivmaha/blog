@@ -16,6 +16,7 @@
     "@types/react-dom": "^15.5.0",
     "@types/react-helmet": "5.0.2",
     "@types/react-router": "^4.0.5",
+    "@types/react-router-dom": "^4.0.4",
     "cross-env": "^4.0.0",
     "css-loader": "^0.28.0",
     "fs-extra": "^3.0.0",
@@ -26,6 +27,7 @@
     "react-dom": "^15.3.2",
     "react-helmet": "^5.0.3",
     "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
     "reset-css": "^2.2.0",
     "sass-loader": "^6.0.3",
     "source-map-loader": "^0.2.1",
@@ -33,7 +35,6 @@
     "ts-loader": "^2.0.3",
     "typescript": "^2.0.3",
     "webpack": "^2.4.1",
-    "webpack-dev-server": "^2.4.5",
-    "webpack-fail-plugin": "^1.0.5"
+    "webpack-dev-server": "^2.4.5"
   }
 }

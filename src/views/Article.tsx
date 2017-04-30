@@ -1,23 +1,16 @@
-import * as Helmet from "react-helmet";
+import { Helmet } from "react-helmet";
 import * as Moment from "moment";
 import * as React from "react";
 import { ArticleStore } from "../stores/ArticleStore";
 import { Header } from "../components/Header";
 import { ArticleSetSummary } from "../components/ArticleSetSummary";
+import { RouteComponentProps } from "react-router";
 
 import "./Article.scss";
 
-interface Params {
-    id: string;
-}
-
-export interface Props {
-    params : Params;
-}
-
-export var Article: React.StatelessComponent<Props> = (props: Props) => {
+export var Article = (props: RouteComponentProps<any>) => {
     let store = new ArticleStore();
-    let article = store.getArticle(props.params.id);
+    let article = store.getArticle(props.match.params.id);
     let friendlyDate = Moment(article.date).format("MMM Do, YYYY");
     return (
         <div className="body-container">

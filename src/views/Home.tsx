@@ -1,21 +1,23 @@
-import * as Helmet from "react-helmet";
+import { Helmet } from "react-helmet";
 import * as React from "react";
 import { IArticle } from "../models/IArticle";
 import { ArticleStore } from "../stores/ArticleStore";
 import { Articles } from "../components/Articles";
+import { RouteComponentProps } from "react-router";
 
-export interface Props {
+export interface Props extends RouteComponentProps<any> {
 }
 
-export class State {
-    public Articles: IArticle[];
+export interface State {
+    Articles: IArticle[];
 }
 
 export class Home extends React.Component<Props, State> {
     constructor(props: Props) {        
         super(props);
-        this.state = new State();
-        this.state.Articles = [];
+        this.state = {
+            Articles: []
+        };
     }
 
     public componentDidMount() {

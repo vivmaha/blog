@@ -1,4 +1,3 @@
-var webpackFailPlugin = require('webpack-fail-plugin');
 var webpack = require('webpack');
 
 const PRODUCTION = process.env.NODE_ENV === 'production';
@@ -15,8 +14,6 @@ var plugins = PRODUCTION ? [
         }
     }),
 ] : [
-    // Workaround for https://github.com/webpack/webpack/issues/708
-    webpackFailPlugin
 ]
 
 module.exports = {
@@ -27,7 +24,7 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.tsx?$/, loader: "ts-loader" },
-            { test: /\.scss$/, loaders:["style", "css", "sass"] },
+            { test: /\.scss$/, loaders:["style-loader", "css-loader", "sass-loader"] },
         ],
     },
     output: {
@@ -38,6 +35,6 @@ module.exports = {
         new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en$/),
     ]),
     resolve: {
-        extensions: ["", ".webpack.js", ".web.js", ".ts", ".tsx", ".js"],
+        extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js"],
     },
 };

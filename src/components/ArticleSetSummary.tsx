@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { ArticleStore } from "../stores/ArticleStore";
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import { ArticleCaption }  from "./ArticleCaption";
 
 export interface Props {
