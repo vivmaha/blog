@@ -8,7 +8,6 @@ var plugins = PRODUCTION ? [
             NODE_ENV: JSON.stringify('production')
         }
     }),
-    new webpack.optimize.UglifyJsPlugin(),
     new webpack.LoaderOptionsPlugin({
         minimize: true
     })
@@ -27,18 +26,18 @@ module.exports = {
     module: {
         rules: [     
             {
-                test: /\.tsx?$/,
-                loader: "ts-loader"
-            },
-            {
                 enforce: 'pre',
                 test: /\.js$/,
-                loader: "source-map-loader"
+                use: "source-map-loader"
             },
             {
                 enforce: 'pre',
                 test: /\.tsx?$/,
                 use: "source-map-loader"
+            },
+            {
+                test: /\.tsx?$/,
+                use: "ts-loader"
             },
             {
                 test: /\.scss$/, 
