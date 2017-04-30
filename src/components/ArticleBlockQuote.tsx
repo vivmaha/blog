@@ -8,7 +8,7 @@ export interface Props {
     personTitle?: string;
 }
 
-export var ArticleBlockQuote: React.StatelessComponent<Props> = (props: Props) => {
+export var ArticleBlockQuote = (props: Props) => {
     let titleString = props.personTitle ? `, ${props.personTitle}` : '';
     return (
         <section className="article-block-quote">
@@ -16,4 +16,4 @@ export var ArticleBlockQuote: React.StatelessComponent<Props> = (props: Props) =
             <p className="no-margin-top"><strong>{props.person}</strong>{titleString}</p>
         </section>
     );
-}
+};

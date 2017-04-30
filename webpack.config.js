@@ -22,19 +22,33 @@ module.exports = {
     devServer: {
         historyApiFallback: true,
     },
+    devtool: 'inline-source-map',
     entry: "./src/index.tsx",    
     module: {
-        rules: [{ 
-            test: /\.tsx?$/, 
-            use: "ts-loader"
-        }, {            
-            test: /\.scss$/, 
-            use: [
-                "style-loader",
-                "css-loader",
-                "sass-loader"
-            ]
-        }]
+        rules: [     
+            {
+                test: /\.tsx?$/,
+                loader: "ts-loader"
+            },
+            {
+                enforce: 'pre',
+                test: /\.js$/,
+                loader: "source-map-loader"
+            },
+            {
+                enforce: 'pre',
+                test: /\.tsx?$/,
+                use: "source-map-loader"
+            },
+            {
+                test: /\.scss$/, 
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "sass-loader"
+                ]
+            }
+        ]
     },
     output: {
         filename: "./bundle.js",
@@ -44,6 +58,6 @@ module.exports = {
         new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en$/),
     ]),
     resolve: {
-        extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js"],
+        extensions: [".ts", ".tsx", ".js"],
     },
 };
