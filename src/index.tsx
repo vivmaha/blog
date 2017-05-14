@@ -14,7 +14,7 @@ render(
     (
         <BrowserRouter>
           <div>
-            <ScrollToTop></ScrollToTop>
+            <ScrollToTop />
             <Route exact path="/" component={Home} />
             <Route path="/article/:id" component={Article} />
             <Route path="/series/:id" component={ArticleSet} />
