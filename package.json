@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --progress",
-    "build-dev" : "webpack --env.dev",
-    "build-prod" : "webpack --env.prod"
+    "build-dev": "webpack --env.dev",
+    "build-prod": "webpack --env.prod"
   },
   "author": "vivek maharajh",
   "license": "ISC",
@@ -19,7 +19,6 @@
     "@types/react-router-dom": "^4.0.4",
     "cross-env": "^4.0.0",
     "css-loader": "^0.28.0",
-    "history": "^4.4.0",
     "moment": "^2.15.1",
     "node-sass": "^4.5.2",
     "react": "^15.3.2",
