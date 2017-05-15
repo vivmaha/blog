@@ -12,8 +12,8 @@ export var ArticleBlockQuote = (props: Props) => {
     let titleString = props.personTitle ? `, ${props.personTitle}` : '';
     return (
         <section className="article-block-quote">
-            <blockquote>{props.quote}</blockquote>
-            <p className="no-margin-top"><strong>{props.person}</strong>{titleString}</p>
+            <blockquote>“{props.quote}”</blockquote>
+            <p className="no-margin-top">—&nbsp;<strong>{props.person}</strong>{titleString}</p>
         </section>
     );
 };

@@ -4,19 +4,8 @@
     &:not(:first-child) {
         margin-top: 1em;
     }
-    &>blockquote{
-        &::before {
-            content: "“";
-        }
-        &::after {
-            content: "”";
-        }        
+    &>blockquote{  
         font-style: italic;
         margin-bottom: 0;
-    }
-    &>p {
-        &::before{
-            content: "—\00a0";
-        }
     }
 }
