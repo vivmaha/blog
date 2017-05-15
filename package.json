@@ -17,7 +17,6 @@
     "@types/react-helmet": "5.0.2",
     "@types/react-router": "^4.0.5",
     "@types/react-router-dom": "^4.0.4",
-    "cross-env": "^4.0.0",
     "css-loader": "^0.28.0",
     "moment": "^2.15.1",
     "node-sass": "^4.5.2",
