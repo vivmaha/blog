@@ -3,3 +3,4 @@ bundle.js
 bundle.js.map
 .vscode
 npm-debug.log
+.tmp

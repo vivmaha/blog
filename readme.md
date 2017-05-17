@@ -16,6 +16,14 @@
 
     // Deployed to http://localhost:8080/
 
+## Run unit tests
+
+    // Run tests once
+    npm test
+
+    // Run tests and watch for changes. Also useful for debugging in the browser.
+    npm run test-watch
+
 ## Deploy to production
 
     git push master
