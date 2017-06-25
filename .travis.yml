@@ -20,8 +20,11 @@ addons:
     - ubuntu-toolchain-r-test
     packages:
     - g++-4.8
-  chrome: stable
+  firefox: "latest"
 before_script:
   - npm run build-prod
   - git fetch --unshallow || true
   - git fetch origin "+refs/heads/*:refs/remotes/origin/*"
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3 # give xvfb some time to start

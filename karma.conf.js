@@ -4,7 +4,7 @@ const TestConfig = require('./webpack.test');
 
 module.exports = function (config) {
   config.set({
-    browsers: [ 'Chrome' ],
+    browsers: [ process.env.CONTINUOUS_INTEGRATION ? 'Firefox' : 'Chrome' ],
     singleRun: true,
     frameworks: [ 'mocha' ],
     files: [
