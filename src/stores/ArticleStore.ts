@@ -11,7 +11,7 @@ import articleCrossCulturalTeams  from './articles/cross-cultural-teams/cross-cu
 
 import articleSetGlobalUx from './article-sets/global-ux';
 
-export class ArticleStore {    
+export class ArticleStore {   
 
     private articles : IArticle[] = [
         articleCrossCulturalTeams,
@@ -23,12 +23,21 @@ export class ArticleStore {
         articleCultureStudiesModels,
     ];
 
+    
+    ArticleStore() {
+        this.articleSets.forEach(articleSet => {
+            let articles = this.getArticlesOfArticleSet(articleSet.id);            
+        });
+    }
+
     private articleSets: IArticleSet[] = [
         articleSetGlobalUx,
     ];
 
     getArticles() : IArticle[] {
-        return this.articles;
+        let articles = this.articles;
+        articles = this.sortArticlesByDate(articles).reverse();
+        return articles;
     }
 
     getArticle(id: string) {
@@ -40,6 +49,12 @@ export class ArticleStore {
     }
 
     getArticlesOfArticleSet(id: string) {
-        return this.articles.filter(article => article.articleSetId == id);
+        let articles = this.articles.filter(article => article.articleSetId == id);
+        articles = this.sortArticlesByDate(articles);
+        return articles;
+    }
+
+    private sortArticlesByDate(articles: IArticle[]) {
+        return articles.sort((a: IArticle, b: IArticle) => a.date.getTime() - b.date.getTime());
     }
 }
