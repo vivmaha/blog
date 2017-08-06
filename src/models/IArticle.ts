@@ -8,4 +8,6 @@ export interface IArticle {
     introductionPart2: JSX.Element;
     sections : JSX.Element[];
     articleSetId?: string;
+    nextArticleId?: string;
+    previousArticleId?: string;
 }

@@ -7,6 +7,6 @@ export interface Props extends React.HTMLProps<HTMLDivElement>{
 
 export var ArticleCaption: React.StatelessComponent<Props> = (props: Props) => {
     return (
-        <p className="article-caption">{props.children}</p>
+        <section className="article-caption">{props.children}</section>
     );
 }

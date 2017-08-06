@@ -24,9 +24,21 @@ export class ArticleStore {
     ];
 
     
-    ArticleStore() {
+    constructor() {
         this.articleSets.forEach(articleSet => {
-            let articles = this.getArticlesOfArticleSet(articleSet.id);            
+            let articles = this.getArticlesOfArticleSet(articleSet.id);
+            for (let i = 0; i < articles.length; i++) {
+                
+                let getArticleId = (index: number) => {
+                    if (index < 0 || index >= articles.length) {
+                        return undefined;
+                    }
+                    return articles[index].id;
+                };
+
+                articles[i].previousArticleId = getArticleId(i - 1);
+                articles[i].nextArticleId = getArticleId(i + 1);
+            }
         });
     }
 

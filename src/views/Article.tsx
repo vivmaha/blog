@@ -23,11 +23,18 @@ export var Article = (props: RouteComponentProps<any>) => {
                         <p>by V Maharajh on {friendlyDate}</p>
                         <p>{article.introductionPart1}</p>
                         {article.introductionPart2}                        
-                        <ArticleSetSummary id={article.articleSetId} />
+                        <ArticleSetSummary 
+                            articleSetId={article.articleSetId} 
+                            currentArticleId={article.id}
+                        />
                     </header>
                     { article.sections }
                     <footer>
-                        <ArticleSetSummary id={article.articleSetId} />
+                        <ArticleSetSummary
+                            articleSetId={article.articleSetId} 
+                            currentArticleId={article.id}
+                            includeLinkToNextArticle
+                        />
                     </footer>
                 </article>
             </main>

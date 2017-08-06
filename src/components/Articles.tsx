@@ -52,7 +52,7 @@ export class Articles extends React.Component<Props, State> {
             homeRecirculation = (
                 <nav>
                     <ArticleCaption>
-                        This series is part of <Link to="/">Notes by V</Link>
+                        <p>This series is part of <Link to="/">Notes by V</Link></p>
                     </ArticleCaption>
                 </nav>
             );
