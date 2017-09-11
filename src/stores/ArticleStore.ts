@@ -1,6 +1,8 @@
 import { IArticle } from "../models/IArticle";
 import { IArticleSet } from "../models/IArticleSet";
 
+import { ArticleMaterializer } from './articles/ArticleMaterializer';
+
 import articleCultureStudiesModels from './articles/culture-studies-models/culture-studies-models';
 import articleCulturalDimensionsDesign from './articles/cultural-dimensions-design/cultural-dimensions-design';
 import articleInternationalUIDesign from './articles/international-ui-design/international-ui-design';
@@ -13,18 +15,23 @@ import articleSetGlobalUx from './article-sets/global-ux';
 
 export class ArticleStore {   
 
-    private articles : IArticle[] = [
-        articleCrossCulturalTeams,
-        articleDevelopingEmergingEconomies,
-        articleTranslationLocalization,
-        articleInternationalUIDesign,
-        articleInternationalResearch,        
-        articleCulturalDimensionsDesign,
-        articleCultureStudiesModels,
-    ];
+    private articles : IArticle[];
 
     
     constructor() {
+
+        let articleMaterializer = new ArticleMaterializer();
+
+        this.articles = [
+            articleMaterializer.materialize(articleCrossCulturalTeams),
+            articleMaterializer.materialize(articleCulturalDimensionsDesign),
+            articleDevelopingEmergingEconomies,
+            articleTranslationLocalization,
+            articleInternationalUIDesign,
+            articleInternationalResearch,        
+            articleCultureStudiesModels,
+        ];
+
         this.articleSets.forEach(articleSet => {
             let articles = this.getArticlesOfArticleSet(articleSet.id);
             for (let i = 0; i < articles.length; i++) {
