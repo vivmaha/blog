@@ -29,7 +29,7 @@ export class ArticleStore {
             articleTranslationLocalization,
             articleInternationalUIDesign,
             articleInternationalResearch,        
-            articleCultureStudiesModels,
+            articleMaterializer.materialize(articleCultureStudiesModels),
         ];
 
         this.articleSets.forEach(articleSet => {
