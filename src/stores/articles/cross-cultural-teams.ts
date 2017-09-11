@@ -2,7 +2,7 @@ import {
     IArticleQuoteData,
     IArticleData,
     IArticleDataHtml,
-} from "../../../models/IArticleData";
+} from "../../models/IArticleData";
 
 export default <IArticleData>{
     type: "article",

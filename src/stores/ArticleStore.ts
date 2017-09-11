@@ -3,13 +3,13 @@ import { IArticleSet } from "../models/IArticleSet";
 
 import { ArticleMaterializer } from './articles/ArticleMaterializer';
 
-import articleCultureStudiesModels from './articles/culture-studies-models/culture-studies-models';
-import articleCulturalDimensionsDesign from './articles/cultural-dimensions-design/cultural-dimensions-design';
-import articleInternationalUIDesign from './articles/international-ui-design/international-ui-design';
-import articleInternationalResearch from './articles/international-research/international-research';
-import articleTranslationLocalization from './articles/translation-localization/translation-localization';
-import articleDevelopingEmergingEconomies from './articles/developing-emerging-economies/developing-emerging-economies';
-import articleCrossCulturalTeams  from './articles/cross-cultural-teams/cross-cultural-teams';
+import articleCultureStudiesModels from './articles/culture-studies-models';
+import articleCulturalDimensionsDesign from './articles/cultural-dimensions-design';
+import articleInternationalUIDesign from './articles/international-ui-design';
+import articleInternationalResearch from './articles/international-research';
+import articleTranslationLocalization from './articles/translation-localization';
+import articleDevelopingEmergingEconomies from './articles/developing-emerging-economies';
+import articleCrossCulturalTeams  from './articles/cross-cultural-teams';
 
 import articleSetGlobalUx from './article-sets/global-ux';
 
@@ -23,14 +23,14 @@ export class ArticleStore {
         let articleMaterializer = new ArticleMaterializer();
 
         this.articles = [
-            articleMaterializer.materialize(articleCrossCulturalTeams),
-            articleMaterializer.materialize(articleCulturalDimensionsDesign),
+            articleCrossCulturalTeams,
+            articleCulturalDimensionsDesign,
             articleDevelopingEmergingEconomies,
             articleTranslationLocalization,
             articleInternationalUIDesign,
-            articleInternationalResearch,        
-            articleMaterializer.materialize(articleCultureStudiesModels),
-        ];
+            articleInternationalResearch,
+            articleCultureStudiesModels,
+        ].map(articleData => articleMaterializer.materialize(articleData));
 
         this.articleSets.forEach(articleSet => {
             let articles = this.getArticlesOfArticleSet(articleSet.id);
