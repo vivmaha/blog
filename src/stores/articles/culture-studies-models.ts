@@ -1,17 +1,17 @@
 import {
-    IArticleQuoteData,
-    IArticleData,
-    IArticleDataHtml,
-} from "../../models/IArticleData";
+    IArticleContentQuote,
+    IArticleContentHtml,
+} from "../../models/IArticleContent";
+import { IArticle } from "../../models/IArticle";
 
-export default <IArticleData>{
+export default <IArticle>{
     type: "article",
     title: 'Cultural Awareness',
     date: new Date(2016, 9, 8),
     id: 'cultural-awareness',
     introduction: {
         preview: "Global design demands cultural awareness. In this article, I look at techniques for developing cultural awareness.",
-        extended: <IArticleQuoteData>{
+        extended: <IArticleContentQuote>{
             type: "article-quote",
             quote: "Your company's culture and your company's brand are really just two sides of the same coin. The brand may lag the culture at first, but eventually it will catch up. Your culture is your brand.",
             person: "Tony Hsei",
@@ -21,7 +21,7 @@ export default <IArticleData>{
     articleSetId: 'global-ux',
     sections: [
         [
-            <IArticleDataHtml>{ 
+            <IArticleContentHtml>{ 
                 type: "html",
                 content: `
                     <h1>The Concept of Culture</h1>
@@ -41,7 +41,7 @@ export default <IArticleData>{
                 `
             },
         ], [
-            <IArticleDataHtml>{
+            <IArticleContentHtml>{
                 type: "html",
                 content: `
                     <h1>Culture and UX</h1>
@@ -64,7 +64,7 @@ export default <IArticleData>{
                 `
             },
         ], [
-            <IArticleDataHtml>{
+            <IArticleContentHtml>{
                 type: "html",
                 content: `
                     <h1>Building Your Cultural Awareness</h1>

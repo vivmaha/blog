@@ -1,17 +1,17 @@
 import {
-    IArticleQuoteData,
-    IArticleData,
-    IArticleDataHtml,
-} from "../../models/IArticleData";
+    IArticleContentQuote,
+    IArticleContentHtml,
+} from "../../models/IArticleContent";
+import { IArticle } from "../../models/IArticle";
 
-export default <IArticleData>{
+export default <IArticle>{
     type: "article",
     title: 'Design for Emerging Economies',
     date: new Date(2016, 10, 19),
     id: 'developing-for-emerging-economies',
     introduction: {
         preview: "Companies are increasingly expanding into untapped markets of emerging economies. This post reflects on the successes and failures of a few of these endeavours.",
-        extended: <IArticleQuoteData>{
+        extended: <IArticleContentQuote>{
             type: "article-quote",
             quote: "The usual approach is to strip the product of features until a semblance of affordability is attained. The trouble is that the emerging consumer, for whom every act of discretionary consumption is an act of sacrificing something essential, is looking to be seduced rather than patronized",
             person: "Santosh Desai",
@@ -21,7 +21,7 @@ export default <IArticleData>{
     articleSetId: 'global-ux',
     sections: [        
         [
-            <IArticleDataHtml>{ 
+            <IArticleContentHtml>{ 
                 type: "html",
                 content: `
                     <h1>Engineering Reverse Innovations</h1>
@@ -40,7 +40,7 @@ export default <IArticleData>{
                 `
             },
         ], [
-            <IArticleDataHtml>{
+            <IArticleContentHtml>{
                 type: "html",
                 content: `
                     <h1>Global Product Design</h1>
@@ -65,7 +65,7 @@ export default <IArticleData>{
                 `
             },
         ], [
-            <IArticleDataHtml>{
+            <IArticleContentHtml>{
                 type: "html",
                 content: `
                     <h1>The Washing Machine that Ate my Sari</h1>
@@ -78,7 +78,7 @@ export default <IArticleData>{
                 `
             },
         ], [
-            <IArticleDataHtml>{
+            <IArticleContentHtml>{
                 type: "html",
                 content: `
                     <h1>How P&amp;G brought the diaper revolution to China</h1>

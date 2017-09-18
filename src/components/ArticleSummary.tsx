@@ -15,7 +15,7 @@ export var ArticleSummary: React.StatelessComponent<IArticle> = (props: IArticle
                 <Link to={link}>{props.title}</Link>
             </h1>
             <span>{friendlyDate}</span>
-            <p className="no-margin-top">{props.introductionPart1}</p>
+            <p className="no-margin-top">{props.introduction.preview}</p>
         </section>
     );
 }

@@ -1,17 +1,17 @@
 import {
-    IArticleQuoteData,
-    IArticleData,
-    IArticleDataHtml,
-} from "../../models/IArticleData";
+    IArticleContentQuote,
+    IArticleContentHtml,
+} from "../../models/IArticleContent";
+import { IArticle } from "../../models/IArticle";
 
-export default <IArticleData>{
+export default <IArticle>{
     type: "article",
     title: 'Global User Research',
     date: new Date(2016, 10, 6),
     id: 'global-user-research',
     introduction: {
         preview: "Global User Research is hard. In this post, we look at tips from seasoned veterans for conducting an insightful global user study, and delivering compelling results to the product team.",
-        extended: <IArticleQuoteData>{
+        extended: <IArticleContentQuote>{
             type: "article-quote",
             quote: "Let them teach you",
             person: "Global UX (Chapter 7)"
@@ -20,7 +20,7 @@ export default <IArticleData>{
     articleSetId: 'global-ux',
     sections: [
         [
-            <IArticleDataHtml>{ 
+            <IArticleContentHtml>{ 
                 type: "html",
                 content: `
                     <h1>Research in the Field</h1>
@@ -77,7 +77,7 @@ export default <IArticleData>{
                 `
             },
         ], [
-            <IArticleDataHtml>{
+            <IArticleContentHtml>{
                 type: "html",
                 content: `
                     <h1>Bringing It Home</h1>

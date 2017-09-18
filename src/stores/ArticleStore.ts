@@ -1,8 +1,6 @@
 import { IArticle } from "../models/IArticle";
 import { IArticleSet } from "../models/IArticleSet";
 
-import { ArticleMaterializer } from './articles/ArticleMaterializer';
-
 import articleCultureStudiesModels from './articles/culture-studies-models';
 import articleCulturalDimensionsDesign from './articles/cultural-dimensions-design';
 import articleInternationalUIDesign from './articles/international-ui-design';
@@ -16,11 +14,8 @@ import articleSetGlobalUx from './article-sets/global-ux';
 export class ArticleStore {   
 
     private articles : IArticle[];
-
     
     constructor() {
-
-        let articleMaterializer = new ArticleMaterializer();
 
         this.articles = [
             articleCrossCulturalTeams,
@@ -30,7 +25,7 @@ export class ArticleStore {
             articleInternationalUIDesign,
             articleInternationalResearch,
             articleCultureStudiesModels,
-        ].map(articleData => articleMaterializer.materialize(articleData));
+        ];
 
         this.articleSets.forEach(articleSet => {
             let articles = this.getArticlesOfArticleSet(articleSet.id);

@@ -5,6 +5,7 @@ import { IArticleSet } from "../models/IArticleSet";
 import { ArticleStore } from "../stores/ArticleStore";
 import { Articles } from "../components/Articles";
 import { RouteComponentProps } from "react-router";
+import { ArticleMaterializer } from "./ArticleMaterializer";
 
 interface Params {
     id: string;
@@ -16,6 +17,9 @@ export interface State {
 }
 
 export class ArticleSet extends React.Component<RouteComponentProps<any>, State> {
+
+    private articleMaterializer = new ArticleMaterializer();
+
     constructor(props: RouteComponentProps<any>) {        
         super(props);
         this.state = {
@@ -43,7 +47,7 @@ export class ArticleSet extends React.Component<RouteComponentProps<any>, State>
         return (
             <Articles 
                 articles={this.state.articles} 
-                bannerContent={this.state.articleSet.introduction}
+                bannerContent={this.articleMaterializer.materialize(this.state.articleSet.introduction)}
                 bannerTitle={this.state.articleSet.title}
                 backgroundImageUrl={this.state.articleSet.backgroundImageUrl}
             />

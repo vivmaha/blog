@@ -7,6 +7,7 @@ export interface Props {
 }
 
 export var Header: React.StatelessComponent<Props> = (props: Props) => {
+
     return (
         <header className="header">
             <nav>

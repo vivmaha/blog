@@ -1,17 +1,17 @@
 import {
-    IArticleQuoteData,
-    IArticleData,
-    IArticleDataHtml,
-} from "../../models/IArticleData";
+    IArticleContentQuote,
+    IArticleContentHtml,
+} from "../../models/IArticleContent";
+import { IArticle } from "../../models/IArticle";
 
-export default <IArticleData>{
+export default <IArticle>{
     type: "article",
     title: 'How Culture Became Part of UX',
     date: new Date(2016, 9, 16),
     id: 'how-culture-became-part-of-ux',
     introduction: {
         preview: "Experiences in the field have proven that culture is a key factor of UX. In this article we look at one such example, and how the field of UX has evolved to incorporate culture.",
-        extended: <IArticleQuoteData>{
+        extended: <IArticleContentQuote>{
             type: "article-quote",
             quote: "Once developers recognize that their own patterns of rationality are not universal, there is the possibility of designing new interfaces with more appeal to those voluntarily on the opposite side of the digital divide.",
             person: "Emilie W. Gould",
@@ -21,7 +21,7 @@ export default <IArticleData>{
     articleSetId: 'global-ux',
     sections: [
         [
-            <IArticleDataHtml>{ 
+            <IArticleContentHtml>{ 
                 type: "html",
                 content: `
                     <h1>The Ethnic Theory of Plane Crashes</h1>
@@ -36,7 +36,7 @@ export default <IArticleData>{
                 `
             },
         ], [
-            <IArticleDataHtml>{
+            <IArticleContentHtml>{
                 type: "html",
                 content: `
                     <h1>Synthesizing the Literature on Cultural Values</h1>
@@ -70,7 +70,7 @@ export default <IArticleData>{
                 `
             },
         ], [
-            <IArticleDataHtml>{
+            <IArticleContentHtml>{
                 type: "html",
                 content: `
                     <h1>Culural issues in HCI</h1>

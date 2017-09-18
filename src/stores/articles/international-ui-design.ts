@@ -1,17 +1,17 @@
 import {
-    IArticleQuoteData,
-    IArticleData,
-    IArticleDataHtml,
-} from "../../models/IArticleData";
+    IArticleContentQuote,
+    IArticleContentHtml,
+} from "../../models/IArticleContent";
+import { IArticle } from "../../models/IArticle";
 
-export default <IArticleData>{
+export default <IArticle>{
     type: "article",
     title: 'Global Design',
     date: new Date(2016, 9, 22),
     id: 'global-design',
     introduction: {
         preview: "Great global user research does not automatically translate into a successful product. Design and engineering processes must also be globally-oriented so that they can address any cultural issues that arise.",
-        extended: <IArticleQuoteData>{
+        extended: <IArticleContentQuote>{
             type: "article-quote",
             quote: "It is arrogant of us to think we can create images that will have the same precise meaning to everyone everywhere.",
             person: "William Horton"
@@ -20,7 +20,7 @@ export default <IArticleData>{
     articleSetId: 'global-ux',
     sections: [
         [
-            <IArticleDataHtml>{ 
+            <IArticleContentHtml>{ 
                 type: "html",
                 content: `
                     <h1>Design for a Global Audience</h1>
@@ -66,7 +66,7 @@ export default <IArticleData>{
                 `
             },
         ], [
-            <IArticleDataHtml>{
+            <IArticleContentHtml>{
                 type: "html",
                 content: `
                     <h1>Graphics: The Not Quite Universal Language</h1>
