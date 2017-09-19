@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { ArticleStore } from "../stores/ArticleStore";
+import { ArticleStore } from "../content/ArticleStore";
 import { Link } from 'react-router-dom';
 import { ArticleCaption }  from "./ArticleCaption";
 

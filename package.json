@@ -12,7 +12,9 @@
   },
   "author": "vivek maharajh",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "@types/react-redux": "^5.0.9"
+  },
   "devDependencies": {
     "@types/chai": "^4.0.4",
     "@types/enzyme": "^2.8.7",
@@ -39,9 +41,12 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-helmet": "^5.2.0",
+    "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-test-renderer": "^15.6.1",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
     "reset-css": "^2.2.1",
     "sass-loader": "^6.0.6",
     "source-map-loader": "^0.2.1",

@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
 import * as React from "react";
 import { IArticle } from "../models/IArticle";
-import { ArticleStore } from "../stores/ArticleStore";
+import { ArticleStore } from "../content/ArticleStore";
 import { Articles } from "../components/Articles";
 import { RouteComponentProps } from "react-router";
 
