@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 
 
 import { Home } from "./views/Home";
-import { Article } from "./views/Article";
+import { ArticleView } from "./views/ArticleView";
 import { ArticleSet } from "./views/ArticleSet";
 import { store } from "./redux/Store";
 
@@ -20,7 +20,7 @@ render(
           <div>
             <ScrollToTop />
             <Route exact path="/" component={Home} />
-            <Route path="/article/:id" component={Article} />
+            <Route path="/article/:id" component={ArticleView} />
             <Route path="/series/:id" component={ArticleSet} />
           </div>
         </BrowserRouter>

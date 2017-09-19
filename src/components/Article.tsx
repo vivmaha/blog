@@ -2,8 +2,6 @@ import * as Moment from "moment";
 
 import * as React from "react";
 import { Helmet } from "react-helmet";
-import { connect } from 'react-redux';
-import { RouteComponentProps } from "react-router";
 
 import { ArticleSetSummary } from "../components/ArticleSetSummary";
 import { Header } from "../components/Header";
@@ -11,28 +9,11 @@ import { Header } from "../components/Header";
 import { IArticleContent } from "../models/IArticleContent";
 import { IArticle } from "../models/IArticle";
 
-import { State } from "../redux/State";
-
-import { ArticleMaterializer } from "./ArticleMaterializer";
+import { ArticleMaterializer } from "../views/ArticleMaterializer";
 
 import "./Article.scss";
 
-interface Props extends  RouteComponentProps<any> {
-    articles: {
-        [id: string]: IArticle
-    }
-}
-
-const mapStateToProps = (state: State) => {
-    return {
-        articles: state.articles.items
-    }
-}
-
-export var Article = connect(mapStateToProps)((props: Props) => {
-    let articleId = props.match.params.id;    
-    
-    let article = props.articles[articleId];
+export let Article = (article: IArticle) => {
 
     let friendlyDate = Moment(article.date).format("MMM Do, YYYY");
     let articleMaterializer = new ArticleMaterializer();
@@ -73,4 +54,4 @@ export var Article = connect(mapStateToProps)((props: Props) => {
             </main>
         </div>
     );
-});
+};
