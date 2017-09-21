@@ -9,12 +9,19 @@ import { Header } from "../components/Header";
 
 import { IArticleContent } from "../models/IArticleContent";
 import { IArticle } from "../models/IArticle";
+import { IArticleSet } from "../models/IArticleSet";
 
 import "./Article.scss";
 
-export let Article = (article: IArticle) => {
+interface Props {
+    article: IArticle,
+    nextArticle: IArticle,
+    articleSet: IArticleSet
+}
 
-    let friendlyDate = Moment(article.date).format("MMM Do, YYYY");
+export let Article = (props: Props) => {
+
+    let friendlyDate = Moment(props.article.date).format("MMM Do, YYYY");
 
     let materializeSections = (sections: IArticleContent[][]): JSX.Element[] => {
         return sections.map(section => {
@@ -26,25 +33,25 @@ export let Article = (article: IArticle) => {
 
     return (
         <div className="body-container">
-            <Helmet title={article.title}/>
+            <Helmet title={props.article.title}/>
             <Header></Header>
             <main>
                 <article>
                     <header>
-                        <h1>{article.title}</h1>
+                        <h1>{props.article.title}</h1>
                         <p>by V Maharajh on {friendlyDate}</p>
-                        <p>{article.introduction.preview}</p>
-                        <ArticleFreeform data={article.introduction.extended}/>
+                        <p>{props.article.introduction.preview}</p>
+                        <ArticleFreeform data={props.article.introduction.extended}/>
                         <ArticleSetSummary 
-                            articleSetId={article.articleSetId} 
-                            currentArticleId={article.id}
+                            articleSet={props.articleSet}
+                            nextArticle={props.nextArticle}
                         />
                     </header>
-                    { materializeSections(article.sections) }
+                    { materializeSections(props.article.sections) }
                     <footer>
                         <ArticleSetSummary
-                            articleSetId={article.articleSetId} 
-                            currentArticleId={article.id}
+                            articleSet={props.articleSet}
+                            nextArticle={props.nextArticle}
                             includeLinkToNextArticle
                         />
                     </footer>
