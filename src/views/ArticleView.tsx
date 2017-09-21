@@ -25,5 +25,5 @@ const mapStateToProps = (state: State) => {
 export var ArticleView = connect(mapStateToProps)((props: Props) => {
     let articleId = props.match.params.id;    
     let article = props.articles[articleId];
-    return <Article {...article}></Article>
+    return <Article {...article}></Article>;
 });
