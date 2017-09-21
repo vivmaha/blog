@@ -1,11 +1,12 @@
-import { Helmet } from "react-helmet";
 import * as React from "react";
+
 import { connect } from 'react-redux';
+import { RouteComponentProps } from "react-router";
+
 import { IArticle } from "../models/IArticle";
 import { IArticleSet } from "../models/IArticleSet";
-import { Articles } from "../components/Articles";
-import { RouteComponentProps } from "react-router";
-import { ArticleMaterializer } from "./ArticleMaterializer";
+
+import { ArticleSet } from "../components/ArticleSet";
 
 import { State as redux_State} from "../redux/State";
 
@@ -21,7 +22,7 @@ const mapStateToProps = (state: redux_State) => {
     }
 }
 
-export var ArticleSet = connect(mapStateToProps)((props: Props) => {
+export var ArticleSetView = connect(mapStateToProps)((props: Props) => {
     let articleSetId = props.match.params.id;
 
     let articleSet = props.articleSets[articleSetId];
@@ -35,14 +36,10 @@ export var ArticleSet = connect(mapStateToProps)((props: Props) => {
         }
     }
 
-    let articleMaterializer = new ArticleMaterializer();
-
     return (
-        <Articles 
-            articles={articles}
-            bannerContent={articleMaterializer.materialize(articleSet.introduction)}
-            bannerTitle={articleSet.title}
-            backgroundImageUrl={articleSet.backgroundImageUrl}
-        />
+        <ArticleSet 
+            articles={articles} 
+            articleSet={articleSet}>
+        </ArticleSet>
     );
 });
