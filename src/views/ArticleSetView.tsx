@@ -8,14 +8,14 @@ import { IArticleSet } from "../models/IArticleSet";
 
 import { ArticleSet } from "../components/ArticleSet";
 
-import { State as redux_State} from "../redux/State";
+import { State } from "../redux/State";
 
 interface Props extends  RouteComponentProps<any> {
     articles: { [id: string]: IArticle };
     articleSets: { [id: string]: IArticleSet };
 }
 
-const mapStateToProps = (state: redux_State) => {
+const mapStateToProps = (state: State) => {
     return {
         articles: state.articles.items,
         articleSets: state.articleSets.items,
