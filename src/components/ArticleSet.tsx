@@ -1,11 +1,10 @@
 import * as React from "react";
 
 import { Articles } from "../components/Articles";
+import { ArticleFreeform } from "../components/ArticleFreeform";
 
 import { IArticle } from "../models/IArticle";
 import { IArticleSet } from "../models/IArticleSet";
-
-import { ArticleMaterializer } from "../views/ArticleMaterializer";
 
 interface Props {
     articles: IArticle[];
@@ -13,12 +12,12 @@ interface Props {
 }
 
 export var ArticleSet = (props: Props) => {
-    let articleMaterializer = new ArticleMaterializer();
+    let bannerContent = <ArticleFreeform data={props.articleSet.introduction}/>;
 
     return (
         <Articles 
             articles={props.articles}
-            bannerContent={articleMaterializer.materialize(props.articleSet.introduction)}
+            bannerContent={bannerContent}
             bannerTitle={props.articleSet.title}
             backgroundImageUrl={props.articleSet.backgroundImageUrl}
         />

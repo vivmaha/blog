@@ -6,11 +6,9 @@ import {
     IArticleContent,    
 } from "../models/IArticleContent";
 
-import { IArticle } from "../models/IArticle";
-
 import { ArticleBlockQuote } from "../components/ArticleBlockQuote";
 
-export class ArticleMaterializer {
+class ArticleMaterializer {
 
     private key: number = 0;
 
@@ -43,3 +41,12 @@ export class ArticleMaterializer {
         }
     }
 }
+
+interface Props {
+    data: IArticleContent;
+}
+
+export var ArticleFreeform = (props: Props) => {
+    let articleMaterializer = new ArticleMaterializer();
+    return articleMaterializer.materialize(props.data);
+};
