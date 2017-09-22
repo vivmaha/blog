@@ -17,7 +17,7 @@ export var ArticleSetSummary: React.StatelessComponent<Props> = (props: Props) =
     let link = `/series/${props.articleSet.id}`;
 
     let linkToNextArticleElement = null;
-    if (props.includeLinkToNextArticle) {        
+    if (props.includeLinkToNextArticle && props.nextArticle) {
         let nextArticleUrl = `/article/${props.nextArticle.id}`;
         linkToNextArticleElement = (                
             <p>
