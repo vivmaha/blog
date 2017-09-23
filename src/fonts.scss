@@ -35,7 +35,7 @@
 
 @mixin type-base() {
     &:not(:first-child):not(.no-margin-top) {
-        margin-top: 1em;
+        margin-top: 0.5em;
     }
 }
 

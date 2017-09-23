@@ -11,7 +11,7 @@ export default <IArticleSet>{
     introduction: <IArticleContentHtml>{ 
         type: "html",
         content: `
-        <p className="no-margin-top">
+        <p>
             <span>A series exploring the existing literature on Global UX.</span>
             <br/>
             <br/>

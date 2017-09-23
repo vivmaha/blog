@@ -9,7 +9,7 @@ interface Props {
 }
 
 export var Home = (props: Props) => {
-    let bannerContent = <p className="no-margin-top">A place to store my notes.</p>;
+    let bannerContent = <p>A place to store my notes.</p>;
     return (
         <Articles 
             articles={props.articles} 

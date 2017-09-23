@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 import { IArticle } from "../models/IArticle";
 import { ArticleSummary } from "./ArticleSummary";
 import { ArticleCaption } from "./ArticleCaption";
+import { ArticlesBanner } from "./ArticlesBanner";
 
 import "./Articles.scss";
-
 
 export interface Props extends React.HTMLProps<HTMLDivElement> {
     articles: IArticle[];
@@ -42,7 +42,6 @@ export class Articles extends React.Component<Props, State> {
     }
 
     public render() {
-        let className = `articles ${this.state.IsCollapsed ? 'collapsed' : ''}`;
         let bannerStyle = {
             backgroundImage: `url('${this.props.backgroundImageUrl}')`,
         }
@@ -59,14 +58,14 @@ export class Articles extends React.Component<Props, State> {
         }
 
         return (
-                <main className={className}>
+                <main className="articles">
                     <Helmet title={this.props.bannerTitle}/>
-                    <header style={bannerStyle}>
-                        <div className="banner-title body-container">
-                            <h1 className="no-margin-top">{this.props.bannerTitle}</h1>
-                            {this.props.bannerContent}
-                        </div>
-                    </header>
+                    <ArticlesBanner
+                        backgroundImageUrl={this.props.backgroundImageUrl}
+                        content={this.props.bannerContent}
+                        title={this.props.bannerTitle}
+                        isTitleHidden={this.state.IsCollapsed}
+                    />
                     <article className="body-container no-margin-top">
                         { homeRecirculation }
                         <ol>

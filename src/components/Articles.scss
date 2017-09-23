@@ -5,25 +5,6 @@
     background: $color-background;
     $border: 20px;
     $shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.2);
-    header {        
-        background-position: center;
-        z-index: -1;
-        position: fixed;
-        background-size: cover;
-        left:0;
-        top: 0;
-        height: 70vh;
-        width: 100vw;
-        transition: opacity $transition-theatric-function;
-        &>.banner-title {
-            transform: none;
-            transition: opacity $transition-theatric-function;
-            margin-top: 35vh;
-            transform: translateY(-50%);
-            border: $border solid $color-background;
-            box-shadow: $shadow;
-        }
-    }
     box-shadow: $shadow;    
     &>article{
         margin-top: 70vh;
@@ -37,13 +18,6 @@
         }
         &>nav {
             margin: $border 0;
-        }
-    }
-    &.collapsed {
-        &>header {
-            &>.banner-title {
-                opacity: 0;
-            }
         }
     }
 }
