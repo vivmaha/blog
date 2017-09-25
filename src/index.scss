@@ -3,14 +3,19 @@
 @import "./fonts";
 @import "./transitions";
 
-.body-container {
-    @include type-body();
-    margin: 4vw auto;
+.body-width {
     // You should be able to read the line with eye movement only (no head movement).
     max-width: 38em;
     @include responsive(margin-left, 1em, auto, auto);
-    @include responsive(margin-right, 1em, auto, auto);        
+    @include responsive(margin-right, 1em, auto, auto);
     color: $color-text;
+    @include type-body();
+}
+
+.body-container  {
+    @extend .body-width;
+    @include type-body();
+    margin: 4vw auto;    
     background: $color-background;
 }
 

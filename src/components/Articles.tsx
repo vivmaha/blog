@@ -17,7 +17,6 @@ export interface Props extends React.HTMLProps<HTMLDivElement> {
 }
 
 export class State {
-    public IsCollapsed: boolean;
 }
 
 export class Articles extends React.Component<Props, State> {
@@ -25,20 +24,6 @@ export class Articles extends React.Component<Props, State> {
     constructor(props: Props) {        
         super(props);
         this.state = new State();
-        this.handleScroll = this.handleScroll.bind(this);
-    }
-
-    public componentDidMount() {
-        window.addEventListener('scroll', this.handleScroll);
-    }
-
-    public componentWillUnmount() {        
-         window.removeEventListener('scroll', this.handleScroll);
-    }
-
-    handleScroll(event: UIEvent) {        
-        let scrollTop = (event.target as any).body.scrollTop;
-        this.setState({IsCollapsed: scrollTop != 0} as State);
     }
 
     public render() {
@@ -64,7 +49,6 @@ export class Articles extends React.Component<Props, State> {
                         backgroundImageUrl={this.props.backgroundImageUrl}
                         content={this.props.bannerContent}
                         title={this.props.bannerTitle}
-                        isTitleHidden={this.state.IsCollapsed}
                     />
                     <article className="body-container no-margin-top">
                         { homeRecirculation }

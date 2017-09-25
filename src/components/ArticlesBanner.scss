@@ -4,22 +4,22 @@
 
 .articles-banner {        
     $border: 20px;
-    $shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.2);
+    $shadow: 0 3px 9px 0 rgba(0,0,0,0.10), 0 0 0 1px rgba(0,0,0,0.04);
 
     background-position: center;
     z-index: -1;
-    position: fixed;
     background-size: cover;
     left:0;
     top: 0;
-    height: 70vh;
-    width: 100vw;
+    height: calc(100vh - 10em);
     transition: opacity $transition-theatric-function;
+    display: flex;
+    align-items: center;
+    box-shadow: $shadow;
+    
     &>.title {
-        transform: none;
-        transition: opacity $transition-theatric-function;
-        margin-top: 35vh;
-        transform: translateY(-50%);
+        background-color: $color-background;
+        flex-grow: 1;        
         border: $border solid $color-background;
         box-shadow: $shadow;
     }

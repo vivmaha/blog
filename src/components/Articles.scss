@@ -4,11 +4,8 @@
 .articles {
     background: $color-background;
     $border: 20px;
-    $shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.2);
-    box-shadow: $shadow;    
     &>article{
-        margin-top: 70vh;
-        padding-top: 1px;
+        margin-top: 2em;
         &>ol>li {
             &:first-child {
                 &>.article-summary {
