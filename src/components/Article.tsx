@@ -15,8 +15,8 @@ import "./Article.scss";
 
 interface Props {
     article: IArticle,
-    nextArticle: IArticle,
-    articleSet: IArticleSet
+    nextArticle?: IArticle,
+    articleSet?: IArticleSet
 }
 
 export let Article = (props: Props) => {
@@ -42,18 +42,26 @@ export let Article = (props: Props) => {
                         <p>by V Maharajh on {friendlyDate}</p>
                         <p>{props.article.introduction.preview}</p>
                         <ArticleFreeform data={props.article.introduction.extended}/>
-                        <ArticleSetSummary 
-                            articleSet={props.articleSet}
-                            nextArticle={props.nextArticle}
-                        />
+                        {
+                            props.articleSet ? 
+                                <ArticleSetSummary 
+                                    articleSet={props.articleSet}
+                                    nextArticle={props.nextArticle}
+                                />
+                            : null
+                        }                        
                     </header>
                     { materializeSections(props.article.sections) }
                     <footer>
-                        <ArticleSetSummary
-                            articleSet={props.articleSet}
-                            nextArticle={props.nextArticle}
-                            includeLinkToNextArticle
-                        />
+                        {
+                            props.articleSet ? 
+                                <ArticleSetSummary
+                                    articleSet={props.articleSet}
+                                    nextArticle={props.nextArticle}
+                                    includeLinkToNextArticle
+                                />
+                            : null
+                        }
                     </footer>
                 </article>
             </main>

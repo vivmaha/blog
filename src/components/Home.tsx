@@ -15,6 +15,10 @@ export var Home = (props: Props) => {
             articles={props.articles} 
             bannerContent={bannerContent}
             bannerTitle="Notes by V"
+            bannerLink={{
+                url: "/about",
+                text: "About"
+            }}
             backgroundImageUrl="https://notesbyvmedia.blob.core.windows.net/images/pen-idea-bulb-paper-web-optimized.jpg"
         />
     );

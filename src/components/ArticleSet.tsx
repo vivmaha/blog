@@ -17,7 +17,11 @@ export var ArticleSet = (props: Props) => {
     return (
         <Articles 
             articles={props.articles}
-            bannerContent={bannerContent}
+            bannerContent={bannerContent}            
+            bannerLink={{
+                url: "/",
+                text: "Home"
+            }}
             bannerTitle={props.articleSet.title}
             backgroundImageUrl={props.articleSet.backgroundImageUrl}
         />

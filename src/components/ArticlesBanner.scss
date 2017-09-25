@@ -3,7 +3,7 @@
 @import "../colors";
 
 .articles-banner {        
-    $border: 20px;
+    
     $shadow: 0 3px 9px 0 rgba(0,0,0,0.10), 0 0 0 1px rgba(0,0,0,0.04);
 
     background-position: center;
@@ -17,10 +17,20 @@
     align-items: center;
     box-shadow: $shadow;
     
-    &>.title {
-        background-color: $color-background;
-        flex-grow: 1;        
-        border: $border solid $color-background;
-        box-shadow: $shadow;
+    &>.content {
+
+        flex-grow: 1;
+        &>* {
+            background-color: $color-background;
+            box-shadow: $shadow;
+            border: 10px solid $color-background;      
+        }
+        
+        &>.link {
+            margin-top: 0.8em;
+            display: inline-block;
+            text-decoration: none;
+            color: $color-text;
+        }
     }
 }

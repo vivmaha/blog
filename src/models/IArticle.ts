@@ -6,11 +6,11 @@ export interface IArticle {
     id: string;
     introduction: {
         // Used to show a summary of the article
-        preview: string;
+        preview?: string;
         // Concatenated with {preview} and placed at the beginning of the article.
         extended: IArticleContent;
     }
-    articleSetId: string;
+    articleSetId?: string;
     sections: IArticleContent[][];
     nextArticleId?: string;
     previousArticleId?: string;

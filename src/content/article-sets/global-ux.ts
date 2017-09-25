@@ -11,11 +11,11 @@ export default <IArticleSet>{
     introduction: <IArticleContentHtml>{ 
         type: "html",
         content: `
-        <p>
-            <span>A series exploring the existing literature on Global UX.</span>
+        <p class="force-margin-top">
+            <span>A literature review.</span>
             <br/>
             <br/>
-            <span>This is part of my <em>HCDE 512</em> coursework at the University of Washington as instructed by Manuela Noske.</span>
+            <span>This was part of my coursework at the University of Washington. Specifically, HCDE 512 with Manuela Noske.</span>
         </p>
         `
     }

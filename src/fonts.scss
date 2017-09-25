@@ -37,6 +37,9 @@
     &:not(:first-child):not(.no-margin-top) {
         margin-top: 0.8em;
     }
+    .force-margin-top {
+        margin-top: 0.8em;
+    }
 }
 
 @mixin type-p {
