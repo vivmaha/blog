@@ -5,6 +5,7 @@ import articleInternationalResearch from './international-research';
 import articleTranslationLocalization from './translation-localization';
 import articleDevelopingEmergingEconomies from './developing-emerging-economies';
 import articleCrossCulturalTeams  from './cross-cultural-teams';
+import articleSearchEngineOptimization101  from './search-engine-optimization-101';
 
 import { IArticle } from "../../models/IArticle";
 
@@ -16,6 +17,7 @@ let articles = [
     articleInternationalUIDesign,
     articleInternationalResearch,
     articleCultureStudiesModels,
+    articleSearchEngineOptimization101
 ];
 
 articles = articles.sort((a: IArticle, b: IArticle) => a.date.getTime() - b.date.getTime());

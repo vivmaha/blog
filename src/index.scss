@@ -15,7 +15,8 @@
 .body-container  {
     @extend .body-width;
     @include type-body();
-    margin: 4vw auto;    
+    margin-top: 4vw;
+    margin-bottom: 2em;
     background: $color-background;
 }
 
