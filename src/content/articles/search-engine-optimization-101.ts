@@ -13,8 +13,8 @@ export default <IArticle>{
         preview: "Search engine optimization (SEO) is now a critical ingredient of website design. This post summarizes a paper that discusses a broad range of SEO techniques.",
         extended: <IArticleContentQuote>{
             type: "article-quote",
-            quote: "Search engine optimization is often about making small modifications to parts of your website. When viewed individually, these changes might seem like incremental improvements, but when combined with other optimizations, they could have a noticeable impact on your site's user experience and performance in organic search results. ",
-            person: "Google's SEO Starter Guide",
+            quote: "The rewards of improving search ranking can entice site owners to engage in questionable “black hat” techniques to trick the search engine into boosting their site’s rank. However, search engines are mature enough to detect such efforts, and may penalize the site with lower rankings or exclusion from the search results.",
+            person: "John B. Killoran",
         }
     },
     sections: [
