@@ -1,6 +1,6 @@
 # Blog
 
-[In Progress] Website for my blog
+Website for my blog
 
 # Ops
 
