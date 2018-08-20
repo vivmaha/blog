@@ -12,15 +12,6 @@ deploy:
   # verbose: true
   on:
     branch: master
-env:
-  - CXX=g++-4.8
-addons:
-  apt:
-    sources:
-    - ubuntu-toolchain-r-test
-    packages:
-    - g++-4.8
-  firefox: "latest"
 before_script:
   - npm run build-prod
   - git fetch --unshallow || true
