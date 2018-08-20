@@ -1,7 +1,42 @@
-module.exports = function(env) {
-    var envName = 'dev';
-    if (env) {
-      envName = Object.keys(env)[0];
-    } 
-    return require(`./webpack.${envName}.js`);
-}
+var webpack = require('webpack');
+
+module.exports = {
+    mode: process.env.WEBPACK_SERVE ? 'development' : 'production',
+    entry: "./src/index.tsx",    
+    module: {
+        rules: [     
+            {
+                enforce: 'pre',
+                test: /\.js$/,
+                use: "source-map-loader"
+            },
+            {
+                enforce: 'pre',
+                test: /\.tsx?$/,
+                use: "source-map-loader"
+            },
+            {
+                test: /\.tsx?$/,
+                use: "ts-loader"
+            },
+            {
+                test: /\.scss$/, 
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "sass-loader"
+                ]
+            }
+        ]
+    },
+    output: {
+        filename: "./bundle.js",
+    },
+    plugins: [
+        // Workaround for https://github.com/moment/moment/issues/1435
+        new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en$/),
+    ],
+    resolve: {
+        extensions: [".ts", ".tsx", ".js"],
+    },
+};
