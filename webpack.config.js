@@ -1,7 +1,6 @@
 var webpack = require('webpack');
 
 module.exports = {
-    mode: process.env.WEBPACK_SERVE ? 'development' : 'production',
     entry: "./src/index.tsx",    
     module: {
         rules: [     
