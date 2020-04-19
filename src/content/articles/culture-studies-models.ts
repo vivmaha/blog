@@ -1,29 +1,31 @@
 import {
-    IArticleContentQuote,
-    IArticleContentHtml,
+  IArticleContentQuote,
+  IArticleContentHtml,
 } from "../../models/IArticleContent";
 import { IArticle } from "../../models/IArticle";
 
-export default <IArticle>{
-    type: "article",
-    title: 'Cultural Awareness',
-    date: new Date(2016, 9, 8),
-    id: 'cultural-awareness',
-    introduction: {
-        preview: "Global design demands cultural awareness. In this article, I look at techniques for developing cultural awareness.",
-        extended: <IArticleContentQuote>{
-            type: "article-quote",
-            quote: "Your company's culture and your company's brand are really just two sides of the same coin. The brand may lag the culture at first, but eventually it will catch up. Your culture is your brand.",
-            person: "Tony Hsei",
-            personTitle: "Zappos",
-        }
-    },
-    articleSetId: 'global-ux',
-    sections: [
-        [
-            <IArticleContentHtml>{ 
-                type: "html",
-                content: `
+export default {
+  type: "article",
+  title: "Cultural Awareness",
+  date: new Date(2016, 9, 8),
+  id: "cultural-awareness",
+  introduction: {
+    preview:
+      "Global design demands cultural awareness. In this article, I look at techniques for developing cultural awareness.",
+    extended: {
+      type: "article-quote",
+      quote:
+        "Your company's culture and your company's brand are really just two sides of the same coin. The brand may lag the culture at first, but eventually it will catch up. Your culture is your brand.",
+      person: "Tony Hsei",
+      personTitle: "Zappos",
+    } as IArticleContentQuote,
+  },
+  articleSetId: "global-ux",
+  sections: [
+    [
+      {
+        type: "html",
+        content: `
                     <h1>The Concept of Culture</h1>
                     <cite>Minkov, “The Concept of Culture”, Cross-Cultural Analysis (LA, London, Delhi: Sage, 2012): 9-17.</cite>
                     <p>Culture is too complicated to define, but too important to ignore. There is wide variation in definitions across scholarly circles. Notably, there is disagreement between which aspects are part of culture, and which are extraneous. For example, is the wealth of a nation a part of its culture? Pick the definition that best fits your purpose and be sure to communicate this with your findings.</p>
@@ -38,12 +40,13 @@ export default <IArticle>{
                         <dd>These classifications disagree on whether culture should be studied in context of humans, or as an independent phenomenon.</dd>
                         <dd>The disagreement is not about the uniqueness of culture to mankind. It is about whether humans are capable of studying it independently from human contexts.</dd>
                     </dl>
-                `
-            },
-        ], [
-            <IArticleContentHtml>{
-                type: "html",
-                content: `
+                `,
+      } as IArticleContentHtml,
+    ],
+    [
+      {
+        type: "html",
+        content: `
                     <h1>Culture and UX</h1>
                     <cite>Quesenbery, W., &amp; Szuc, D. (2012). Global UX: Design and research in a connected world. Waltham, MA: Morgan Kaufmann (Chapter 3)</cite>
                     <p>Culture is best understood comparatively.</p>
@@ -61,12 +64,13 @@ export default <IArticle>{
                     <p>Some sources of UX issues are easier to predict than others. In increasing order of difficulty: task completion, infrastructure, legal, market, language, and finally, culture.</p>
                     <p>Hofstede has five dimensions for classifying cultures. It is the most popular model for doing this, but has been met with mixed reactions. Regardless of its accuracy, it is a good mental framework to build upon.</p>
                     <p>Language will be just as nuanced as culture, and you'll have to understand them both for a successful design.</p>
-                `
-            },
-        ], [
-            <IArticleContentHtml>{
-                type: "html",
-                content: `
+                `,
+      } as IArticleContentHtml,
+    ],
+    [
+      {
+        type: "html",
+        content: `
                     <h1>Building Your Cultural Awareness</h1>
                     <cite>Quesenbery, W., &amp; Szuc, D. (2012). Global UX: Design and research in a connected world. Waltham, MA: Morgan Kaufmann (Chapter 4)</cite>
                     <p>The following attitudes are helpful in developing global awareness:</p>
@@ -89,8 +93,8 @@ export default <IArticle>{
                         <dt>Proxy</dt>
                         <dd>As a last resort, if you're unable to travel, you can get to know someone who originates from that culture, or even someone who has been thru the immersion process in that culture. Be mindful that the person's experiences may be reflective of an older time period of that culture.</dd>
                     </dl>
-                `
-            },
-        ]
-    ]
-};
+                `,
+      } as IArticleContentHtml,
+    ],
+  ],
+} as IArticle;

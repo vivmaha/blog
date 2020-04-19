@@ -1,29 +1,31 @@
 import {
-    IArticleContentQuote,
-    IArticleContentHtml,
+  IArticleContentQuote,
+  IArticleContentHtml,
 } from "../../models/IArticleContent";
 import { IArticle } from "../../models/IArticle";
 
-export default <IArticle>{
-    type: "article",
-    title: 'Cross-Cultural Teams',
-    date: new Date(2016, 10, 25),
-    id: 'cross-cultural-teams',
-    introduction: {
-        preview: "Working on a global product is usually accompanied with a global workforce. This post explores the dynamics of diverse work spaces.",
-        extended: <IArticleContentQuote>{
-            type: "article-quote",
-            quote: "The Japanese have a saying: ‘The nail that sticks up must be hammered down,’ implying that individualism must be crushed and frustrated. This isn’t so — individual effort and initiative are appreciated in Japanese business — but they need to be coordinated in a team effort. This means that a lot of time is spent in collective discussion, and decisions are made through the process known as nemawashi (binding the roots).",
-            person: "Barry Tomalin",
-            personTitle: "Lecturer in Cultural Awareness"
-        }
-    },
-    articleSetId: "global-ux",
-    sections: [
-        [
-            <IArticleContentHtml>{ 
-                type: "html",
-                content: `
+export default {
+  type: "article",
+  title: "Cross-Cultural Teams",
+  date: new Date(2016, 10, 25),
+  id: "cross-cultural-teams",
+  introduction: {
+    preview:
+      "Working on a global product is usually accompanied with a global workforce. This post explores the dynamics of diverse work spaces.",
+    extended: {
+      type: "article-quote",
+      quote:
+        "The Japanese have a saying: ‘The nail that sticks up must be hammered down,’ implying that individualism must be crushed and frustrated. This isn’t so — individual effort and initiative are appreciated in Japanese business — but they need to be coordinated in a team effort. This means that a lot of time is spent in collective discussion, and decisions are made through the process known as nemawashi (binding the roots).",
+      person: "Barry Tomalin",
+      personTitle: "Lecturer in Cultural Awareness",
+    } as IArticleContentQuote,
+  },
+  articleSetId: "global-ux",
+  sections: [
+    [
+      {
+        type: "html",
+        content: `
                     <h1>Effective Global Teams</h1>
                     <cite>Global UX, Chapter 6, “Effective Global Teams,” pp. 99-119​</cite>
                     <p>There are numerous ways to structure a global team. You may have a central location within the headquarters, or multiple branches in key markets, or even a team that is spread thinly across many different countries. It helps to hire designers who are passionate about moving to new cultures and embracing them.</p>
@@ -37,12 +39,13 @@ export default <IArticle>{
                         <li>Intentionally build cross-cultural knowledge of designers. Integration within the local community helps. Integration with the global UX community also helps, such as conferences.</li>
                     </ul>
                     <p>Diverse teams tend to be more effective at innovation, perhaps because the diversity allows them to tackle problems from many perspectives. This makes the overhead described above worth it.</p>
-                `
-            },
-        ], [
-            <IArticleContentHtml>{
-                type: "html",
-                content: `
+                `,
+      } as IArticleContentHtml,
+    ],
+    [
+      {
+        type: "html",
+        content: `
                     <h1>Teams, motivation and feedback</h1>
                     <cite>Tomalin, B. (n.d.). 8. In The World's Business Cultures: And How to Unlock Them (2nd ed., pp. 115-127). Thorogood.</cite>
                     <p>Cultures have accompanying team ethics. If your team members come from different cultures, there will be a mix of team ethics, which may not mix nicely.</p>
@@ -59,8 +62,8 @@ export default <IArticle>{
                         <dt>Feedback</dt>
                         <dd>Private versus public. Email versus in-person. Blunt versus mitigated.</dd>
                     </dl>
-                `
-            },
-        ]
-    ]
-};
+                `,
+      } as IArticleContentHtml,
+    ],
+  ],
+} as IArticle;

@@ -1,27 +1,29 @@
 import {
-    IArticleContentQuote,
-    IArticleContentHtml,
+  IArticleContentQuote,
+  IArticleContentHtml,
 } from "../../models/IArticleContent";
 import { IArticle } from "../../models/IArticle";
 
-export default <IArticle>{
-    type: "article",
-    title: 'Search Engine Optimization',
-    date: new Date(2015, 10, 25),
-    id: 'search-engine-optimization-101',
-    introduction: {
-        preview: "Search engine optimization (SEO) is now a critical ingredient of website design. This post summarizes a paper that discusses a broad range of SEO techniques.",
-        extended: <IArticleContentQuote>{
-            type: "article-quote",
-            quote: "The rewards of improving search ranking can entice site owners to engage in questionable “black hat” techniques to trick the search engine into boosting their site’s rank. However, search engines are mature enough to detect such efforts, and may penalize the site with lower rankings or exclusion from the search results.",
-            person: "John B. Killoran",
-        }
-    },
-    sections: [
-        [
-            <IArticleContentHtml>{ 
-                type: "html",
-                content: `
+export default {
+  type: "article",
+  title: "Search Engine Optimization",
+  date: new Date(2015, 10, 25),
+  id: "search-engine-optimization-101",
+  introduction: {
+    preview:
+      "Search engine optimization (SEO) is now a critical ingredient of website design. This post summarizes a paper that discusses a broad range of SEO techniques.",
+    extended: {
+      type: "article-quote",
+      quote:
+        "The rewards of improving search ranking can entice site owners to engage in questionable “black hat” techniques to trick the search engine into boosting their site’s rank. However, search engines are mature enough to detect such efforts, and may penalize the site with lower rankings or exclusion from the search results.",
+      person: "John B. Killoran",
+    } as IArticleContentQuote,
+  },
+  sections: [
+    [
+      {
+        type: "html",
+        content: `
                     <h1>Background</h1>
                     <cite>Killoran, J. B. (2013). How to Use Search Engine Optimization Techniques to Increase Website Visibility. IEEE Trans. Profess. Commun. IEEE Transactions on Professional Communication, 56(1), 50-66.</cite>
                     <p>Search engines aim to rank websites based on authenticity, topicality, quality, and popularity. To do this, they employ a set of rules that have two general classes:</p>                    
@@ -40,12 +42,13 @@ export default <IArticle>{
                         <li>Keywords on the website</li>
                         <li>Inbound links from other websites</li>
                     </ul>
-                `
-            },
-        ], [
-            <IArticleContentHtml>{
-                type: "html",
-                content: `
+                `,
+      } as IArticleContentHtml,
+    ],
+    [
+      {
+        type: "html",
+        content: `
                     <h1>Search behavior of users</h1>
                     <p>The following user factors affect search ranking<p>
                     <dl>
@@ -55,12 +58,13 @@ export default <IArticle>{
                         <dd>If users click on a result, but end up returning to the search engine to try other results, the result’s ranking will decrease. This behavior indicates that the user was unsatisfied with the initial result.</dd>
                     </dl>
                     <p>Websites should therefore ensure that their descriptions featured on search engines are compelling to increase the CTR, and accurate to decrease the bounce rate.</p>                    
-                `
-            },
-        ], [
-            <IArticleContentHtml>{
-                type: "html",
-                content: `
+                `,
+      } as IArticleContentHtml,
+    ],
+    [
+      {
+        type: "html",
+        content: `
                     <h1>Keywords on the website</h1>
                     <p>Use the vocabulary of the intended audience. It is tempting to use the vocabulary of experts, but this isn’t the vocabulary that users will be using to search for the site.</p>
                     <p>Searchers most often include the following in their search:</p>
@@ -79,12 +83,13 @@ export default <IArticle>{
                         <li>The URL’s path (separated by hyphens).</li>
                     </ul>
                     <p>Note that ranking is a cumulative calculation, so doing both of the above is even more effective.</p>
-                `
-            },
-        ], [
-            <IArticleContentHtml>{
-                type: "html",
-                content: `
+                `,
+      } as IArticleContentHtml,
+    ],
+    [
+      {
+        type: "html",
+        content: `
                     <h1>Inbound links from other websites</h1>
                     <p>External websites that link to your site increases your site’s ranking. The quality of these inbound links matter, and include:</p>
                     <ul>
@@ -105,16 +110,17 @@ export default <IArticle>{
                         <li>Post content that can be shared via Tweets and Facebook. These should be accompanied with one-button affordances to share.</li>
                         <li>Post content directly to social media sites. Currently Twitter links seem to have the most impact to search rank, followed by Facebook links.</li>
                     </ul>
-                `
-            },
-        ], [
-            <IArticleContentHtml>{
-                type: "html",
-                content: `
+                `,
+      } as IArticleContentHtml,
+    ],
+    [
+      {
+        type: "html",
+        content: `
                     <h1>Constant Change</h1>
                     <p>Lastly, these techniques are constantly evolving because search engines are constantly changing their algorithms. This forces siteowners to keep up to date with the changes in order to maintain their search ranking.</p>
-                `
-            },
-        ]
-    ]
-};
+                `,
+      } as IArticleContentHtml,
+    ],
+  ],
+} as IArticle;

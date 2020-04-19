@@ -1,28 +1,29 @@
 import {
-    IArticleContentQuote,
-    IArticleContentHtml,
+  IArticleContentQuote,
+  IArticleContentHtml,
 } from "../../models/IArticleContent";
 import { IArticle } from "../../models/IArticle";
 
-export default <IArticle>{
-    type: "article",
-    title: 'Global User Research',
-    date: new Date(2016, 10, 6),
-    id: 'global-user-research',
-    introduction: {
-        preview: "Global User Research is hard. In this post, we look at tips from seasoned veterans for conducting an insightful global user study, and delivering compelling results to the product team.",
-        extended: <IArticleContentQuote>{
-            type: "article-quote",
-            quote: "Let them teach you",
-            person: "Global UX (Chapter 7)"
-        }
-    },
-    articleSetId: 'global-ux',
-    sections: [
-        [
-            <IArticleContentHtml>{ 
-                type: "html",
-                content: `
+export default {
+  type: "article",
+  title: "Global User Research",
+  date: new Date(2016, 10, 6),
+  id: "global-user-research",
+  introduction: {
+    preview:
+      "Global User Research is hard. In this post, we look at tips from seasoned veterans for conducting an insightful global user study, and delivering compelling results to the product team.",
+    extended: {
+      type: "article-quote",
+      quote: "Let them teach you",
+      person: "Global UX (Chapter 7)",
+    } as IArticleContentQuote,
+  },
+  articleSetId: "global-ux",
+  sections: [
+    [
+      {
+        type: "html",
+        content: `
                     <h1>Research in the Field</h1>
                     <cite>Global UX, Chapter 7, “Research in the Field,” pp. 121-53.</cite>            
                     <p>In this chapter, we learn to successfully execute global research.</p>
@@ -74,12 +75,13 @@ export default <IArticle>{
                         <li>Recruitment materials that are misunderstood.</li>
                         <li>Non-expert translations.</li>
                     </ul>
-                `
-            },
-        ], [
-            <IArticleContentHtml>{
-                type: "html",
-                content: `
+                `,
+      } as IArticleContentHtml,
+    ],
+    [
+      {
+        type: "html",
+        content: `
                     <h1>Bringing It Home</h1>
                     <cite>Quesenbery, W., &amp; Szuc, D. (2012). Global UX: Design and research in a connected world. Waltham, MA: Morgan Kaufmann (Chaper 8)</cite>
                     <h2>Collecting you research results</h2>
@@ -96,8 +98,8 @@ export default <IArticle>{
                     <p>Personas allow you to present a detailed description of users. This protects the privacy of your research participants. They reveal differences between your users. They allow the product team to think of new solutions for unmet user needs.</p>
                     <h2>Follow thru</h2>
                     <p>Ensure that the results are incorporated into the product. Refer back to the research during the ideation phase.</p>
-                `
-            },
-        ]
-    ]
-};
+                `,
+      } as IArticleContentHtml,
+    ],
+  ],
+} as IArticle;
