@@ -27,7 +27,6 @@ const ArticleViewInternal: React.FC<Props> = ({
   match,
 }) => {
   const articleId = match.params.id;
-
   let currentArticle: ArticleModel | undefined;
   let nextArticle: ArticleModel | undefined;
   for (const article of [...articles.values()]) {
