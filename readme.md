@@ -4,7 +4,7 @@ Website for my blog
 
 # Ops
 
-TODO - Add build status glyph after adding Github CI
+![](https://github.com/vivmaha/blog/workflows/.github/workflows/main.yml/badge.svg?branch=master)
 
 # Dev
 
