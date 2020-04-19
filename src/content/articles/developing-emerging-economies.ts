@@ -1,8 +1,8 @@
 import {
-  IArticleContentQuote,
-  IArticleContentHtml,
+  ArticleContentQuote,
+  ArticleContentHtml,
 } from "../../models/IArticleContent";
-import { IArticle } from "../../models/IArticle";
+import Article from "../../models/IArticle";
 
 export default {
   type: "article",
@@ -18,7 +18,7 @@ export default {
         "The usual approach is to strip the product of features until a semblance of affordability is attained. The trouble is that the emerging consumer, for whom every act of discretionary consumption is an act of sacrificing something essential, is looking to be seduced rather than patronized",
       person: "Santosh Desai",
       personTitle: "FutureBrands CEO",
-    } as IArticleContentQuote,
+    } as ArticleContentQuote,
   },
   articleSetId: "global-ux",
   sections: [
@@ -40,7 +40,7 @@ export default {
                     </ul>
                     <p>Emerging markets are gaining dominance of the global market. Companies ought to invest in expertise in emerging markets in order to ensure future relevance. One thing that makes this easy is the abundance of cheap engineers in those markets.</p>
                 `,
-      } as IArticleContentHtml,
+      } as ArticleContentHtml,
     ],
     [
       {
@@ -66,7 +66,7 @@ export default {
                     </dl>
                     <p>The authors believe that new technologies will impact the behavior of consumers, but not their core cultural assumptions.</p>
                 `,
-      } as IArticleContentHtml,
+      } as ArticleContentHtml,
     ],
     [
       {
@@ -80,7 +80,7 @@ export default {
                     <p>Understanding the constraints and capabilities of the local infrastructure is also crucial. This includes payment methods, internet connectivity, and power reliability.</p>
                     <p>The design methodologies that we're used to were developed and tested mainly in developed countries. They may not be effective in emerging markets. Designers have to be flexible and creative and adapt design methodologies to ensure effectiveness.</p>
                 `,
-      } as IArticleContentHtml,
+      } as ArticleContentHtml,
     ],
     [
       {
@@ -91,7 +91,7 @@ export default {
                     <p>P&amp;G entered the disposable diaper market in China in 1998. No one in China used disposable diapers at the time. P&G's strategy was to create a cheap version of the US diaper. This failed. The diaper was inferior in quality. Customers in both developing and developed countries avoid inferior quality.</p>
                     <p>P&amp;G updated their strategy. They kept cost low by using new technology, and more efficient production mechanisms. They found out that Chinese mothers craved sleep,  and they delivered a campaign that targeted this. They also played on the academic development of the baby, which is also valued in Chinese culture. This strategy succeeded.</p>
                 `,
-      } as IArticleContentHtml,
+      } as ArticleContentHtml,
     ],
   ],
-} as IArticle;
+} as Article;

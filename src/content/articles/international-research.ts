@@ -1,8 +1,8 @@
 import {
-  IArticleContentQuote,
-  IArticleContentHtml,
+  ArticleContentQuote,
+  ArticleContentHtml,
 } from "../../models/IArticleContent";
-import { IArticle } from "../../models/IArticle";
+import Article from "../../models/IArticle";
 
 export default {
   type: "article",
@@ -16,7 +16,7 @@ export default {
       type: "article-quote",
       quote: "Let them teach you",
       person: "Global UX (Chapter 7)",
-    } as IArticleContentQuote,
+    } as ArticleContentQuote,
   },
   articleSetId: "global-ux",
   sections: [
@@ -76,7 +76,7 @@ export default {
                         <li>Non-expert translations.</li>
                     </ul>
                 `,
-      } as IArticleContentHtml,
+      } as ArticleContentHtml,
     ],
     [
       {
@@ -99,7 +99,7 @@ export default {
                     <h2>Follow thru</h2>
                     <p>Ensure that the results are incorporated into the product. Refer back to the research during the ideation phase.</p>
                 `,
-      } as IArticleContentHtml,
+      } as ArticleContentHtml,
     ],
   ],
-} as IArticle;
+} as Article;

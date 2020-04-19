@@ -2,16 +2,16 @@ import * as React from "react";
 import { connect } from "react-redux";
 import { RouteComponentProps } from "react-router";
 
-import { Article } from "../components/Article";
+import Article from "../components/Article";
 
-import { IArticle } from "../models/IArticle";
-import { IArticleSet } from "../models/IArticleSet";
+import ArticleModel from "../models/IArticle";
+import ArticleSetModel from "../models/IArticleSet";
 
 import { State } from "../redux/State";
 
-interface Props extends RouteComponentProps<any> {
-  articles: { [id: string]: IArticle };
-  articleSets: { [id: string]: IArticleSet };
+interface Props extends RouteComponentProps<{ id: string }> {
+  articles: Map<string, ArticleModel>;
+  articleSets: Map<string, ArticleSetModel>;
 }
 
 const mapStateToProps = (state: State) => {
@@ -21,13 +21,16 @@ const mapStateToProps = (state: State) => {
   };
 };
 
-export var ArticleView = connect(mapStateToProps)((props: Props) => {
-  let articleId = props.match.params.id;
+const ArticleViewInternal: React.FC<Props> = ({
+  articles,
+  articleSets,
+  match,
+}) => {
+  const articleId = match.params.id;
 
-  let currentArticle: IArticle | undefined;
-  let nextArticle: IArticle | undefined;
-  for (let articleKey in props.articles) {
-    let article = props.articles[articleKey];
+  let currentArticle: ArticleModel | undefined;
+  let nextArticle: ArticleModel | undefined;
+  for (const article of [...articles.values()]) {
     if (article.id === articleId) {
       currentArticle = article;
     } else if (currentArticle) {
@@ -40,9 +43,8 @@ export var ArticleView = connect(mapStateToProps)((props: Props) => {
     throw new Error("Current article is undefined.");
   }
 
-  let currentArticleSet: IArticleSet | undefined;
-  for (let articleSetKey in props.articleSets) {
-    let articleSet = props.articleSets[articleSetKey];
+  let currentArticleSet: ArticleSetModel | undefined;
+  for (const articleSet of [...articleSets.values()]) {
     if (articleSet.id === currentArticle.articleSetId) {
       currentArticleSet = articleSet;
     }
@@ -59,4 +61,8 @@ export var ArticleView = connect(mapStateToProps)((props: Props) => {
       articleSet={currentArticleSet}
     />
   );
-});
+};
+
+const ArticleView = connect(mapStateToProps)(ArticleViewInternal);
+
+export { ArticleView as default };

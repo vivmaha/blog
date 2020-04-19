@@ -1,5 +1,5 @@
-import { IArticleContentHtml } from "../../models/IArticleContent";
-import { IArticle } from "../../models/IArticle";
+import { ArticleContentHtml } from "../../models/IArticleContent";
+import Article from "../../models/IArticle";
 
 export default {
   type: "article",
@@ -19,7 +19,7 @@ export default {
                 <p>Being able to organize my notes on this site was a nice bonus.</p>
                 <p><a href="https://github.com/vivmaha/blog">View the code on Github</a></p>
             `,
-    } as IArticleContentHtml,
+    } as ArticleContentHtml,
   },
   sections: [],
-} as IArticle;
+} as Article;

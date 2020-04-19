@@ -1,43 +1,49 @@
 import * as React from "react";
 
 import {
-  IArticleContentQuote,
-  IArticleContentHtml,
-  IArticleContent,
+  ArticleContentQuote,
+  ArticleContentHtml,
+  ArticleContent,
 } from "../models/IArticleContent";
 
-import { ArticleBlockQuote } from "../components/ArticleBlockQuote";
+import ArticleBlockQuote from "./ArticleBlockQuote";
 
 class ArticleMaterializer {
-  private key: number = 0;
+  private key = 0;
 
   public getKey(): number {
-    return this.key++;
+    return this.key + 1;
   }
 
-  private materializeArticleQuote(data: IArticleContentQuote): JSX.Element {
+  private static materializeArticleQuote(
+    data: ArticleContentQuote
+  ): JSX.Element {
     return (
       <ArticleBlockQuote
         quote={data.quote}
         person={data.person}
         personTitle={data.personTitle}
-      ></ArticleBlockQuote>
+      />
     );
   }
 
-  private materializeHtml(data: IArticleContentHtml): JSX.Element {
-    return <div dangerouslySetInnerHTML={{ __html: data.content }}></div>;
+  private static materializeHtml(data: ArticleContentHtml): JSX.Element {
+    // This html comes from my own code.
+    // eslint-disable-next-line react/no-danger
+    return <div dangerouslySetInnerHTML={{ __html: data.content }} />;
   }
 
-  materialize(data: IArticleContent, key?: string) {
+  static materialize(data: ArticleContent) {
     if (!data) {
       return null;
     }
     switch (data.type) {
       case "article-quote":
-        return this.materializeArticleQuote(data as IArticleContentQuote);
+        return ArticleMaterializer.materializeArticleQuote(
+          data as ArticleContentQuote
+        );
       case "html":
-        return this.materializeHtml(data as IArticleContentHtml);
+        return ArticleMaterializer.materializeHtml(data as ArticleContentHtml);
       default:
         throw new Error(`Unexpected data type ${data.type}`);
     }
@@ -45,10 +51,11 @@ class ArticleMaterializer {
 }
 
 interface Props {
-  data: IArticleContent;
+  data: ArticleContent;
 }
 
-export var ArticleFreeform = (props: Props) => {
-  let articleMaterializer = new ArticleMaterializer();
-  return articleMaterializer.materialize(props.data);
+const ArticleFreeform = (props: Props) => {
+  return ArticleMaterializer.materialize(props.data);
 };
+
+export { ArticleFreeform as default };

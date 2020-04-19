@@ -3,16 +3,16 @@ import * as React from "react";
 import { connect } from "react-redux";
 import { RouteComponentProps } from "react-router";
 
-import { IArticle } from "../models/IArticle";
-import { IArticleSet } from "../models/IArticleSet";
+import ArticleModel from "../models/IArticle";
+import ArticleSetModel from "../models/IArticleSet";
 
-import { ArticleSet } from "../components/ArticleSet";
+import ArticleSet from "../components/ArticleSet";
 
 import { State } from "../redux/State";
 
-interface Props extends RouteComponentProps<any> {
-  articles: { [id: string]: IArticle };
-  articleSets: { [id: string]: IArticleSet };
+interface Props extends RouteComponentProps<{ id: string }> {
+  articles: Map<string, ArticleModel>;
+  articleSets: Map<string, ArticleSetModel>;
 }
 
 const mapStateToProps = (state: State) => {
@@ -22,19 +22,22 @@ const mapStateToProps = (state: State) => {
   };
 };
 
-export var ArticleSetView = connect(mapStateToProps)((props: Props) => {
-  let articleSetId = props.match.params.id;
+const ArticleSetView = connect(mapStateToProps)(
+  ({ articles, articleSets, match }: Props) => {
+    const articleSetId = match.params.id;
 
-  let articleSet = props.articleSets[articleSetId];
+    const articleSet = articleSets.get(articleSetId);
 
-  let articles: IArticle[] = [];
-  for (let articleKey in props.articles) {
-    let article = props.articles[articleKey];
-    if (article.articleSetId === articleSetId) {
-      // This incidentally reverses the chronological order of the articles, which is desired.
-      articles.push(article);
+    if (!articleSet) {
+      throw new Error("articleSet is undefined");
     }
-  }
 
-  return <ArticleSet articles={articles} articleSet={articleSet}></ArticleSet>;
-});
+    const articlesInSet = [...articles.values()]
+      .filter((article) => article.articleSetId === articleSetId)
+      .reverse();
+
+    return <ArticleSet articles={articlesInSet} articleSet={articleSet} />;
+  }
+);
+
+export { ArticleSetView as default };

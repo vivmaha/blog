@@ -1,6 +1,6 @@
-import { IArticleSet } from "../../models/IArticleSet";
+import ArticleSet from "../../models/IArticleSet";
 
-import { IArticleContentHtml } from "../../models/IArticleContent";
+import { ArticleContentHtml } from "../../models/IArticleContent";
 
 export default {
   id: "global-ux",
@@ -17,5 +17,5 @@ export default {
             <span>This was part of my coursework at the University of Washington. Specifically, HCDE 512 with Manuela Noske.</span>
         </p>
         `,
-  } as IArticleContentHtml,
-} as IArticleSet;
+  } as ArticleContentHtml,
+} as ArticleSet;

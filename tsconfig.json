@@ -6,11 +6,7 @@
     "module": "esnext",
     "target": "es5",
     "jsx": "react",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -20,12 +16,9 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true
+    "noEmit": true,
+    "downlevelIteration": true
   },
-  "files": [
-    "./src/index.tsx"
-  ],
-  "include": [
-    "src"
-  ]
+  "files": ["./src/index.tsx"],
+  "include": ["src"]
 }

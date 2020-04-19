@@ -1,8 +1,8 @@
 import {
-  IArticleContentQuote,
-  IArticleContentHtml,
+  ArticleContentQuote,
+  ArticleContentHtml,
 } from "../../models/IArticleContent";
-import { IArticle } from "../../models/IArticle";
+import Article from "../../models/IArticle";
 
 export default {
   type: "article",
@@ -17,7 +17,7 @@ export default {
       quote:
         "The rewards of improving search ranking can entice site owners to engage in questionable “black hat” techniques to trick the search engine into boosting their site’s rank. However, search engines are mature enough to detect such efforts, and may penalize the site with lower rankings or exclusion from the search results.",
       person: "John B. Killoran",
-    } as IArticleContentQuote,
+    } as ArticleContentQuote,
   },
   sections: [
     [
@@ -43,7 +43,7 @@ export default {
                         <li>Inbound links from other websites</li>
                     </ul>
                 `,
-      } as IArticleContentHtml,
+      } as ArticleContentHtml,
     ],
     [
       {
@@ -59,7 +59,7 @@ export default {
                     </dl>
                     <p>Websites should therefore ensure that their descriptions featured on search engines are compelling to increase the CTR, and accurate to decrease the bounce rate.</p>                    
                 `,
-      } as IArticleContentHtml,
+      } as ArticleContentHtml,
     ],
     [
       {
@@ -84,7 +84,7 @@ export default {
                     </ul>
                     <p>Note that ranking is a cumulative calculation, so doing both of the above is even more effective.</p>
                 `,
-      } as IArticleContentHtml,
+      } as ArticleContentHtml,
     ],
     [
       {
@@ -111,7 +111,7 @@ export default {
                         <li>Post content directly to social media sites. Currently Twitter links seem to have the most impact to search rank, followed by Facebook links.</li>
                     </ul>
                 `,
-      } as IArticleContentHtml,
+      } as ArticleContentHtml,
     ],
     [
       {
@@ -120,7 +120,7 @@ export default {
                     <h1>Constant Change</h1>
                     <p>Lastly, these techniques are constantly evolving because search engines are constantly changing their algorithms. This forces siteowners to keep up to date with the changes in order to maintain their search ranking.</p>
                 `,
-      } as IArticleContentHtml,
+      } as ArticleContentHtml,
     ],
   ],
-} as IArticle;
+} as Article;

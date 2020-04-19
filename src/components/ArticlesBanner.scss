@@ -2,35 +2,33 @@
 @import "../fonts";
 @import "../colors";
 
-.articles-banner {        
-    
-    $shadow: 0 3px 9px 0 rgba(0,0,0,0.10), 0 0 0 1px rgba(0,0,0,0.04);
+.articles-banner {
+  $shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.04);
 
-    background-position: center;
-    z-index: -1;
-    background-size: cover;
-    left:0;
-    top: 0;
-    height: calc(100vh - 10em);
-    transition: opacity $transition-theatric-function;
-    display: flex;
-    align-items: center;
-    box-shadow: $shadow;
-    
-    &>.content {
+  background-position: center;
+  z-index: -1;
+  background-size: cover;
+  left: 0;
+  top: 0;
+  height: calc(100vh - 10em);
+  transition: opacity $transition-theatric-function;
+  display: flex;
+  align-items: center;
+  box-shadow: $shadow;
 
-        flex-grow: 1;
-        &>* {
-            background-color: $color-background;
-            box-shadow: $shadow;
-            border: 10px solid $color-background;      
-        }
-        
-        &>.link {
-            margin-top: 0.8em;
-            display: inline-block;
-            text-decoration: none;
-            color: $color-text;
-        }
+  & > .content {
+    flex-grow: 1;
+    & > * {
+      background-color: $color-background;
+      box-shadow: $shadow;
+      border: 10px solid $color-background;
     }
+
+    & > .link {
+      margin-top: 0.8em;
+      display: inline-block;
+      text-decoration: none;
+      color: $color-text;
+    }
+  }
 }

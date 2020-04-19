@@ -1,8 +1,8 @@
 import {
-  IArticleContentQuote,
-  IArticleContentHtml,
+  ArticleContentQuote,
+  ArticleContentHtml,
 } from "../../models/IArticleContent";
-import { IArticle } from "../../models/IArticle";
+import Article from "../../models/IArticle";
 
 export default {
   type: "article",
@@ -18,7 +18,7 @@ export default {
         "Once developers recognize that their own patterns of rationality are not universal, there is the possibility of designing new interfaces with more appeal to those voluntarily on the opposite side of the digital divide.",
       person: "Emilie W. Gould",
       personTitle: "Rensselaer Polytechnic Institute",
-    } as IArticleContentQuote,
+    } as ArticleContentQuote,
   },
   articleSetId: "global-ux",
   sections: [
@@ -36,7 +36,7 @@ export default {
                     <p>If cultural values are innately unsuited for a task, look for ways to suppress the corresponding cultural behaviors. With training, individuals can change their behaviors from their cultural norms.</p>
                     <p>It is tempting to ignore cultural differences for fear of offending someone. However, ignoring our differences, our unique strengths and weaknesses, can lead to unsuitable designs.</p>
                 `,
-      } as IArticleContentHtml,
+      } as ArticleContentHtml,
     ],
     [
       {
@@ -71,7 +71,7 @@ export default {
                     <p>Triandis approached this topic from social psychology, and redefined many existing notions, including Hofstede's dimensions. The open-minded cross-cultural approach that Triandis advocated would serve HCI well — we should ensure that our field is not building on a western-centric foundation. HIs work also suggests that more effort should be placed in developing trust from users from collectivist cultures.</p>
                     <p>Gudykunst combined intra and inter cultural communications theory. When people first meet, they try to find similarities in background, then as the relationship developers, they explore personal traits, and the need for similarity decreases. His work also explored the multiple identities that persons adopt for subgroups that they belong to. This work can be applied to the first meeting between a user and software being designed by providing sufficient similarities for users to attach to and being attuned to when the user has gained sufficient trust in the system.</p>
                 `,
-      } as IArticleContentHtml,
+      } as ArticleContentHtml,
     ],
     [
       {
@@ -85,7 +85,7 @@ export default {
                     <p>In High PDI cultures, websites may focus on the organization. In low PDI cultures, websites may focus on the users of the organization.</p> 
                     <p>Tables 2–6 of this reading are a great cheat sheet for adapting a website based on Hofstede's dimensions.</p>
                 `,
-      } as IArticleContentHtml,
+      } as ArticleContentHtml,
     ],
   ],
-} as IArticle;
+} as Article;

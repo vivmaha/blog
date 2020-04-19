@@ -1,5 +1,5 @@
 import articleSetGlobalUx from "./global-ux";
 
-let articleSets = [articleSetGlobalUx];
+const articleSets = [articleSetGlobalUx];
 
-export { articleSets };
+export { articleSets as default };

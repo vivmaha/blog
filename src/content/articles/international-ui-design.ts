@@ -1,8 +1,8 @@
 import {
-  IArticleContentQuote,
-  IArticleContentHtml,
+  ArticleContentQuote,
+  ArticleContentHtml,
 } from "../../models/IArticleContent";
-import { IArticle } from "../../models/IArticle";
+import Article from "../../models/IArticle";
 
 export default {
   type: "article",
@@ -17,7 +17,7 @@ export default {
       quote:
         "It is arrogant of us to think we can create images that will have the same precise meaning to everyone everywhere.",
       person: "William Horton",
-    } as IArticleContentQuote,
+    } as ArticleContentQuote,
   },
   articleSetId: "global-ux",
   sections: [
@@ -66,7 +66,7 @@ export default {
                     <h2>Local research</h2> 
                     <p>Perhaps most obvious, you have to perform local research to discover all of the nuances of your product's experience in each culture you target.</p>
                 `,
-      } as IArticleContentHtml,
+      } as ArticleContentHtml,
     ],
     [
       {
@@ -81,7 +81,7 @@ export default {
                     <p>For the second step, localization, a good ballpark is to translate 3% to 5% of your graphics. There are many best-practices you can adopt to make it easy and efficient to localize your graphics.</p>
                     <p>This reading is dense with small valuable tips. Summarizing does not do it justice. Refer to the full text if you're ever working on graphics.</p>
                 `,
-      } as IArticleContentHtml,
+      } as ArticleContentHtml,
     ],
   ],
-} as IArticle;
+} as Article;

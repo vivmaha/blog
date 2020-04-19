@@ -2,14 +2,14 @@
 @import "../fonts";
 
 .article-summary {
-    h1 {
-        @include type-h3();
-        margin:0;
-    }
-    span {
-        color: $color-text-secondary;
-    }
-    p {
-        margin-top: 0;
-    }
+  h1 {
+    @include type-h3();
+    margin: 0;
+  }
+  span {
+    color: $color-text-secondary;
+  }
+  p {
+    margin-top: 0;
+  }
 }

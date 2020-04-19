@@ -1,27 +1,28 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import { ArticleCaption } from "./ArticleCaption";
-import { IArticle } from "../models/IArticle";
-import { IArticleSet } from "../models/IArticleSet";
+import ArticleCaption from "./ArticleCaption";
+import ArticleModel from "../models/IArticle";
+import ArticleSetModel from "../models/IArticleSet";
 
 export interface Props {
-  articleSet: IArticleSet;
-  nextArticle?: IArticle;
+  articleSet: ArticleSetModel;
+  nextArticle?: ArticleModel;
   includeLinkToNextArticle?: boolean;
-  includeLinkToPreviousArticle?: boolean;
 }
 
-export var ArticleSetSummary: React.StatelessComponent<Props> = (
-  props: Props
-) => {
-  let link = `/series/${props.articleSet.id}`;
+const ArticleSetSummary: React.FC<Props> = ({
+  articleSet,
+  nextArticle,
+  includeLinkToNextArticle,
+}) => {
+  const link = `/series/${articleSet.id}`;
 
   let linkToNextArticleElement = null;
-  if (props.includeLinkToNextArticle && props.nextArticle) {
-    let nextArticleUrl = `/article/${props.nextArticle.id}`;
+  if (includeLinkToNextArticle && nextArticle) {
+    const nextArticleUrl = `/article/${nextArticle.id}`;
     linkToNextArticleElement = (
       <p>
-        Up next: <Link to={nextArticleUrl}>{props.nextArticle.title}</Link>
+        Up next: <Link to={nextArticleUrl}>{nextArticle.title}</Link>
       </p>
     );
   }
@@ -29,10 +30,11 @@ export var ArticleSetSummary: React.StatelessComponent<Props> = (
   return (
     <ArticleCaption>
       <p>
-        This note is part of a series:{" "}
-        <Link to={link}>{props.articleSet.title}</Link>
+        This note is part of a series: <Link to={link}>{articleSet.title}</Link>
       </p>
       {linkToNextArticleElement}
     </ArticleCaption>
   );
 };
+
+export { ArticleSetSummary as default };

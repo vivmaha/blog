@@ -1,8 +1,8 @@
 import {
-  IArticleContentQuote,
-  IArticleContentHtml,
+  ArticleContentQuote,
+  ArticleContentHtml,
 } from "../../models/IArticleContent";
-import { IArticle } from "../../models/IArticle";
+import Article from "../../models/IArticle";
 
 export default {
   type: "article",
@@ -18,7 +18,7 @@ export default {
         "The Japanese have a saying: ‘The nail that sticks up must be hammered down,’ implying that individualism must be crushed and frustrated. This isn’t so — individual effort and initiative are appreciated in Japanese business — but they need to be coordinated in a team effort. This means that a lot of time is spent in collective discussion, and decisions are made through the process known as nemawashi (binding the roots).",
       person: "Barry Tomalin",
       personTitle: "Lecturer in Cultural Awareness",
-    } as IArticleContentQuote,
+    } as ArticleContentQuote,
   },
   articleSetId: "global-ux",
   sections: [
@@ -27,7 +27,7 @@ export default {
         type: "html",
         content: `
                     <h1>Effective Global Teams</h1>
-                    <cite>Global UX, Chapter 6, “Effective Global Teams,” pp. 99-119​</cite>
+                    <cite>Global UX, Chapter 6, “Effective Global Teams,” pp. 99-199</cite>
                     <p>There are numerous ways to structure a global team. You may have a central location within the headquarters, or multiple branches in key markets, or even a team that is spread thinly across many different countries. It helps to hire designers who are passionate about moving to new cultures and embracing them.</p>
                     <p>Time zones adds unavoidable overhead into global communications. There is no way to completely solve this but there are ways to mitigate it:</p>
                     <ul>
@@ -40,7 +40,7 @@ export default {
                     </ul>
                     <p>Diverse teams tend to be more effective at innovation, perhaps because the diversity allows them to tackle problems from many perspectives. This makes the overhead described above worth it.</p>
                 `,
-      } as IArticleContentHtml,
+      } as ArticleContentHtml,
     ],
     [
       {
@@ -63,7 +63,7 @@ export default {
                         <dd>Private versus public. Email versus in-person. Blunt versus mitigated.</dd>
                     </dl>
                 `,
-      } as IArticleContentHtml,
+      } as ArticleContentHtml,
     ],
   ],
-} as IArticle;
+} as Article;

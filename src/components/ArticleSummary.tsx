@@ -1,22 +1,22 @@
 import moment from "moment";
 import * as React from "react";
 import { Link } from "react-router-dom";
-import { IArticle } from "../models/IArticle";
+import Article from "../models/IArticle";
 
 import "./ArticleSummary.scss";
 
-export var ArticleSummary: React.StatelessComponent<IArticle> = (
-  props: IArticle
-) => {
-  let friendlyDate = moment(props.date).format("MMM Do, YYYY");
-  let link = `/article/${props.id}`;
+const ArticleSummary: React.FC<{ article: Article }> = ({ article }) => {
+  const friendlyDate = moment(article.date).format("MMM Do, YYYY");
+  const link = `/article/${article.id}`;
   return (
     <section className="article-summary">
       <h1>
-        <Link to={link}>{props.title}</Link>
+        <Link to={link}>{article.title}</Link>
       </h1>
       <span>{friendlyDate}</span>
-      <p className="no-margin-top">{props.introduction.preview}</p>
+      <p className="no-margin-top">{article.introduction.preview}</p>
     </section>
   );
 };
+
+export { ArticleSummary as default };

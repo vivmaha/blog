@@ -1,14 +1,14 @@
 // Serializable building block for article content
-export interface IArticleContent {
-    type: string;
+export interface ArticleContent {
+  type: string;
 }
 
-export interface IArticleContentQuote extends IArticleContent {
-    quote: string;
-    person: string;
-    personTitle?: string;
+export interface ArticleContentQuote extends ArticleContent {
+  quote: string;
+  person: string;
+  personTitle?: string;
 }
 
-export interface IArticleContentHtml extends IArticleContent {
-    content: string;
+export interface ArticleContentHtml extends ArticleContent {
+  content: string;
 }

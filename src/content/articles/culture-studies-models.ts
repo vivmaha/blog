@@ -1,8 +1,8 @@
 import {
-  IArticleContentQuote,
-  IArticleContentHtml,
+  ArticleContentQuote,
+  ArticleContentHtml,
 } from "../../models/IArticleContent";
-import { IArticle } from "../../models/IArticle";
+import Article from "../../models/IArticle";
 
 export default {
   type: "article",
@@ -18,7 +18,7 @@ export default {
         "Your company's culture and your company's brand are really just two sides of the same coin. The brand may lag the culture at first, but eventually it will catch up. Your culture is your brand.",
       person: "Tony Hsei",
       personTitle: "Zappos",
-    } as IArticleContentQuote,
+    } as ArticleContentQuote,
   },
   articleSetId: "global-ux",
   sections: [
@@ -41,7 +41,7 @@ export default {
                         <dd>The disagreement is not about the uniqueness of culture to mankind. It is about whether humans are capable of studying it independently from human contexts.</dd>
                     </dl>
                 `,
-      } as IArticleContentHtml,
+      } as ArticleContentHtml,
     ],
     [
       {
@@ -65,7 +65,7 @@ export default {
                     <p>Hofstede has five dimensions for classifying cultures. It is the most popular model for doing this, but has been met with mixed reactions. Regardless of its accuracy, it is a good mental framework to build upon.</p>
                     <p>Language will be just as nuanced as culture, and you'll have to understand them both for a successful design.</p>
                 `,
-      } as IArticleContentHtml,
+      } as ArticleContentHtml,
     ],
     [
       {
@@ -94,7 +94,7 @@ export default {
                         <dd>As a last resort, if you're unable to travel, you can get to know someone who originates from that culture, or even someone who has been thru the immersion process in that culture. Be mindful that the person's experiences may be reflective of an older time period of that culture.</dd>
                     </dl>
                 `,
-      } as IArticleContentHtml,
+      } as ArticleContentHtml,
     ],
   ],
-} as IArticle;
+} as Article;

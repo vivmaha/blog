@@ -5,33 +5,33 @@
 
 $space-between-back-and-edge: 0.5vw;
 .header {
-    @include responsive(display, none, null, null);
-    nav {
-        a{
-            @include type-h1();
-            color: rgba(0,0,0,0);
-            position: absolute;
-            transform: translateX(-100%);
-            // Why do we need to use ::after?
-            //    Because our hover effect translates the object, and this can 
-            //    move it from under the user's cursor, which will un-hover
-            //    without user intent to do so. We use ::after to make the visual
-            //    independent from the hover target so that we don't run into this 
-            //    bug.
-            &::after {
-                color: $color-text;
-                transition: transform $transition-function;
-                font-family: "Times New Roman";
-                content: "←\00a0";
-                position: absolute;
-                right: 0;
-            }
-            &:hover {
-                &::after {
-                    transform: translateX(-0.2em);
-                }
-                text-decoration: none;                
-            }
+  @include responsive(display, none, null, null);
+  nav {
+    a {
+      @include type-h1();
+      color: rgba(0, 0, 0, 0);
+      position: absolute;
+      transform: translateX(-100%);
+      // Why do we need to use ::after?
+      //    Because our hover effect translates the object, and this can
+      //    move it from under the user's cursor, which will un-hover
+      //    without user intent to do so. We use ::after to make the visual
+      //    independent from the hover target so that we don't run into this
+      //    bug.
+      &::after {
+        color: $color-text;
+        transition: transform $transition-function;
+        font-family: "Times New Roman";
+        content: "←\00a0";
+        position: absolute;
+        right: 0;
+      }
+      &:hover {
+        &::after {
+          transform: translateX(-0.2em);
         }
+        text-decoration: none;
+      }
     }
+  }
 }
