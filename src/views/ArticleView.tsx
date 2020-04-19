@@ -50,10 +50,6 @@ const ArticleViewInternal: React.FC<Props> = ({
     }
   }
 
-  if (!currentArticleSet) {
-    throw new Error("Current article set is undefined.");
-  }
-
   return (
     <Article
       article={currentArticle}
