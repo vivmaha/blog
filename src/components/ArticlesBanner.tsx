@@ -15,7 +15,12 @@ export interface Props {
   link: ArticlesBannerLink;
 }
 
-export default ({ backgroundImageUrl, title, content, link }: Props) => {
+export const ArticlesBanner: React.FC<Props> = ({
+  backgroundImageUrl,
+  title,
+  content,
+  link,
+}) => {
   const bannerStyle = {
     backgroundImage: `url('${backgroundImageUrl}')`,
   };

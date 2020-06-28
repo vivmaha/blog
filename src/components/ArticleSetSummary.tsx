@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import ArticleCaption from "./ArticleCaption";
+import { ArticleCaption } from "./ArticleCaption";
 import ArticleModel from "../models/IArticle";
 import ArticleSetModel from "../models/IArticleSet";
 

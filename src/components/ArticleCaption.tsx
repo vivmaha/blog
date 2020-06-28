@@ -4,6 +4,6 @@ import "./ArticleCaption.scss";
 
 export type Props = React.HTMLProps<HTMLDivElement>;
 
-export default ({ children }: Props) => {
+export const ArticleCaption: React.FC<Props> = ({ children }) => {
   return <section className="article-caption">{children}</section>;
 };

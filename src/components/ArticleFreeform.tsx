@@ -6,7 +6,7 @@ import {
   ArticleContent,
 } from "../models/IArticleContent";
 
-import ArticleBlockQuote from "./ArticleBlockQuote";
+import { ArticleBlockQuote } from "./ArticleBlockQuote";
 
 class ArticleMaterializer {
   private key = 0;
@@ -54,7 +54,7 @@ interface Props {
   data: ArticleContent;
 }
 
-const ArticleFreeform = (props: Props) => {
+const ArticleFreeform: React.FC<Props> = (props: Props) => {
   return ArticleMaterializer.materialize(props.data);
 };
 
