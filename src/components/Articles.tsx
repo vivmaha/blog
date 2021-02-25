@@ -1,14 +1,14 @@
 import { Helmet } from "react-helmet";
 import * as React from "react";
 
-import ArticleModel from "../models/IArticle";
 import ArticleSummary from "./ArticleSummary";
 import { ArticlesBanner, ArticlesBannerLink } from "./ArticlesBanner";
 
 import "./Articles.scss";
+import { Articles as ApiArticles} from "../api/get-articles";
 
 export interface Props extends React.HTMLProps<HTMLDivElement> {
-  articles: ArticleModel[];
+  articles: ApiArticles;
   bannerTitle: string;
   bannerContent: JSX.Element;
   bannerLink: ArticlesBannerLink;
@@ -32,7 +32,7 @@ const Articles: React.FC<Props> = ({
     />
     <article className="body-container no-margin-top">
       <ol>
-        {articles.map((article) => (
+        {articles.articles.map((article) => (
           <li key={article.id}>
             <ArticleSummary article={article} />
           </li>

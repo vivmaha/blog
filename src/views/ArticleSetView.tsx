@@ -10,6 +10,8 @@ import ArticleSet from "../components/ArticleSet";
 
 import { State } from "../redux/State";
 
+import { Articles as ApiArticles } from "../api/get-articles";
+
 interface Props extends RouteComponentProps<{ id: string }> {
   articles: Map<string, ArticleModel>;
   articleSets: Map<string, ArticleSetModel>;
@@ -36,7 +38,16 @@ const ArticleSetView = connect(mapStateToProps)(
       .filter((article) => article.articleSetId === articleSetId)
       .reverse();
 
-    return <ArticleSet articles={articlesInSet} articleSet={articleSet} />;
+    const apiArticles: ApiArticles = {
+      articles: articlesInSet.map(articleInSet => ({
+        date: articleInSet.date.toISOString(),
+        id: articleInSet.id,
+        preview: articleInSet.introduction.preview as string,
+        title: articleInSet.title
+      })),
+    };
+
+    return <ArticleSet articles={apiArticles} articleSet={articleSet} />;
   }
 );
 
