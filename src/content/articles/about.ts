@@ -7,7 +7,9 @@ export default {
   date: new Date(2017, 9, 25),
   id: "about",
   introduction: {
-    extended: {
+  },
+  sections: [[
+    {
       type: "html",
       content: `                
                 <p>I'm <a href="https://www.linkedin.com/in/vivmaha">Vivek Maharajh</a> — a Developer and UX Designer.</p>
@@ -20,6 +22,6 @@ export default {
                 <p><a href="https://github.com/vivmaha/blog">View the code on Github</a></p>
             `,
     } as ArticleContentHtml,
-  },
-  sections: [],
+  ]
+  ],
 } as Article;

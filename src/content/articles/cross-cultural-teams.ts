@@ -12,16 +12,22 @@ export default {
   introduction: {
     preview:
       "Working on a global product is usually accompanied with a global workforce. This post explores the dynamics of diverse work spaces.",
-    extended: {
-      type: "article-quote",
-      quote:
-        "The Japanese have a saying: ‘The nail that sticks up must be hammered down,’ implying that individualism must be crushed and frustrated. This isn’t so — individual effort and initiative are appreciated in Japanese business — but they need to be coordinated in a team effort. This means that a lot of time is spent in collective discussion, and decisions are made through the process known as nemawashi (binding the roots).",
-      person: "Barry Tomalin",
-      personTitle: "Lecturer in Cultural Awareness",
-    } as ArticleContentQuote,
   },
   articleSetId: "global-ux",
   sections: [
+    [
+      {
+        type: "html",
+        content: `<p>Working on a global product is usually accompanied with a global workforce. This post explores the dynamics of diverse work spaces.</p>`
+      },
+      {
+        type: "article-quote",
+        quote:
+          "The Japanese have a saying: ‘The nail that sticks up must be hammered down,’ implying that individualism must be crushed and frustrated. This isn’t so — individual effort and initiative are appreciated in Japanese business — but they need to be coordinated in a team effort. This means that a lot of time is spent in collective discussion, and decisions are made through the process known as nemawashi (binding the roots).",
+        person: "Barry Tomalin",
+        personTitle: "Lecturer in Cultural Awareness",
+      } as ArticleContentQuote,
+    ],
     [
       {
         type: "html",

@@ -43,8 +43,6 @@ const Article: React.FC<Props> = ({ article, nextArticle, articleSet }) => {
           <header>
             <h1>{article.title}</h1>
             <p>by V Maharajh on {friendlyDate}</p>
-            <p>{article.introduction.preview}</p>
-            <ArticleFreeform data={article.introduction.extended} />
             {articleSet ? (
               <ArticleSetSummary
                 articleSet={articleSet}

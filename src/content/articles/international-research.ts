@@ -12,14 +12,19 @@ export default {
   introduction: {
     preview:
       "Global User Research is hard. In this post, we look at tips from seasoned veterans for conducting an insightful global user study, and delivering compelling results to the product team.",
-    extended: {
-      type: "article-quote",
-      quote: "Let them teach you",
-      person: "Global UX (Chapter 7)",
-    } as ArticleContentQuote,
   },
   articleSetId: "global-ux",
   sections: [
+    [
+      {
+        type: "html",
+        content: `<p>Global User Research is hard. In this post, we look at tips from seasoned veterans for conducting an insightful global user study, and delivering compelling results to the product team.</p>`
+      } as ArticleContentHtml,{
+        type: "article-quote",
+        quote: "Let them teach you",
+        person: "Global UX (Chapter 7)",
+      } as ArticleContentQuote,
+    ],
     [
       {
         type: "html",
