@@ -39,11 +39,11 @@ const ArticleSetView = connect(mapStateToProps)(
       .reverse();
 
     const apiArticles: ApiArticles = {
-      articles: articlesInSet.map(articleInSet => ({
+      articles: articlesInSet.map((articleInSet) => ({
         date: articleInSet.date.toISOString(),
         id: articleInSet.id,
         preview: articleInSet.introduction.preview as string,
-        title: articleInSet.title
+        title: articleInSet.title,
       })),
     };
 

@@ -1,9 +1,8 @@
 import * as React from "react";
 
+import { useEffect, useState } from "react";
 import Home from "../components/Home";
 
-
-import { useEffect, useState } from "react";
 import { Articles, getArticles } from "../api/get-articles";
 
 const HomeView: React.FC = () => {
@@ -11,7 +10,7 @@ const HomeView: React.FC = () => {
 
   useEffect(() => {
     getArticles().then(setArticles);
-  }, [])
+  }, []);
 
   if (articles === undefined) {
     // TODO Improve this UX

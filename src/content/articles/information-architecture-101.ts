@@ -17,8 +17,9 @@ export default {
     [
       {
         type: "html",
-        content: `<p>Information Architecture (IA) is focused on making information findable and  understandable. This note summarizes the first few chapters of a book on this topic.</p>`
-      } as ArticleContentHtml,{
+        content: `<p>Information Architecture (IA) is focused on making information findable and  understandable. This note summarizes the first few chapters of a book on this topic.</p>`,
+      } as ArticleContentHtml,
+      {
         type: "article-quote",
         quote:
           "IA done in a vacuum without regard for users  won’t hold up against the light of day. The design must be informed by the  user’s tasks, needs, navigation behavior, and experience",

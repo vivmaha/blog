@@ -5,7 +5,9 @@ import { ArticleSummary as ApiArticleSummary } from "../api/get-articles";
 
 import "./ArticleSummary.scss";
 
-const ArticleSummary: React.FC<{ article: ApiArticleSummary }> = ({ article }) => {
+const ArticleSummary: React.FC<{ article: ApiArticleSummary }> = ({
+  article,
+}) => {
   const friendlyDate = moment(article.date).format("MMM Do, YYYY");
   const link = `/article/${article.id}`;
   return (

@@ -18,8 +18,9 @@ export default {
     [
       {
         type: "html",
-        content: `<p>Great global user research does not automatically translate into a successful product. Design and engineering processes must also be globally-oriented so that they can address any cultural issues that arise.</p>`
-      } as ArticleContentHtml,{
+        content: `<p>Great global user research does not automatically translate into a successful product. Design and engineering processes must also be globally-oriented so that they can address any cultural issues that arise.</p>`,
+      } as ArticleContentHtml,
+      {
         type: "article-quote",
         quote:
           "It is arrogant of us to think we can create images that will have the same precise meaning to everyone everywhere.",

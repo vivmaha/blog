@@ -11,15 +11,16 @@ export default {
   id: "cultural-awareness",
   introduction: {
     preview:
-      "Global design demands cultural awareness. In this article, I look at techniques for developing cultural awareness."
+      "Global design demands cultural awareness. In this article, I look at techniques for developing cultural awareness.",
   },
   articleSetId: "global-ux",
   sections: [
     [
       {
         type: "html",
-        content: `<p>Global design demands cultural awareness. In this article, I look at techniques for developing cultural awareness.</p>`
-      } as ArticleContentHtml,{
+        content: `<p>Global design demands cultural awareness. In this article, I look at techniques for developing cultural awareness.</p>`,
+      } as ArticleContentHtml,
+      {
         type: "article-quote",
         quote:
           "Your company's culture and your company's brand are really just two sides of the same coin. The brand may lag the culture at first, but eventually it will catch up. Your culture is your brand.",

@@ -34,5 +34,4 @@ for (let i = 0; i < articles.length; i++) {
   articles[i].nextArticleId = getArticleId(i + 1);
 }
 
-
 export { articles as default };

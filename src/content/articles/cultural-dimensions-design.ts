@@ -18,7 +18,7 @@ export default {
     [
       {
         type: "html",
-        content: `<p>Experiences in the field have proven that culture is a key factor of UX. In this article we look at one such example, and how the field of UX has evolved to incorporate culture.</p>`
+        content: `<p>Experiences in the field have proven that culture is a key factor of UX. In this article we look at one such example, and how the field of UX has evolved to incorporate culture.</p>`,
       } as ArticleContentHtml,
       {
         type: "article-quote",
