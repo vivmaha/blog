@@ -25,15 +25,15 @@ export default {
     [
       {
         type: "html",
-        content: `<p>Companies are increasingly expanding into untapped markets of emerging economies. This post reflects on the successes and failures of a few of these endeavours.</p>`
-      } as ArticleContentHtml, {
-      type: "article-quote",
-      quote:
-        "The usual approach is to strip the product of features until a semblance of affordability is attained. The trouble is that the emerging consumer, for whom every act of discretionary consumption is an act of sacrificing something essential, is looking to be seduced rather than patronized",
-      person: "Santosh Desai",
-      personTitle: "FutureBrands CEO",
-    } as ArticleContentQuote,
-
+        content: `<p>Companies are increasingly expanding into untapped markets of emerging economies. This post reflects on the successes and failures of a few of these endeavours.</p>`,
+      } as ArticleContentHtml,
+      {
+        type: "article-quote",
+        quote:
+          "The usual approach is to strip the product of features until a semblance of affordability is attained. The trouble is that the emerging consumer, for whom every act of discretionary consumption is an act of sacrificing something essential, is looking to be seduced rather than patronized",
+        person: "Santosh Desai",
+        personTitle: "FutureBrands CEO",
+      } as ArticleContentQuote,
     ],
     [
       {
