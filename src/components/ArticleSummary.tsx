@@ -1,11 +1,11 @@
 import moment from "moment";
 import * as React from "react";
 import { Link } from "react-router-dom";
-import { ArticleSummary as ApiArticleSummary } from "../api/get-articles";
+import { ArticleSummary as ArticleSummaryModel } from "../api/models/article-summary";
 
 import "./ArticleSummary.scss";
 
-const ArticleSummary: React.FC<{ article: ApiArticleSummary }> = ({
+const ArticleSummary: React.FC<{ article: ArticleSummaryModel }> = ({
   article,
 }) => {
   const friendlyDate = moment(article.date).format("MMM Do, YYYY");

@@ -1,63 +1,34 @@
 import * as React from "react";
-import { connect } from "react-redux";
-import { RouteComponentProps } from "react-router";
+import { useEffect, useState } from "react";
+import { RouteComponentProps, useParams } from "react-router";
 
 import Article from "../components/Article";
+import { Article as ArticleModel } from "../api/models/article";
 
-import ArticleModel from "../models/IArticle";
-import ArticleSetModel from "../models/IArticleSet";
-
-import { State } from "../redux/State";
+import { getArticle } from "../api/get-articles";
 
 interface Props extends RouteComponentProps<{ id: string }> {
-  articles: Map<string, ArticleModel>;
-  articleSets: Map<string, ArticleSetModel>;
 }
 
-const mapStateToProps = (state: State) => {
-  return {
-    articles: state.articles.items,
-    articleSets: state.articleSets.items,
-  };
-};
 
-const ArticleViewInternal: React.FC<Props> = ({
-  articles,
-  articleSets,
+export const ArticleView: React.FC<Props> = ({
   match,
 }) => {
-  const articleId = match.params.id;
-  let currentArticle: ArticleModel | undefined;
-  let nextArticle: ArticleModel | undefined;
-  for (const article of [...articles.values()]) {
-    if (article.id === articleId) {
-      currentArticle = article;
-    } else if (currentArticle) {
-      nextArticle = article;
-      break;
-    }
-  }
+  const { id } = useParams<{id: string}>();
+  const [article, setArticle] = useState<ArticleModel>();
 
-  if (!currentArticle) {
-    throw new Error("Current article is undefined.");
-  }
+  useEffect(() => {
+    getArticle(id).then(setArticle);
+  }, [id]);
 
-  let currentArticleSet: ArticleSetModel | undefined;
-  for (const articleSet of [...articleSets.values()]) {
-    if (articleSet.id === currentArticle.articleSetId) {
-      currentArticleSet = articleSet;
-    }
+  if (article === undefined) {
+    // TODO - Add a better loading experience.
+    return <div>Loading...</div>;
   }
 
   return (
     <Article
-      article={currentArticle}
-      nextArticle={nextArticle}
-      articleSet={currentArticleSet}
+      article={article}
     />
   );
 };
-
-const ArticleView = connect(mapStateToProps)(ArticleViewInternal);
-
-export { ArticleView as default };
