@@ -1,12 +1,14 @@
 import * as React from "react";
 
 import { useEffect, useState } from "react";
+import { getArticles } from "../api/get-article";
+import { ArticleSummary } from "../api/models/article-summary";
 import Home from "../components/Home";
 
-import { Articles, getArticles } from "../api/get-articles";
+
 
 const HomeView: React.FC = () => {
-  const [articles, setArticles] = useState<Articles>();
+  const [articles, setArticles] = useState<ArticleSummary[]>();
 
   useEffect(() => {
     getArticles().then(setArticles);

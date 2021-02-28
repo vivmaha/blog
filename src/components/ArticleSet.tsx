@@ -5,10 +5,10 @@ import ArticleFreeform from "./ArticleFreeform";
 
 import ArticleSetModel from "../models/IArticleSet";
 
-import { Articles as ApiArticles } from "../api/get-articles";
+import { ArticleSummary as ArticleSummaryModel } from "../api/models/article-summary";
 
 interface Props {
-  articles: ApiArticles;
+  articles: ArticleSummaryModel[];
   articleSet: ArticleSetModel;
 }
 
