@@ -6,15 +6,15 @@ import { Article as ArticleModel } from "../api/models/article";
 
 
 export interface Props {
-  articleSet: NonNullable<ArticleModel["articleSet"]>;
+  series: NonNullable<ArticleModel["series"]>;
   includeLinkToNextArticle?: boolean;
 }
 
-const ArticleSetSummary: React.FC<Props> = ({
-  articleSet,
+const SeriesSummary: React.FC<Props> = ({
+  series,
   includeLinkToNextArticle,
 }) => {
-  const {id, title, nextArticle} = articleSet;
+  const {id, title, nextArticle} = series;
   const link = `/series/${id}`;
 
   let linkToNextArticleElement = null;
@@ -37,4 +37,4 @@ const ArticleSetSummary: React.FC<Props> = ({
   );
 };
 
-export { ArticleSetSummary as default };
+export { SeriesSummary as default };

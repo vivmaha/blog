@@ -4,7 +4,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 
 import ArticleFreeform from "./ArticleFreeform";
-import ArticleSetSummary from "./ArticleSetSummary";
+import SeriesSummary from "./SeriesSummary";
 import { Header } from "./Header";
 
 import { ArticleContent } from "../models/IArticleContent";
@@ -40,17 +40,17 @@ const Article: React.FC<Props> = ({ article }) => {
           <header>
             <h1>{article.title}</h1>
             <p>by V Maharajh on {friendlyDate}</p>
-            {article.articleSet ? (
-              <ArticleSetSummary
-                articleSet={article.articleSet}
+            {article.series ? (
+              <SeriesSummary
+                series={article.series}
               />
             ) : null}
           </header>
           {materializeSections(JSON.parse(article.content))}
           <footer>
-            {article.articleSet ? (
-              <ArticleSetSummary
-                articleSet={article.articleSet}
+            {article.series ? (
+              <SeriesSummary
+                series={article.series}
                 includeLinkToNextArticle
               />
             ) : null}
