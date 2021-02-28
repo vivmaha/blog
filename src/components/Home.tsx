@@ -8,11 +8,10 @@ interface Props {
 }
 
 const Home: React.FC<Props> = ({ articles }) => {
-  const bannerContent = <p>A place to store my notes.</p>;
   return (
     <Articles
       articles={articles}
-      bannerContent={bannerContent}
+      introduction="A place to store my notes."
       bannerTitle="Notes by V"
       bannerLink={{
         url: "/article/about",

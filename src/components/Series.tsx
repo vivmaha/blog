@@ -13,12 +13,11 @@ interface Props {
 }
 
 const Series: React.FC<Props> = ({ articles, series }) => {
-  const bannerContent = <ArticleFreeform data={series.introduction} />;
 
   return (
     <Articles
       articles={articles}
-      bannerContent={bannerContent}
+      introduction={series.introduction}
       bannerLink={{
         url: "/",
         text: "Home",
