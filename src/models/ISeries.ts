@@ -4,7 +4,7 @@ interface Series {
   title: string;
   id: string;
   backgroundImageUrl: string;
-  introduction: ArticleContent;
+  introduction: string;
 }
 
 export type { Series as default };

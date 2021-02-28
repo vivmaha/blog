@@ -10,7 +10,7 @@ import ArticleSummary from "./ArticleSummary";
 export interface Props extends React.HTMLProps<HTMLDivElement> {
   articles: ArticleSummaryModel[];
   bannerTitle: string;
-  bannerContent: JSX.Element;
+  introduction: string;
   bannerLink: ArticlesBannerLink;
   backgroundImageUrl: string;
 }
@@ -18,7 +18,7 @@ export interface Props extends React.HTMLProps<HTMLDivElement> {
 const Articles: React.FC<Props> = ({
   articles,
   bannerTitle,
-  bannerContent,
+  introduction,
   bannerLink,
   backgroundImageUrl,
 }) => (
@@ -26,7 +26,7 @@ const Articles: React.FC<Props> = ({
     <Helmet title={bannerTitle} />
     <ArticlesBanner
       backgroundImageUrl={backgroundImageUrl}
-      content={bannerContent}
+      content={<p style={{whiteSpace: "pre-line"}}>{introduction}</p>}
       title={bannerTitle}
       link={bannerLink}
     />
