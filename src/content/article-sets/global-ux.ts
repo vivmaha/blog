@@ -1,4 +1,4 @@
-import ArticleSet from "../../models/IArticleSet";
+import Series from "../../models/ISeries";
 
 import { ArticleContentHtml } from "../../models/IArticleContent";
 
@@ -18,4 +18,4 @@ export default {
         </p>
         `,
   } as ArticleContentHtml,
-} as ArticleSet;
+} as Series;

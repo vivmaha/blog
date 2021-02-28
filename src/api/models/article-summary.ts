@@ -16,7 +16,7 @@ export type ArticleSummary = {
     title: string;
     preview: string;
   
-    articleSet?: {
+    series?: {
       id: string;
       title: string;
       nextArticle?: {
