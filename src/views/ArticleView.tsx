@@ -5,7 +5,7 @@ import { RouteComponentProps, useParams } from "react-router";
 import Article from "../components/Article";
 import { Article as ArticleModel } from "../api/models/article";
 
-import { getArticle } from "../api/get-articles";
+import { getArticle } from "../api/get-article";
 
 interface Props extends RouteComponentProps<{ id: string }> {
 }

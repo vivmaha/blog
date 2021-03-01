@@ -1,14 +1,12 @@
 import { getConfig } from "../app/config";
-import { ArticleSummary as ApiArticleSummary } from "./models/article-summary";
+import { Article } from "./models/article";
 
-export type ArticleSummary = ApiArticleSummary;
-
-type ArticlesResponse = {
-  articles: ArticleSummary[];
+type ArticleResponse = {
+  article: Article;
 };
 
-export const getArticles = async (): Promise<ArticleSummary[]> => {
-  const httpResponse = await fetch(`${getConfig().api}/articles`);
-  const articlesResponse = (await httpResponse.json()) as ArticlesResponse;
-  return articlesResponse.articles;
+export const getArticle = async (id: string): Promise<Article> => {
+  const httpResponse = await fetch(`${getConfig().api}/article/${id}`);
+  const articleResponse = (await httpResponse.json()) as ArticleResponse;
+  return articleResponse.article;
 };

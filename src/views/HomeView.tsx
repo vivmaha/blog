@@ -1,24 +1,24 @@
 import * as React from "react";
 
 import { useEffect, useState } from "react";
-import { getArticles } from "../api/get-article";
-import { ArticleSummary } from "../api/models/article-summary";
+import { getSeries } from "../api/get-series";
+import { Series } from "../api/models/series";
 import Home from "../components/Home";
 
 
 
 const HomeView: React.FC = () => {
-  const [articles, setArticles] = useState<ArticleSummary[]>();
+  const [series, setSeries] = useState<Series>();
 
   useEffect(() => {
-    getArticles().then(setArticles);
+    getSeries("home").then(setSeries);
   }, []);
 
-  if (articles === undefined) {
+  if (series === undefined) {
     // TODO Improve this UX
     return <div>Loading...</div>;
   }
-  return <Home articles={articles} />;
+  return <Home series={series} />;
 };
 
 export { HomeView as default };
