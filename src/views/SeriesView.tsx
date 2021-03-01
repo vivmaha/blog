@@ -1,34 +1,25 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { getArticles } from "../api/get-article";
-import { ArticleSummary } from "../api/models/article-summary";
+import { getSeries } from "../api/get-series";
+import { Series as SeriesModel } from "../api/models/series";
 
 import Series from "../components/Series";
-import seriess from "../content/article-sets/Series";
 
 const SeriesView: React.FC = () => {
   const {id} = useParams<{id: string}>();
-  const [articles, setArticles] = useState<ArticleSummary[]>();
+  const [series, setSeries] = useState<SeriesModel>();
 
   useEffect(() => {
-    getArticles().then(setArticles);
-  }, []);
+    getSeries(id).then(setSeries);
+  }, [id]);
   
-  const series = seriess.find(set => set.id === id);
   if (series === undefined) {
-    throw new Error(`Unkown article set ${id}`);
-  }
-
-  if (articles === undefined) {
     // TODO Improve this UX
     return <div>Loading...</div>;
   }
 
-  const articlesInSet = articles
-    .filter((article) => article.series && article.series.id === id)
-
-  return <Series articles={articlesInSet} series={series} />;
+  return <Series articles={series.articles} series={series} />;
 };
 
 export { SeriesView as default };
