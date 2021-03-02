@@ -1,30 +1,36 @@
-import * as React from "react";
+import React from "react";
+import { useEffect, useState } from "react";
+import { getSeries } from "../api/get-series";
 
+import { Series as SeriesModel } from "../api/models/series";
 import Articles from "./Articles";
+import { FullPageSpinner } from "./FullPageSpinner";
 
-import SeriesModel from "../models/ISeries";
-
-import { ArticleSummary as ArticleSummaryModel } from "../api/models/article-summary";
-
-interface Props {
-  articles: ArticleSummaryModel[];
-  series: SeriesModel;
+export type SeriesProps = {
+    id: string;
+    bannerLink: {
+        url: string;
+        text: string;
+    }
 }
 
-const Series: React.FC<Props> = ({ articles, series }) => {
+export const Series: React.FC<SeriesProps> = ({id, bannerLink}) => {
+    const [series, setSeries] = useState<SeriesModel>();
 
-  return (
-    <Articles
-      articles={articles}
-      introduction={series.introduction}
-      bannerLink={{
-        url: "/",
-        text: "Home",
-      }}
-      bannerTitle={series.title}
-      backgroundImageUrl={series.backgroundImageUrl}
-    />
-  );
-};
-
-export { Series as default };
+    useEffect(() => {
+      getSeries(id).then(setSeries);
+    }, [id]);
+  
+    if (series === undefined) {
+      return <FullPageSpinner />
+    }
+    return (
+      <Articles
+        articles={series.articles}
+        introduction={series.introduction}
+        bannerTitle={series.title}
+        bannerLink={bannerLink}
+        backgroundImageUrl={series.backgroundImageUrl}
+      />
+    );
+}

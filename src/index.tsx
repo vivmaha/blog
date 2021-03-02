@@ -2,9 +2,9 @@ import * as React from "react";
 import { render } from "react-dom";
 import { BrowserRouter, Route } from "react-router-dom";
 
-import HomeView from "./views/HomeView";
+import { HomeView } from "./views/HomeView";
 import { ArticleView } from "./views/ArticleView";
-import SeriesView from "./views/SeriesView";
+import { SeriesView } from "./views/SeriesView";
 import "./index.scss";
 import { ScrollToTop } from "./components/ScrollToTop";
 
