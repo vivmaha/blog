@@ -4,7 +4,7 @@ import * as React from "react";
 import { ArticlesBanner, ArticlesBannerLink } from "./ArticlesBanner";
 
 import "./Articles.scss";
-import { ArticleSummary as ArticleSummaryModel} from "../api/models/article-summary";
+import { ArticleSummary as ArticleSummaryModel } from "../api/models/article-summary";
 import ArticleSummary from "./ArticleSummary";
 
 export interface Props extends React.HTMLProps<HTMLDivElement> {
@@ -26,7 +26,7 @@ const Articles: React.FC<Props> = ({
     <Helmet title={bannerTitle} />
     <ArticlesBanner
       backgroundImageUrl={backgroundImageUrl}
-      content={<p style={{whiteSpace: "pre-line"}}>{introduction}</p>}
+      content={<p style={{ whiteSpace: "pre-line" }}>{introduction}</p>}
       title={bannerTitle}
       link={bannerLink}
     />

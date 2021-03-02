@@ -4,7 +4,6 @@ import { ArticleCaption } from "./ArticleCaption";
 
 import { Article as ArticleModel } from "../api/models/article";
 
-
 export interface Props {
   series: NonNullable<ArticleModel["series"]>;
   includeLinkToNextArticle?: boolean;
@@ -14,7 +13,7 @@ const SeriesSummary: React.FC<Props> = ({
   series,
   includeLinkToNextArticle,
 }) => {
-  const {id, title, nextArticle} = series;
+  const { id, title, nextArticle } = series;
   const link = `/series/${id}`;
 
   let linkToNextArticleElement = null;
