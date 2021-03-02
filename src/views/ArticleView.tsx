@@ -1,32 +1,33 @@
 import moment from "moment";
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
-import ArticleFreeform from "../components/ArticleFreeform";
-import SeriesSummary from "../components//SeriesSummary";
-import { Header } from "../components//Header";
 import { useParams } from "react-router";
+import ArticleFreeform from "../components/ArticleFreeform";
+import SeriesSummary from "../components/SeriesSummary";
+import { Header } from "../components/Header";
 import { getArticle } from "../api/get-article";
-import { FullPageSpinner } from "../components//FullPageSpinner";
+import { FullPageSpinner } from "../components/FullPageSpinner";
 import { ArticleContent } from "../models/IArticleContent";
 import { Article as ArticleModel } from "../api/models/article";
 
 import "./Article.scss";
 
-
 export const ArticleView: React.FC = () => {
-  const { id } = useParams<{id: string}>();
+  const { id } = useParams<{ id: string }>();
   const [article, setArticle] = useState<ArticleModel>();
   const [error, setError] = useState<string>();
 
   useEffect(() => {
-    getArticle(id).then(setArticle).catch((e) => setError(e.toString()));
+    getArticle(id)
+      .then(setArticle)
+      .catch((e) => setError(e.toString()));
   }, [id]);
 
   if (error !== undefined) {
     return <pre>{error}</pre>;
   }
   if (article === undefined) {
-    return <FullPageSpinner />
+    return <FullPageSpinner />;
   }
 
   const friendlyDate = moment(article.date).format("MMM Do, YYYY");
@@ -52,19 +53,12 @@ export const ArticleView: React.FC = () => {
           <header>
             <h1>{article.title}</h1>
             <p>by V Maharajh on {friendlyDate}</p>
-            {article.series ? (
-              <SeriesSummary
-                series={article.series}
-              />
-            ) : null}
+            {article.series ? <SeriesSummary series={article.series} /> : null}
           </header>
           {materializeSections(JSON.parse(article.content))}
           <footer>
             {article.series ? (
-              <SeriesSummary
-                series={article.series}
-                includeLinkToNextArticle
-              />
+              <SeriesSummary series={article.series} includeLinkToNextArticle />
             ) : null}
           </footer>
         </article>
