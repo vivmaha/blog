@@ -6,7 +6,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "lint": "eslint --fix --max-warnings 0 --ext .ts,.tsx,.js,.jsx src && prettier --write ."
+    "lint-ci": "eslint --max-warnings 0 --ext .ts,.tsx,.js,.jsx src && prettier --check .",
+    "lint": "eslint --max-warnings 0 --ext .ts,.tsx,.js,.jsx src && prettier --write ."
   },
   "author": "vivek maharajh",
   "license": "ISC",
@@ -34,6 +35,8 @@
     "eslint-plugin-jest": "^24.1.5",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
     "node-sass": "^4.14.1",
     "prettier": "^2.0.5",
     "react-scripts": "^3.4.1",
@@ -50,5 +53,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "lint-staged": {
+    "**/*.{ts,js}": [
+      "eslint --max-warnings 0 --fix"
+    ],
+    "**/*.{json,md,yml,ts,js}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
