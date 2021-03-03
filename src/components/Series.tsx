@@ -30,25 +30,29 @@ export const Series: React.FC<SeriesProps> = ({ id, bannerLink }) => {
     return <FullPageSpinner />;
   }
 
-  const heroUrl = `${getConfig().media}/series/${series.id}/hero-web-optimized.jpg`;
+  const heroUrl = `${getConfig().media}/series/${
+    series.id
+  }/hero-web-optimized.jpg`;
   return (
     <main className="series">
-    <Helmet title={series.title} />
-    <SeriesBanner
-      heroUrl={heroUrl}
-      content={<p style={{ whiteSpace: "pre-line" }}>{series.introduction}</p>}
-      title={series.title}
-      link={bannerLink}
-    />
-    <article className="body-container no-margin-top">
-      <ol>
-        {series.articles.map((article) => (
-          <li key={article.id}>
-            <ArticleSummary article={article} />
-          </li>
-        ))}
-      </ol>
-    </article>
-  </main>
+      <Helmet title={series.title} />
+      <SeriesBanner
+        heroUrl={heroUrl}
+        content={
+          <p style={{ whiteSpace: "pre-line" }}>{series.introduction}</p>
+        }
+        title={series.title}
+        link={bannerLink}
+      />
+      <article className="body-container no-margin-top">
+        <ol>
+          {series.articles.map((article) => (
+            <li key={article.id}>
+              <ArticleSummary article={article} />
+            </li>
+          ))}
+        </ol>
+      </article>
+    </main>
   );
 };
