@@ -1,32 +1,32 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 
-import "./ArticlesBanner.scss";
+import "./SeriesBanner.scss";
 
-export interface ArticlesBannerLink {
+export interface SeriesBannerLink {
   url: string;
   text: string;
 }
 
 export interface Props {
-  backgroundImageUrl: string;
+  heroUrl: string;
   title: string;
   content: JSX.Element;
-  link: ArticlesBannerLink;
+  link: SeriesBannerLink;
 }
 
-export const ArticlesBanner: React.FC<Props> = ({
-  backgroundImageUrl,
+export const SeriesBanner: React.FC<Props> = ({
+  heroUrl,
   title,
   content,
   link,
 }) => {
   const bannerStyle = {
-    backgroundImage: `url('${backgroundImageUrl}')`,
+    backgroundImage: `url('${heroUrl}')`,
   };
 
   return (
-    <header className="articles-banner" style={bannerStyle}>
+    <header className="series-banner" style={bannerStyle}>
       <div className="content body-width">
         <div className="title">
           <h1>{title}</h1>
