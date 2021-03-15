@@ -20,15 +20,9 @@ Website for my blog
 
     git push master
 
-    // TODO - Add notes after hooking up to Github CI
     // Deployed to http://NotesByV.com
 
-## Update npm packages to latest versions
+## Scripts
 
-    npm install -g npm-check-updates
-    ncu -u
-
-## Add an npm package without breaking TypeScript
-
-    npm install --save-dev {package}
-    npm install --save-dev @types/{package}
+`npx ts-node ./bin/generate-site-map.ts`
+☝️ Regenerate the site map
