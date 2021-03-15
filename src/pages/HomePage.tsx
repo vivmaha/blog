@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Series } from "../components/Series";
 
-export const HomeView: React.FC = () => (
+export const HomePage: React.FC = () => (
   <Series
     id="home"
     bannerLink={{

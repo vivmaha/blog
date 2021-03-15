@@ -1,20 +1,20 @@
 import * as React from "react";
 import { render } from "react-dom";
 import { BrowserRouter, Route } from "react-router-dom";
-
-import { HomeView } from "./views/HomeView";
-import { ArticleView } from "./views/ArticleView";
-import { SeriesView } from "./views/SeriesView";
-import "./index.scss";
+import { HomePage } from "./pages/HomePage";
+import { ArticlePage } from "./pages/ArticlePage";
+import { SeriesPage } from "./pages/SeriesPage";
 import { ScrollToTop } from "./components/ScrollToTop";
+
+import "./index.scss";
 
 render(
   <BrowserRouter>
     <ScrollToTop />
     <div>
-      <Route exact path="/" component={HomeView} />
-      <Route path="/article/:id" component={ArticleView} />
-      <Route path="/series/:id" component={SeriesView} />
+      <Route exact path="/" component={HomePage} />
+      <Route path="/article/:id" component={ArticlePage} />
+      <Route path="/series/:id" component={SeriesPage} />
     </div>
   </BrowserRouter>,
   document.getElementById("content")

@@ -10,9 +10,9 @@ import { FullPageSpinner } from "../components/FullPageSpinner";
 import { ArticleContent } from "../models/IArticleContent";
 import { Article as ArticleModel } from "../api/models/article";
 
-import "./Article.scss";
+import "./ArticlePage.scss";
 
-export const ArticleView: React.FC = () => {
+export const ArticlePage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const [article, setArticle] = useState<ArticleModel>();
   const [error, setError] = useState<string>();
