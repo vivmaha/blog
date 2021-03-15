@@ -2,10 +2,11 @@ import * as React from "react";
 
 import Articles from "./Articles";
 
-import Article from "../models/IArticle";
+import { Articles as ApiArticles} from "../api/get-articles";
+
 
 interface Props {
-  articles: Article[];
+  articles: ApiArticles
 }
 
 const Home: React.FC<Props> = ({ articles }) => {

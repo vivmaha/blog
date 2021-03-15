@@ -3,11 +3,12 @@ import * as React from "react";
 import Articles from "./Articles";
 import ArticleFreeform from "./ArticleFreeform";
 
-import ArticleModel from "../models/IArticle";
 import ArticleSetModel from "../models/IArticleSet";
 
+import { Articles as ApiArticles } from "../api/get-articles";
+
 interface Props {
-  articles: ArticleModel[];
+  articles: ApiArticles;
   articleSet: ArticleSetModel;
 }
 
