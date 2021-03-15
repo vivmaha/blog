@@ -12,10 +12,12 @@ import ArticleSetView from "./views/ArticleSetView";
 import store from "./redux/Store";
 
 import "./index.scss";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 render(
   <Provider store={store}>
     <BrowserRouter>
+      <ScrollToTop />
       <div>
         <Route exact path="/" component={HomeView} />
         <Route path="/article/:id" component={ArticleView} />
