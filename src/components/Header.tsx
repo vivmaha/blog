@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import "./Header.scss";
 
-export default () => {
+export const Header: React.FC = () => {
   return (
     <header className="header">
       <nav>

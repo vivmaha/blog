@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 
 import ArticleFreeform from "./ArticleFreeform";
 import ArticleSetSummary from "./ArticleSetSummary";
-import Header from "./Header";
+import { Header } from "./Header";
 
 import { ArticleContent } from "../models/IArticleContent";
 import ArticleModel from "../models/IArticle";

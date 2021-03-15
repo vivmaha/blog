@@ -3,7 +3,7 @@ import * as React from "react";
 
 import ArticleModel from "../models/IArticle";
 import ArticleSummary from "./ArticleSummary";
-import ArticlesBanner, { ArticlesBannerLink } from "./ArticlesBanner";
+import { ArticlesBanner, ArticlesBannerLink } from "./ArticlesBanner";
 
 import "./Articles.scss";
 

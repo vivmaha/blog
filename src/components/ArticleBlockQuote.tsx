@@ -8,7 +8,11 @@ export interface Props {
   personTitle?: string;
 }
 
-export default ({ quote, person, personTitle }: Props) => {
+export const ArticleBlockQuote: React.FC<Props> = ({
+  quote,
+  person,
+  personTitle,
+}) => {
   const titleString = personTitle ? `, ${personTitle}` : "";
   return (
     <section className="article-block-quote">
