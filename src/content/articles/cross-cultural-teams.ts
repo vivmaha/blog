@@ -18,7 +18,7 @@ export default {
     [
       {
         type: "html",
-        content: `<p>Working on a global product is usually accompanied with a global workforce. This post explores the dynamics of diverse work spaces.</p>`
+        content: `<p>Working on a global product is usually accompanied with a global workforce. This post explores the dynamics of diverse work spaces.</p>`,
       },
       {
         type: "article-quote",

@@ -18,14 +18,15 @@ export default {
     [
       {
         type: "html",
-        content: `<p>Localization and translation are standard for global products. This post explores power dynamics between languages that translators should be mindful of.</p>`
-      } as ArticleContentHtml,{
+        content: `<p>Localization and translation are standard for global products. This post explores power dynamics between languages that translators should be mindful of.</p>`,
+      } as ArticleContentHtml,
+      {
         type: "article-quote",
         quote:
           "However great our future writers may be, their fame will never succeed in crossing beyond our borders … And so I would like to suggest to the public spirited men of the world that they engage themselves in the writing of English … In this day and age, it is self-evident that a man with great ambitions should study English writing. Study it, and strive, by using the language, to make his glory shine abroad. There is nothing great about a fame solely garnered in the context of this pathetic string of islands",
         person: "Editorialist",
         personTitle: "Yomiuri Shimbun (Japanese daily newspaper)",
-      } as ArticleContentQuote
+      } as ArticleContentQuote,
     ],
     [
       {

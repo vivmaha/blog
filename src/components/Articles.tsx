@@ -5,7 +5,7 @@ import ArticleSummary from "./ArticleSummary";
 import { ArticlesBanner, ArticlesBannerLink } from "./ArticlesBanner";
 
 import "./Articles.scss";
-import { Articles as ApiArticles} from "../api/get-articles";
+import { Articles as ApiArticles } from "../api/get-articles";
 
 export interface Props extends React.HTMLProps<HTMLDivElement> {
   articles: ApiArticles;
