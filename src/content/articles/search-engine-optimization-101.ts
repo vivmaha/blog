@@ -11,15 +11,20 @@ export default {
   id: "search-engine-optimization-101",
   introduction: {
     preview:
-      "Search engine optimization (SEO) is now a critical ingredient of website design. This post summarizes a paper that discusses a broad range of SEO techniques.",
-    extended: {
-      type: "article-quote",
-      quote:
-        "The rewards of improving search ranking can entice site owners to engage in questionable “black hat” techniques to trick the search engine into boosting their site’s rank. However, search engines are mature enough to detect such efforts, and may penalize the site with lower rankings or exclusion from the search results.",
-      person: "John B. Killoran",
-    } as ArticleContentQuote,
+      "Search engine optimization (SEO) is now a critical ingredient of website design. This post summarizes a paper that discusses a broad range of SEO techniques."
   },
   sections: [
+    [
+      {
+        type: "html",
+        content: `<p>Search engine optimization (SEO) is now a critical ingredient of website design. This post summarizes a paper that discusses a broad range of SEO techniques.</p>`
+      } as ArticleContentHtml,{
+        type: "article-quote",
+        quote:
+          "The rewards of improving search ranking can entice site owners to engage in questionable “black hat” techniques to trick the search engine into boosting their site’s rank. However, search engines are mature enough to detect such efforts, and may penalize the site with lower rankings or exclusion from the search results.",
+        person: "John B. Killoran",
+      } as ArticleContentQuote,
+    ],
     [
       {
         type: "html",

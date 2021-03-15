@@ -12,15 +12,20 @@ export default {
   introduction: {
     preview:
       "Information Architecture (IA) is focused on making information findable and  understandable. This note summarizes the first few chapters of a book on this topic.",
-    extended: {
-      type: "article-quote",
-      quote:
-        "IA done in a vacuum without regard for users  won’t hold up against the light of day. The design must be informed by the  user’s tasks, needs, navigation behavior, and experience",
-      person: "L. Rosenfeld, P. Morville, J. Arango",
-      personTitle: "Authors of the book summarized in this post",
-    } as ArticleContentQuote,
   },
   sections: [
+    [
+      {
+        type: "html",
+        content: `<p>Information Architecture (IA) is focused on making information findable and  understandable. This note summarizes the first few chapters of a book on this topic.</p>`
+      } as ArticleContentHtml,{
+        type: "article-quote",
+        quote:
+          "IA done in a vacuum without regard for users  won’t hold up against the light of day. The design must be informed by the  user’s tasks, needs, navigation behavior, and experience",
+        person: "L. Rosenfeld, P. Morville, J. Arango",
+        personTitle: "Authors of the book summarized in this post",
+      } as ArticleContentQuote,
+    ],
     [
       {
         type: "html",

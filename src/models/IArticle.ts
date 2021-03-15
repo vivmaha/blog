@@ -8,7 +8,7 @@ interface Article {
     // Used to show a summary of the article
     preview?: string;
     // Concatenated with {preview} and placed at the beginning of the article.
-    extended: ArticleContent;
+    extended?: ArticleContent;
   };
   articleSetId?: string;
   sections: ArticleContent[][];
