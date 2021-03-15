@@ -4,7 +4,7 @@ Website for my blog
 
 # Ops
 
-[![Build Status](https://travis-ci.org/vivmaha/blog.svg?branch=master)](https://travis-ci.org/vivmaha/blog)
+TODO - Add build status glyph after adding Github CI
 
 # Dev
 
@@ -20,7 +20,7 @@ Website for my blog
 
     git push master
 
-    // This will trigger a travis build which (upon success) will deploy to Azure. 
+    // TODO - Add notes after hooking up to Github CI
     // Deployed to http://NotesByV.com
 
 ## Update npm packages to latest versions
@@ -28,7 +28,7 @@ Website for my blog
     npm install -g npm-check-updates
     ncu -u
 
-## Add an npm package without breaking TypeScript 
+## Add an npm package without breaking TypeScript
 
     npm install --save-dev {package}
     npm install --save-dev @types/{package}
