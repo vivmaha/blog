@@ -1,28 +1,30 @@
 import {
-    IArticleContentQuote,
-    IArticleContentHtml,
+  IArticleContentQuote,
+  IArticleContentHtml,
 } from "../../models/IArticleContent";
 import { IArticle } from "../../models/IArticle";
 
-export default <IArticle>{
-    type: "article",
-    title: 'Global Design',
-    date: new Date(2016, 9, 22),
-    id: 'global-design',
-    introduction: {
-        preview: "Great global user research does not automatically translate into a successful product. Design and engineering processes must also be globally-oriented so that they can address any cultural issues that arise.",
-        extended: <IArticleContentQuote>{
-            type: "article-quote",
-            quote: "It is arrogant of us to think we can create images that will have the same precise meaning to everyone everywhere.",
-            person: "William Horton"
-        }
-    },
-    articleSetId: 'global-ux',
-    sections: [
-        [
-            <IArticleContentHtml>{ 
-                type: "html",
-                content: `
+export default {
+  type: "article",
+  title: "Global Design",
+  date: new Date(2016, 9, 22),
+  id: "global-design",
+  introduction: {
+    preview:
+      "Great global user research does not automatically translate into a successful product. Design and engineering processes must also be globally-oriented so that they can address any cultural issues that arise.",
+    extended: {
+      type: "article-quote",
+      quote:
+        "It is arrogant of us to think we can create images that will have the same precise meaning to everyone everywhere.",
+      person: "William Horton",
+    } as IArticleContentQuote,
+  },
+  articleSetId: "global-ux",
+  sections: [
+    [
+      {
+        type: "html",
+        content: `
                     <h1>Design for a Global Audience</h1>
                     <cite>Quesenbery, W., &amp; Szuc, D. (2012). Global UX: Design and research in a connected world. Waltham, MA: Morgan Kaufmann (Chaper 9)</cite>
                     <p>The following steps can globalize your regular UX process:</p>
@@ -63,12 +65,13 @@ export default <IArticle>{
                     <p>There's much more to language than mere translation. There are UI implications, political nuances, legal requirements, local variants, and tonal nuances.</p>
                     <h2>Local research</h2> 
                     <p>Perhaps most obvious, you have to perform local research to discover all of the nuances of your product's experience in each culture you target.</p>
-                `
-            },
-        ], [
-            <IArticleContentHtml>{
-                type: "html",
-                content: `
+                `,
+      } as IArticleContentHtml,
+    ],
+    [
+      {
+        type: "html",
+        content: `
                     <h1>Graphics: The Not Quite Universal Language</h1>
                     <cite>W. Horton, “Graphics: The Not Quite Universal Language,” in Usability and internationalization of information technology. N. Aykin, Ed Mahwah, NJ: Erlbaum. (Chap. 6)</cite>
                     <p>Graphics transcends cultures easier than words. However, it isn't as universal as many assume.</p>
@@ -77,8 +80,8 @@ export default <IArticle>{
                     <p>For the first step, globalization, you must use globally objects and be as literal as possible. If you need to illustrate people keep it abstract, and avoid alienating groups.</p>
                     <p>For the second step, localization, a good ballpark is to translate 3% to 5% of your graphics. There are many best-practices you can adopt to make it easy and efficient to localize your graphics.</p>
                     <p>This reading is dense with small valuable tips. Summarizing does not do it justice. Refer to the full text if you're ever working on graphics.</p>
-                `
-            },
-        ]
-    ]
-};
+                `,
+      } as IArticleContentHtml,
+    ],
+  ],
+} as IArticle;
