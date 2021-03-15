@@ -1,28 +1,28 @@
 import moment from "moment";
 
-import * as React from "react";
+import React from "react";
 import { Helmet } from "react-helmet";
 
-import { ArticleFreeform } from "../components/ArticleFreeform";
-import { ArticleSetSummary } from "../components/ArticleSetSummary";
-import { Header } from "../components/Header";
+import ArticleFreeform from "./ArticleFreeform";
+import ArticleSetSummary from "./ArticleSetSummary";
+import Header from "./Header";
 
-import { IArticleContent } from "../models/IArticleContent";
-import { IArticle } from "../models/IArticle";
-import { IArticleSet } from "../models/IArticleSet";
+import { ArticleContent } from "../models/IArticleContent";
+import ArticleModel from "../models/IArticle";
+import ArticleSetModel from "../models/IArticleSet";
 
 import "./Article.scss";
 
 interface Props {
-  article: IArticle;
-  nextArticle?: IArticle;
-  articleSet?: IArticleSet;
+  article: ArticleModel;
+  nextArticle?: ArticleModel;
+  articleSet?: ArticleSetModel;
 }
 
-export let Article = (props: Props) => {
-  let friendlyDate = moment(props.article.date).format("MMM Do, YYYY");
+const Article: React.FC<Props> = ({ article, nextArticle, articleSet }) => {
+  const friendlyDate = moment(article.date).format("MMM Do, YYYY");
 
-  let materializeSections = (sections: IArticleContent[][]): JSX.Element[] => {
+  const materializeSections = (sections: ArticleContent[][]): JSX.Element[] => {
     return sections.map((section) => {
       return (
         <section>
@@ -36,28 +36,28 @@ export let Article = (props: Props) => {
 
   return (
     <div className="body-container">
-      <Helmet title={props.article.title} />
-      <Header></Header>
+      <Helmet title={article.title} />
+      <Header />
       <main>
         <article>
           <header>
-            <h1>{props.article.title}</h1>
+            <h1>{article.title}</h1>
             <p>by V Maharajh on {friendlyDate}</p>
-            <p>{props.article.introduction.preview}</p>
-            <ArticleFreeform data={props.article.introduction.extended} />
-            {props.articleSet ? (
+            <p>{article.introduction.preview}</p>
+            <ArticleFreeform data={article.introduction.extended} />
+            {articleSet ? (
               <ArticleSetSummary
-                articleSet={props.articleSet}
-                nextArticle={props.nextArticle}
+                articleSet={articleSet}
+                nextArticle={nextArticle}
               />
             ) : null}
           </header>
-          {materializeSections(props.article.sections)}
+          {materializeSections(article.sections)}
           <footer>
-            {props.articleSet ? (
+            {articleSet ? (
               <ArticleSetSummary
-                articleSet={props.articleSet}
-                nextArticle={props.nextArticle}
+                articleSet={articleSet}
+                nextArticle={nextArticle}
                 includeLinkToNextArticle
               />
             ) : null}
@@ -67,3 +67,5 @@ export let Article = (props: Props) => {
     </div>
   );
 };
+
+export { Article as default };

@@ -3,17 +3,20 @@ import * as React from "react";
 import "./ArticleBlockQuote.scss";
 
 export interface Props {
-    quote: string;
-    person: string;
-    personTitle?: string;
+  quote: string;
+  person: string;
+  personTitle?: string;
 }
 
-export var ArticleBlockQuote = (props: Props) => {
-    let titleString = props.personTitle ? `, ${props.personTitle}` : '';
-    return (
-        <section className="article-block-quote">
-            <blockquote>“{props.quote}”</blockquote>
-            <p className="no-margin-top">—&nbsp;<strong>{props.person}</strong>{titleString}</p>
-        </section>
-    );
+export default ({ quote, person, personTitle }: Props) => {
+  const titleString = personTitle ? `, ${personTitle}` : "";
+  return (
+    <section className="article-block-quote">
+      <blockquote>“{quote}”</blockquote>
+      <p className="no-margin-top">
+        —&nbsp;<strong>{person}</strong>
+        {titleString}
+      </p>
+    </section>
+  );
 };

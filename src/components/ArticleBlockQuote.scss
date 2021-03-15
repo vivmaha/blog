@@ -1,11 +1,11 @@
 @import "../fonts";
 
 .article-block-quote {
-    &:not(:first-child) {
-        margin-top: 1em;
-    }
-    &>blockquote{  
-        font-style: italic;
-        margin-bottom: 0;
-    }
+  &:not(:first-child) {
+    margin-top: 1em;
+  }
+  & > blockquote {
+    font-style: italic;
+    margin-bottom: 0;
+  }
 }

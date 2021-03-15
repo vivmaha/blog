@@ -2,19 +2,19 @@
 @import "../fonts";
 @import "../colors";
 .articles {
-    background: $color-background;
-    $border: 20px;
-    &>article{
-        margin-top: 2em;
-        &>ol>li {
-            &:first-child {
-                &>.article-summary {
-                    margin-top: $border;   
-                }
-            }
+  background: $color-background;
+  $border: 20px;
+  & > article {
+    margin-top: 2em;
+    & > ol > li {
+      &:first-child {
+        & > .article-summary {
+          margin-top: $border;
         }
-        &>nav {
-            margin: $border 0;
-        }
+      }
     }
+    & > nav {
+      margin: $border 0;
+    }
+  }
 }

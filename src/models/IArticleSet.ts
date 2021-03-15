@@ -1,10 +1,10 @@
-import * as React from "react";
-import { IArticleContent } from "../models/IArticleContent";
+import { ArticleContent } from "./IArticleContent";
 
-
-export interface IArticleSet {
-    title: string;
-    id: string;
-    backgroundImageUrl: string;
-    introduction: IArticleContent;
+interface ArticleSet {
+  title: string;
+  id: string;
+  backgroundImageUrl: string;
+  introduction: ArticleContent;
 }
+
+export type { ArticleSet as default };

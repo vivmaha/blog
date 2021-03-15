@@ -4,74 +4,89 @@
 @import "./transitions";
 
 .body-width {
-    // You should be able to read the line with eye movement only (no head movement).
-    max-width: 38em;
-    @include responsive(margin-left, 1em, auto, auto);
-    @include responsive(margin-right, 1em, auto, auto);
-    color: $color-text;
-    @include type-body();
+  // You should be able to read the line with eye movement only (no head movement).
+  max-width: 38em;
+  @include responsive(margin-left, 1em, auto, auto);
+  @include responsive(margin-right, 1em, auto, auto);
+  color: $color-text;
+  @include type-body();
 }
 
-.body-container  {
-    @extend .body-width;
-    @include type-body();
-    margin-top: 4vw;
-    margin-bottom: 2em;
-    background: $color-background;
+.body-container {
+  @extend .body-width;
+  @include type-body();
+  margin-top: 4vw;
+  margin-bottom: 2em;
+  background: $color-background;
 }
 
 cite {
-    display: inline-block;
-    margin-top: 1em;
-    line-height: 2;
-    @include font-serif-regular();
-    @include responsive(font-size, .7em, .75em, .8em);
-    @include responsive(line-height, 1.2, 1.2, 1.2);
+  display: inline-block;
+  margin-top: 1em;
+  line-height: 2;
+  @include font-serif-regular();
+  @include responsive(font-size, 0.7em, 0.75em, 0.8em);
+  @include responsive(line-height, 1.2, 1.2, 1.2);
 }
 
 h1 {
-    @include type-h1();
-    margin: 0;
+  @include type-h1();
+  margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    @include font-serif-regular();
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include font-serif-regular();
 }
 
-p, span, dl, dt, blockquote {
-    @include type-p();
+p,
+span,
+dl,
+dt,
+blockquote {
+  @include type-p();
 }
 
 strong {
-    @include font-weight-bold();
+  @include font-weight-bold();
 }
 
-ul, ol {
-    list-style: none;
-    padding: 0;
+ul,
+ol {
+  list-style: none;
+  padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    a {
-        text-decoration: none;
-        &::before {
-            opacity: 0;
-            transition: transform $transition-function, opacity $transition-function;        
-            font-family: "Times New Roman";
-            content: "→\00a0";
-            position: absolute;
-            transform: translateX(calc(-100% - 0.2em));
-        }
-        &:hover {        
-            &::before {
-                opacity: 1;
-                transform: translateX(-100%);
-            }
-        }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  a {
+    text-decoration: none;
+    &::before {
+      opacity: 0;
+      transition: transform $transition-function, opacity $transition-function;
+      font-family: "Times New Roman";
+      content: "→\00a0";
+      position: absolute;
+      transform: translateX(calc(-100% - 0.2em));
     }
+    &:hover {
+      &::before {
+        opacity: 1;
+        transform: translateX(-100%);
+      }
+    }
+  }
 }
 
 a {
-    color: $color-link;
-    @include font-serif-regular();    
+  color: $color-link;
+  @include font-serif-regular();
 }

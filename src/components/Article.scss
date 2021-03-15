@@ -2,63 +2,64 @@
 @import "../colors";
 
 article {
-    header {
-        h1 {
-            @include type-h1();
-            &+p{
-                margin-top: 0;
-                opacity: 0.5;
-            }
-        }
+  header {
+    h1 {
+      @include type-h1();
+      & + p {
+        margin-top: 0;
+        opacity: 0.5;
+      }
     }
-    section {
-        margin-top: 2em;
-        h1 {
-            @include type-h2();
-        }
-        h2 {            
-            @include type-h4();
-        }
-        h3 {
-            @include type-h5();
-        }
+  }
+  section {
+    margin-top: 2em;
+    h1 {
+      @include type-h2();
     }
-    dl {
-        margin-left: 2em;
-        &>dt {
-            @include font-weight-bold();
-            margin-bottom: 0;
-        }
-        &>dd {
-            margin-top: 0;
-        }
+    h2 {
+      @include type-h4();
     }
-    dl, ul {        
-        margin-left: 2em;        
+    h3 {
+      @include type-h5();
     }
-    ul {
-       position: relative;
-       /* We use both margin and padding so that
+  }
+  dl {
+    margin-left: 2em;
+    & > dt {
+      @include font-weight-bold();
+      margin-bottom: 0;
+    }
+    & > dd {
+      margin-top: 0;
+    }
+  }
+  dl,
+  ul {
+    margin-left: 2em;
+  }
+  ul {
+    position: relative;
+    /* We use both margin and padding so that
           1) The vertical line adornment starts halfway between the previous line
              the first item in the list.
           2) The first line in the list starts 1em lower than the preceeding div.
        */
-       margin-top: 0.5em;
-       padding-top: 0.5em;
-       li {
-           @include type-p();
-       }
-       &::after {
-           top:0;
-           left:-1em;           
-           background-color: $color-border;
-           height: 100%;
-           width: 1px;
-           position: absolute;
-           content:"";
-       }
+    margin-top: 0.5em;
+    padding-top: 0.5em;
+    li {
+      @include type-p();
     }
-    footer {
-        margin-top: 1.5em;
+    &::after {
+      top: 0;
+      left: -1em;
+      background-color: $color-border;
+      height: 100%;
+      width: 1px;
+      position: absolute;
+      content: "";
     }
+  }
+  footer {
+    margin-top: 1.5em;
+  }
 }

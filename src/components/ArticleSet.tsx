@@ -1,29 +1,31 @@
 import * as React from "react";
 
-import { Articles } from "../components/Articles";
-import { ArticleFreeform } from "../components/ArticleFreeform";
+import Articles from "./Articles";
+import ArticleFreeform from "./ArticleFreeform";
 
-import { IArticle } from "../models/IArticle";
-import { IArticleSet } from "../models/IArticleSet";
+import ArticleModel from "../models/IArticle";
+import ArticleSetModel from "../models/IArticleSet";
 
 interface Props {
-    articles: IArticle[];
-    articleSet: IArticleSet;
+  articles: ArticleModel[];
+  articleSet: ArticleSetModel;
 }
 
-export var ArticleSet = (props: Props) => {
-    let bannerContent = <ArticleFreeform data={props.articleSet.introduction}/>;
+const ArticleSet: React.FC<Props> = ({ articles, articleSet }) => {
+  const bannerContent = <ArticleFreeform data={articleSet.introduction} />;
 
-    return (
-        <Articles 
-            articles={props.articles}
-            bannerContent={bannerContent}            
-            bannerLink={{
-                url: "/",
-                text: "Home"
-            }}
-            bannerTitle={props.articleSet.title}
-            backgroundImageUrl={props.articleSet.backgroundImageUrl}
-        />
-    );
+  return (
+    <Articles
+      articles={articles}
+      bannerContent={bannerContent}
+      bannerLink={{
+        url: "/",
+        text: "Home",
+      }}
+      bannerTitle={articleSet.title}
+      backgroundImageUrl={articleSet.backgroundImageUrl}
+    />
+  );
 };
+
+export { ArticleSet as default };

@@ -1,8 +1,8 @@
 import {
-  IArticleContentQuote,
-  IArticleContentHtml,
+  ArticleContentQuote,
+  ArticleContentHtml,
 } from "../../models/IArticleContent";
-import { IArticle } from "../../models/IArticle";
+import Article from "../../models/IArticle";
 
 export default {
   type: "article",
@@ -18,7 +18,7 @@ export default {
         "IA done in a vacuum without regard for users  won’t hold up against the light of day. The design must be informed by the  user’s tasks, needs, navigation behavior, and experience",
       person: "L. Rosenfeld, P. Morville, J. Arango",
       personTitle: "Authors of the book summarized in this post",
-    } as IArticleContentQuote,
+    } as ArticleContentQuote,
   },
   sections: [
     [
@@ -32,7 +32,7 @@ export default {
                     <p>IA done in a vacuum without regard for users  won’t hold up against the light of day. The design must be informed by the user’s tasks, needs, navigation behavior, and experience.</p>
                     <p>IA must balance the need of the user with the needs of the business.</p>
                 `,
-      } as IArticleContentHtml,
+      } as ArticleContentHtml,
     ],
     [
       {
@@ -43,7 +43,7 @@ export default {
                     <p>Information seeking behaviors are complex. The basic building blocks are searching, browsing, and asking. A single information finding session will realistically comprise of a combination of these, and multiple iterations.</p>
                     <p>One great way to learn what your users are looking is search analytics — reviewing the most common search queries on the site.</p>
                 `,
-      } as IArticleContentHtml,
+      } as ArticleContentHtml,
     ],
     [
       {
@@ -54,7 +54,7 @@ export default {
                     <p>Users get used to the core structures of a site's IA, and become disoriented when they change. Design the core IA with the future in mind so that it won't have to change often. When changing the core IA, keep your habitual users in mind - they've grown used to it and are likely to be disoriented One way to manage this is by separating parts of the environment that have different rates of change.</p>
                     <p>If you've got subsites that are very different, it is possible that they ought to have very different IA designs. Segmenting these subsites allows you to design the sub-IA that is best for each subsite, instead of imposing a compromised one-size-fits-all design for all your subsites. For example, "ebay Motors" has an IA that is significantly different from the rest of eBay.</p>
                 `,
-      } as IArticleContentHtml,
+      } as ArticleContentHtml,
     ],
     [
       {
@@ -77,7 +77,7 @@ export default {
                         <dd>Directly searching for information</dd>
                     </dl>
                 `,
-      } as IArticleContentHtml,
+      } as ArticleContentHtml,
     ],
     [
       {
@@ -141,7 +141,7 @@ export default {
                     <h3>Hypertext</h3>
                     <p>This refers to a highly ad-hoc and nonlinear structure. This provides flexibility for useful relationships between items and groups in the hierarchy. However, if a user primary uses hypertext for navigation, the user doesn't get a feel for the lay of the land, and doesn't develop a mental model of the site's structure. For this reason, hypertext should rarely be the primary organization structure, but it can be complementary.</p>
                 `,
-      } as IArticleContentHtml,
+      } as ArticleContentHtml,
     ],
     [
       {
@@ -155,7 +155,7 @@ export default {
                     </p>
                     
                 `,
-      } as IArticleContentHtml,
+      } as ArticleContentHtml,
     ],
   ],
-} as IArticle;
+} as Article;

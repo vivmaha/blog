@@ -1,8 +1,8 @@
 import {
-  IArticleContentQuote,
-  IArticleContentHtml,
+  ArticleContentQuote,
+  ArticleContentHtml,
 } from "../../models/IArticleContent";
-import { IArticle } from "../../models/IArticle";
+import Article from "../../models/IArticle";
 
 export default {
   type: "article",
@@ -18,7 +18,7 @@ export default {
         "However great our future writers may be, their fame will never succeed in crossing beyond our borders … And so I would like to suggest to the public spirited men of the world that they engage themselves in the writing of English … In this day and age, it is self-evident that a man with great ambitions should study English writing. Study it, and strive, by using the language, to make his glory shine abroad. There is nothing great about a fame solely garnered in the context of this pathetic string of islands",
       person: "Editorialist",
       personTitle: "Yomiuri Shimbun (Japanese daily newspaper)",
-    } as IArticleContentQuote,
+    } as ArticleContentQuote,
   },
   articleSetId: "global-ux",
   sections: [
@@ -32,7 +32,7 @@ export default {
                     <p>Von Humboldt concluded that different languages lent themselves to different mental frameworks. Languages could not be perfectly translated because they evolved to support different mental frameworks. Initially scholars believed that foreign languages were primitive and supported inferior thought. Notably, the inability of abstract thought.</p>
                     <p>Edward Sapir changed this view, by asserting that languages were all equal, and evolved to support their unique environments. Sapir showed that primitive languages were just as complex as civilized languages, albeit in different aspects.</p>
                 `,
-      } as IArticleContentHtml,
+      } as ArticleContentHtml,
     ],
     [
       {
@@ -57,7 +57,7 @@ export default {
                     <p>Translators who speak the target language since childhood can pick up on unintended consequences in translations that other translators will easily miss.</p>
                     <p>Nida's approach is great for translation for informal communication. However, it does not work well in scenarios that demand accuracy, such as scholarly endeavors.</p>
                 `,
-      } as IArticleContentHtml,
+      } as ArticleContentHtml,
     ],
     [
       {
@@ -70,7 +70,7 @@ export default {
                     <p>After English, French and German dominate. Most publishers are from Britain, the US, France, and Germany. </p>
                     <p>Many people publish in English even if it is not their native tongue. They see this as a prerequisite for global adoption of their work.</p>
                 `,
-      } as IArticleContentHtml,
+      } as ArticleContentHtml,
     ],
   ],
-} as IArticle;
+} as Article;

@@ -1,13 +1,11 @@
-import { IArticle } from "../models/IArticle";
-import { IArticleSet } from "../models/IArticleSet";
+import Article from "../models/IArticle";
+import ArticleSet from "../models/IArticleSet";
 
 export interface ListState<T> {
-  items: {
-    [id: string]: T;
-  };
+  items: Map<string, T>;
 }
 
 export interface State {
-  articles: ListState<IArticle>;
-  articleSets: ListState<IArticleSet>;
+  articles: ListState<Article>;
+  articleSets: ListState<ArticleSet>;
 }

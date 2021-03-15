@@ -2,86 +2,84 @@
 
 // weight
 @mixin font-weight-light() {
-    font-weight: 300;
+  font-weight: 300;
 }
 @mixin font-weight-regular() {
-    font-weight: 400;
+  font-weight: 400;
 }
 @mixin font-weight-bold() {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 // typeface
 @mixin font-serif() {
-    font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
 }
 
 // combinations
 @mixin font-serif-light() {
-    @include font-serif();
-    @include font-weight-light();
+  @include font-serif();
+  @include font-weight-light();
 }
 @mixin font-serif-regular() {
-    @include font-serif();
-    @include font-weight-regular();
+  @include font-serif();
+  @include font-weight-regular();
 }
 @mixin font-serif-bold() {
-    @include font-serif();
-    @include font-weight-bold();
+  @include font-serif();
+  @include font-weight-bold();
 }
 
-// The typeramp below was inspired by 
+// The typeramp below was inspired by
 // http://typecast.com/blog/a-more-modern-scale-for-web-typography
 
 @mixin type-base() {
-    &:not(:first-child):not(.no-margin-top) {
-        margin-top: 0.8em;
-    }
-    .force-margin-top {
-        margin-top: 0.8em;
-    }
+  &:not(:first-child):not(.no-margin-top) {
+    margin-top: 0.8em;
+  }
+  .force-margin-top {
+    margin-top: 0.8em;
+  }
 }
 
 @mixin type-p {
-    @include type-base();
-    @include font-serif();
+  @include type-base();
+  @include font-serif();
 }
 
 @mixin type-body {
-    @include type-base();
-    font-size: 16px;
-    @include responsive(line-height, 1.25, 1.375, 1.375);
+  @include type-base();
+  font-size: 16px;
+  @include responsive(line-height, 1.25, 1.375, 1.375);
 }
 
-@mixin type-h1 {    
-    @include type-base();
-    @include responsive(font-size, 2em, 2.5em, 3em);
-    @include responsive(line-height, 1.25, 1.125, 1.125);
-    
+@mixin type-h1 {
+  @include type-base();
+  @include responsive(font-size, 2em, 2.5em, 3em);
+  @include responsive(line-height, 1.25, 1.125, 1.125);
 }
 
 @mixin type-h2 {
-    @include type-base();
-    @include responsive(font-size, 1.625em, 2em, 2.25em);
-    @include responsive(line-height, 1.15, 1.25, 1.125);    
+  @include type-base();
+  @include responsive(font-size, 1.625em, 2em, 2.25em);
+  @include responsive(line-height, 1.15, 1.25, 1.125);
 }
 
 @mixin type-h3 {
-    @include type-base();
-    @include responsive(font-size, 1.375em, 1.5em, 1.75em);
-    @include responsive(line-height, 1.14, 1.25, 1.25);    
+  @include type-base();
+  @include responsive(font-size, 1.375em, 1.5em, 1.75em);
+  @include responsive(line-height, 1.14, 1.25, 1.25);
 }
 
 @mixin type-h4 {
-    @include type-base();
-    @include font-weight-bold();
-    @include responsive(font-size, 1.125em, 1.125em, 1.125em);
-    @include responsive(line-height, 1.11, 1.22, 1.22);
- 
+  @include type-base();
+  @include font-weight-bold();
+  @include responsive(font-size, 1.125em, 1.125em, 1.125em);
+  @include responsive(line-height, 1.11, 1.22, 1.22);
 }
 
 @mixin type-h5 {
-    @include type-base();
-    @include font-weight-bold();
-    @include type-body();
+  @include type-base();
+  @include font-weight-bold();
+  @include type-body();
 }
