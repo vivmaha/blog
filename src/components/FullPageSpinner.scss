@@ -1,0 +1,20 @@
+.full-page-spinner {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  .glyph {
+    @keyframes glyph-frames {
+      0% {
+        transform: perspective(120px) rotateY(0deg);
+      }
+      100% {
+        transform: perspective(120px) rotateY(360deg);
+      }
+    }
+    font-size: 10vh;
+    position: fixed;
+    animation: glyph-frames 2.2s infinite ease;
+  }
+}
