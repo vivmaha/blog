@@ -3,17 +3,17 @@ import * as React from "react";
 import Articles from "./Articles";
 import ArticleFreeform from "./ArticleFreeform";
 
-import ArticleSetModel from "../models/IArticleSet";
+import SeriesModel from "../models/ISeries";
 
 import { ArticleSummary as ArticleSummaryModel } from "../api/models/article-summary";
 
 interface Props {
   articles: ArticleSummaryModel[];
-  articleSet: ArticleSetModel;
+  series: SeriesModel;
 }
 
-const ArticleSet: React.FC<Props> = ({ articles, articleSet }) => {
-  const bannerContent = <ArticleFreeform data={articleSet.introduction} />;
+const Series: React.FC<Props> = ({ articles, series }) => {
+  const bannerContent = <ArticleFreeform data={series.introduction} />;
 
   return (
     <Articles
@@ -23,10 +23,10 @@ const ArticleSet: React.FC<Props> = ({ articles, articleSet }) => {
         url: "/",
         text: "Home",
       }}
-      bannerTitle={articleSet.title}
-      backgroundImageUrl={articleSet.backgroundImageUrl}
+      bannerTitle={series.title}
+      backgroundImageUrl={series.backgroundImageUrl}
     />
   );
 };
 
-export { ArticleSet as default };
+export { Series as default };

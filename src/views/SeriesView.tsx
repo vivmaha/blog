@@ -4,10 +4,10 @@ import { useParams } from "react-router";
 import { getArticles } from "../api/get-article";
 import { ArticleSummary } from "../api/models/article-summary";
 
-import ArticleSet from "../components/ArticleSet";
-import articleSets from "../content/article-sets/ArticleSets";
+import Series from "../components/Series";
+import seriess from "../content/article-sets/Series";
 
-const ArticleSetView: React.FC = () => {
+const SeriesView: React.FC = () => {
   const {id} = useParams<{id: string}>();
   const [articles, setArticles] = useState<ArticleSummary[]>();
 
@@ -15,8 +15,8 @@ const ArticleSetView: React.FC = () => {
     getArticles().then(setArticles);
   }, []);
   
-  const articleSet = articleSets.find(set => set.id === id);
-  if (articleSet === undefined) {
+  const series = seriess.find(set => set.id === id);
+  if (series === undefined) {
     throw new Error(`Unkown article set ${id}`);
   }
 
@@ -26,9 +26,9 @@ const ArticleSetView: React.FC = () => {
   }
 
   const articlesInSet = articles
-    .filter((article) => article.articleSet && article.articleSet.id === id)
+    .filter((article) => article.series && article.series.id === id)
 
-  return <ArticleSet articles={articlesInSet} articleSet={articleSet} />;
+  return <Series articles={articlesInSet} series={series} />;
 };
 
-export { ArticleSetView as default };
+export { SeriesView as default };

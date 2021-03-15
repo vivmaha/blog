@@ -1,10 +1,10 @@
 import { ArticleContent } from "./IArticleContent";
 
-interface ArticleSet {
+interface Series {
   title: string;
   id: string;
   backgroundImageUrl: string;
   introduction: ArticleContent;
 }
 
-export type { ArticleSet as default };
+export type { Series as default };

@@ -4,7 +4,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 
 import HomeView from "./views/HomeView";
 import { ArticleView } from "./views/ArticleView";
-import ArticleSetView from "./views/ArticleSetView";
+import SeriesView from "./views/SeriesView";
 import "./index.scss";
 import { ScrollToTop } from "./components/ScrollToTop";
 
@@ -14,7 +14,7 @@ render(
       <div>
         <Route exact path="/" component={HomeView} />
         <Route path="/article/:id" component={ArticleView} />
-        <Route path="/series/:id" component={ArticleSetView} />
+        <Route path="/series/:id" component={SeriesView} />
       </div>
     </BrowserRouter>,
   document.getElementById("content")
