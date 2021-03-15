@@ -1,23 +1,23 @@
 import * as React from "react";
-import { ArticleSummary } from "../api/models/article-summary";
+import { Series } from "../api/models/series";
 
 import Articles from "./Articles";
 
 interface Props {
-  articles: ArticleSummary[];
+  series: Series
 }
 
-const Home: React.FC<Props> = ({ articles }) => {
+const Home: React.FC<Props> = ({ series }) => {
   return (
     <Articles
-      articles={articles}
-      introduction="A place to store my notes."
-      bannerTitle="Notes by V"
+      articles={series.articles}
+      introduction={series.introduction}
+      bannerTitle={series.title}
       bannerLink={{
         url: "/article/about",
         text: "About",
       }}
-      backgroundImageUrl="https://notesbyvmedia.blob.core.windows.net/images/pen-idea-bulb-paper-web-optimized.jpg"
+      backgroundImageUrl={series.backgroundImageUrl}
     />
   );
 };
