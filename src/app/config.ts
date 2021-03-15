@@ -8,8 +8,10 @@ const getEnv = (key: string): string => {
 
 export type AppConfig = {
   api: string;
+  media: string;
 };
 
 export const getConfig = (): AppConfig => ({
   api: getEnv("REACT_APP_SERVER_API"),
+  media: getEnv("REACT_APP_MEDIA"),
 });
