@@ -8,18 +8,15 @@ import ArticleSetSummary from "./ArticleSetSummary";
 import { Header } from "./Header";
 
 import { ArticleContent } from "../models/IArticleContent";
-import ArticleModel from "../models/IArticle";
-import ArticleSetModel from "../models/IArticleSet";
+import { Article as ArticleModel } from "../api/models/article";
 
 import "./Article.scss";
 
 interface Props {
   article: ArticleModel;
-  nextArticle?: ArticleModel;
-  articleSet?: ArticleSetModel;
 }
 
-const Article: React.FC<Props> = ({ article, nextArticle, articleSet }) => {
+const Article: React.FC<Props> = ({ article }) => {
   const friendlyDate = moment(article.date).format("MMM Do, YYYY");
 
   const materializeSections = (sections: ArticleContent[][]): JSX.Element[] => {
@@ -43,19 +40,17 @@ const Article: React.FC<Props> = ({ article, nextArticle, articleSet }) => {
           <header>
             <h1>{article.title}</h1>
             <p>by V Maharajh on {friendlyDate}</p>
-            {articleSet ? (
+            {article.articleSet ? (
               <ArticleSetSummary
-                articleSet={articleSet}
-                nextArticle={nextArticle}
+                articleSet={article.articleSet}
               />
             ) : null}
           </header>
-          {materializeSections(article.sections)}
+          {materializeSections(JSON.parse(article.content))}
           <footer>
-            {articleSet ? (
+            {article.articleSet ? (
               <ArticleSetSummary
-                articleSet={articleSet}
-                nextArticle={nextArticle}
+                articleSet={article.articleSet}
                 includeLinkToNextArticle
               />
             ) : null}

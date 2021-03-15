@@ -1,21 +1,21 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import { ArticleCaption } from "./ArticleCaption";
-import ArticleModel from "../models/IArticle";
-import ArticleSetModel from "../models/IArticleSet";
+
+import { Article as ArticleModel } from "../api/models/article";
+
 
 export interface Props {
-  articleSet: ArticleSetModel;
-  nextArticle?: ArticleModel;
+  articleSet: NonNullable<ArticleModel["articleSet"]>;
   includeLinkToNextArticle?: boolean;
 }
 
 const ArticleSetSummary: React.FC<Props> = ({
   articleSet,
-  nextArticle,
   includeLinkToNextArticle,
 }) => {
-  const link = `/series/${articleSet.id}`;
+  const {id, title, nextArticle} = articleSet;
+  const link = `/series/${id}`;
 
   let linkToNextArticleElement = null;
   if (includeLinkToNextArticle && nextArticle) {
@@ -30,7 +30,7 @@ const ArticleSetSummary: React.FC<Props> = ({
   return (
     <ArticleCaption>
       <p>
-        This note is part of a series: <Link to={link}>{articleSet.title}</Link>
+        This note is part of a series: <Link to={link}>{title}</Link>
       </p>
       {linkToNextArticleElement}
     </ArticleCaption>
